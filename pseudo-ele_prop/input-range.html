@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>input[type="range"]的伪元素</title>
+    <style>
+        #pseudo{-webkit-appearance:none;}
+        #pseudo::-webkit-slider-runnable-track{width:100px;height:20px;background-color:#3983E4;}
+        #pseudo::-webkit-slider-thumb{margin-top:10px;}
+        #pseudo::-webkit-slider-container{height: 40px;background-color: #FF9913;border:4px solid #3983E4;}
+    </style>
+</head>
+<body>
+<h1>input[type="range"]的伪元素</h1>
+<dl>
+    <dt>::-webkit-slider-runnable-track</dt>
+    <dd>自定义背景条的样式</dd>
+    <dt>::-webkit-slider-thumb</dt>
+    <dd>自定义滑块的样式。可添加hover等伪类。</dd>
+    <dt>::-webkit-slider-container</dt>
+    <dd>自定义滑块容器的样式</dd>
+</dl>
+<input type="range"/>
+<input id="pseudo" type="range"/>
+</body>
+</html>

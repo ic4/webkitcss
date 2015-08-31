@@ -1,0 +1,28 @@
+{
+  "name" : "-webkit-mask-image",
+  "discribe" : "定义遮罩图片路径。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "1.0",
+        "safari" : "4.0",
+        "android" : "?",
+        "ios" : "4.0"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-mask-image",
+      "gram_detail" : "uri"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "uri",
+      "prop_content" : "遮罩图片路径"
+    }
+  ],
+  "iframeUrl" : "../demo/mask-image.html"
+}

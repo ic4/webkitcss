@@ -1,0 +1,32 @@
+{
+  "name" : "-webkit-column-count",
+  "discribe" : "指定需要在多流的<span class="ex">列数</span>. 这个属性的改变可以是动态的。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "3.0+",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-column-count ",
+      "gram_detail" : "number | auto"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "number",
+      "prop_content" : "列数，用整数值来定义列数。不允许负值"
+    },
+    {
+      "prop_title" : "auto",
+      "prop_content" : "根据column-width自定分配宽度"
+    }
+  ],
+  "iframeUrl" : "../demo/column.html"
+}

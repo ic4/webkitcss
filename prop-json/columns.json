@@ -1,0 +1,32 @@
+{
+  "name" : "-webkit-columns",
+  "discribe" : "复合属性。参见： <a target="_blank" href="column-count.html">-webkit-column-count</a> | <a target="_blank" href="column-width.html">-webkit-column-width</a>,设置或检索对象的列数和每列的宽度。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "3.0+",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-columns ",
+      "gram_detail" : " width | count"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "width",
+      "prop_content" : "设置或检索对象每列的宽度"
+    },
+    {
+      "prop_title" : "count",
+      "prop_content" : "设置或检索对象的列数"
+    }
+  ],
+  "iframeUrl" : "../demo/column.html"
+}

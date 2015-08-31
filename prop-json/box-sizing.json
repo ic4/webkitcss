@@ -1,0 +1,64 @@
+{
+  "name" : "-webkit-box-shadow",
+  "discribe" : "设置或检索对象<span class=\"ex\">阴影</span>。<br />
+        可以设定多组效果，每组参数值以逗号分隔。<br />
+        对应的脚本特性为boxShadow。",
+  "support" : [
+    {
+      "type" : "有-webkit-前缀",
+      "browser" : {
+        "chrome" : "3.2+",
+        "safari" : "4+",
+        "android" : "2.1+",
+        "ios" : "3.2+"
+      }
+    },
+    {
+      "type" : "无-webkit-前缀",
+      "browser" : {
+        "chrome" : "5.1+",
+        "safari" : "10+",
+        "android" : "4+",
+        "ios" : "5.1+"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-box-shadow: ",
+      "gram_detail" : "none | &lt;length&gt;① &lt;length&gt;② &lt;length&gt;③ &lt;length&gt;④ &lt;color&gt; inset"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "none",
+      "prop_content" : "无阴影"
+    },
+    {
+      "prop_title" : "&lt;length&gt;①",
+      "prop_content" : "第1个长度值用来设置对象的阴影水平偏移值。可以为负值"
+    },
+    {
+      "prop_title" : "&lt;length&gt;②",
+      "prop_content" : "第2个长度值用来设置对象的阴影垂直偏移值。可以为负值"
+    },
+    {
+      "prop_title" : "&lt;length&gt;③",
+      "prop_content" : "如果提供了第3个长度值则用来设置对象的阴影模糊值。不允许负值"
+    },
+    {
+      "prop_title" : "&lt;length&gt;④",
+      "prop_content" : "如果提供了第4个长度值则用来设置对象的阴影外延值。可以为负值"
+    },
+    {
+      "prop_title" : "&lt;color&gt;",
+      "prop_content" : "设置对象的阴影的颜色。"
+    },
+    {
+      "prop_title" : "inset",
+      "prop_content" : "设置对象的阴影类型为内阴影。该值为空时，则对象的阴影类型为外阴影"
+    }
+  ],
+  "iframeUrl" : "../demo/box-shadow.html"
+}

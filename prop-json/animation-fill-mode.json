@@ -1,0 +1,40 @@
+{
+  "name" : "-webkit-animation-fill-mode",
+  "discribe" : " 检索或设置对象动画时间之外的状态。<span class="ex">默认值为0s</span>。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "4.0+",
+        "android" : "?",
+        "ios" : "2.0+"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-animation-fill-mode ",
+      "gram_detail" : " none | forwards | backwards | both"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "none",
+      "prop_content" : "<span class="ex">默认值</span>。动画帧不会运用到对象非动画周期中。"
+    },
+    {
+      "prop_title" : "forwards",
+      "prop_content" : "设置对象状态为动画结束帧（用于对象的最后一帧）。若动画执行次数为0，则状态为第一次的动画首帧。结束帧与执行次数和运动方向有关。"
+    },
+    {
+      "prop_title" : "backwards",
+      "prop_content" : "设置对象状态为动画首帧（用于对象的第一帧），并在延迟时间周期内保持该状态。首帧与运动方向有关。"
+    },
+    {
+      "prop_title" : "both",
+      "prop_content" : "设置对象状态为动画首帧和结束帧。"
+    }
+  ],
+  "iframeUrl" : "../demo/animation-fill-mode.html"
+}

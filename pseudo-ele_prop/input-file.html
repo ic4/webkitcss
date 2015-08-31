@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>input[type="file"]的伪元素</title>
+    <style>
+        #pseudo{-webkit-appearance:none;}
+        #pseudo::-webkit-file-upload-button{font-size:16px;color:#3983E4;padding:4px 8px;background-color: #FF9913;border:none;outline:none;border-radius: 0;}
+    </style>
+</head>
+<body>
+<h1>input[type="file"]的伪元素</h1>
+<dl>
+    <dt>::-webkit-file-upload-button</dt>
+    <dd>自定义上传按钮的样式</dd>
+</dl>
+<input type="file"/>
+<input type="file" id="pseudo"/>
+</body>
+</html>

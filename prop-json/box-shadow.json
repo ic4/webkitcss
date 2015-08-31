@@ -1,0 +1,43 @@
+{
+  "name" : "-webkit-box-sizing",
+  "discribe" : "设置或检索对象的<span class=\"ex\">盒模型组成模式</span>。<br />
+        对应的脚本特性为boxSizing。",
+  "support" : [
+    {
+      "type" : "有-webkit-前缀",
+      "browser" : {
+        "chrome" : "3.2+",
+        "safari" : "4+",
+        "android" : "2.1+",
+        "ios" : "3.2+"
+      }
+    },
+    {
+      "type" : "无-webkit-前缀",
+      "browser" : {
+        "chrome" : "5.1+",
+        "safari" : "10+",
+        "android" : "4+",
+        "ios" : "5.1+"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-box-sizing: ",
+      "gram_detail" : "content-box | border-box"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "content-box",
+      "prop_content" : "padding和border不被包含在定义的width和height之内。对象的实际宽度等于设置的width值和border、padding之和，即 ( Element width = width + border + padding )。此属性表现为标准模式下的盒模型。此值为默认值"
+    },
+    {
+      "prop_title" : "border-box",
+      "prop_content" : "padding和border被包含在定义的width和height之内。对象的实际宽度就等于设置的width值，即使定义有border和padding也不会改变对象的实际宽度，即 ( Element width = width )。此属性表现为怪异模式下的盒模型。"
+    }
+  ],
+  "iframeUrl" : "../demo/box-sizing.html"
+}

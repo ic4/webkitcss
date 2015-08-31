@@ -1,0 +1,52 @@
+{
+  "name" : "-webkit-mask-position",
+  "discribe" : "定义遮罩层的出现位置。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "1.0",
+        "safari" : "4.0",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-mask-position",
+      "gram_detail" : "[ <percentage> | <length> | left | center | right ] [ <percentage> | <length> | top  | center | bottom ]?"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "<percentage>",
+      "prop_content" : "遮罩物左上角开始偏离元素左上角的距离，此距离为整个宽高的百分比。"
+    },
+    {
+      "prop_title" : "<length>",
+      "prop_content" : "遮罩物左上角开始偏离元素左上角的距离。"
+    },
+    {
+      "prop_title" : "left",
+      "prop_content" : "相当于水平方向的0%。"
+    },
+    {
+      "prop_title" : "right",
+      "prop_content" : "相当于水平方向的100%。"
+    },
+    {
+      "prop_title" : "top",
+      "prop_content" : "相当于垂直方向的0%。"
+    },
+    {
+      "prop_title" : "bottom",
+      "prop_content" : "相当于垂直方向的100%。"
+    },
+    {
+      "prop_title" : "center",
+      "prop_content" : "如果垂直方向未给出，相当于50% 50%。"
+    }
+  ],
+  "iframeUrl" : "../demo/mask-position.html"
+}

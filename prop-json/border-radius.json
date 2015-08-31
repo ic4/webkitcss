@@ -1,0 +1,32 @@
+{
+  "name" : "-webkit-border-radius",
+  "discribe" : "设置或检索对象使用圆角边框。每一个角的弧线形状可以通过分别控制水平圆的半径和垂直圆的半径来定义。圆角是应用在整个背景上。<span class=\"ex\">即使元素没有边框，圆角剪切的位置也将根据背景剪切的值来定义。</span>border-radius的属性值的缩写方式是：border-top-left-radius, border-top-right-radius, border-bottom-right-radius, border-bottom-left-radius。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "3.0",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-border-radius: ",
+      "gram_detail" : " [&lt;length&gt; | &lt;percentage&gt;]{1,4} [&lt;length&gt; | &lt;percentage&gt;]{1,4} "
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "&lt;length&gt;",
+      "prop_content" : "用长度值设置对象的圆角半径长度。不允许负值。"
+    },
+    {
+      "prop_title" : "&lt;percentage&gt;",
+      "prop_content" : "用百分比设置对象的圆角半径长度。不允许负值。对于水平半径，此值为占边框方框宽度的百分比。对于垂直半径，此值为占边框方框高度的百分比。"
+    }
+  ],
+  "iframeUrl" : "../demo/border-radius.html"
+}

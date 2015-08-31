@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>-webkit-mask-composite demo</title>
+		<style type="text/css">
+			body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+			dl,dt,dd{margin: 0;padding: 0;}
+			select,option,input{margin:0;padding:0;font:14px/1.0 Tahoma, Arial, "Microsoft Yahei", serif;}
+			dt{font-size: 16px;}
+			dd{margin-bottom: 10px;}
+			h1{margin-bottom:30px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+			#control_panel{float: left;width: 500px;}
+			#show_panel{
+				float: left;
+				text-align: center;
+				color:#fff;
+				font-size: 20px;
+				font-weight: bold;
+			}
+			#demo{
+				width:930px;
+				height:768px;
+				margin: 50px auto;
+				font-size: 20px;
+				font-weight: bold;
+				color:red;
+				background:url(../img/eric.jpg) no-repeat;
+				-webkit-mask-image:url(../img/apple.png),url(../img/ctrip1.png);
+				-webkit-mask-repeat:no-repeat;	
+			}
+			input[type='button']{
+				display: inline-block;
+				width: 200px;
+				height: 36px;
+				line-height: 30px;
+				background-color: #ffbb01;
+				color: #fff;
+				border: 1px solid #ffbb01;
+				border-bottom: 5px solid #ff9c01;
+				text-align: center;
+				font-size: 16px;
+				font-family: "microsoft yahei", "Times New Roman", Simsun;
+				cursor: pointer;
+				outline: 0;
+				margin-bottom: 5px;
+			}
+			input[type='button']:hover{
+				border: 1px solid #ff9c01;
+				border-bottom: 5px solid #ec8211;
+				background-color: #ff9c01;
+				border-bottom-color: #ec8211;
+			}
+			span {color: red;font-weight: bold;}
+			.mask-composite1{-webkit-mask-composite:clear;}
+			.mask-composite2{-webkit-mask-composite:source-over;}
+			.mask-composite3{-webkit-mask-composite:source-in;}
+			.mask-composite4{-webkit-mask-composite:source-atop;}
+			.mask-composite5{-webkit-mask-composite:destination-over;}
+			.mask-composite6{-webkit-mask-composite:destination-in;}
+			.mask-composite7{-webkit-mask-composite:destination-out;}
+			.mask-composite8{-webkit-mask-composite:destination-atop;}
+			.mask-composite9{-webkit-mask-composite:xor;}
+			.mask-composite10{-webkit-mask-composite:copy;}
+		</style>
+	</head>
+	<body>
+		<h1>-webkit-mask-composite</h1>
+		<dl id="control_panel">
+			<dt>
+			<input id="repeat"  type="button" value="clear"
+			onclick="demo.className='mask-composite1';text.innerHTML=this.value"/>
+			</dt>
+			<dt>
+			<input id="repeat-x"  type="button" value="source-over"
+			onclick="demo.className='mask-composite2';text.innerHTML=this.value"/>
+			</dt>
+			<dt>
+			<input id="repeat-y"  type="button" value="source-in"
+			onclick="demo.className='mask-composite3';text.innerHTML=this.value"/>
+			</dt>
+			<dt>
+			<input id="no-repeat"  type="button" value="source-atop"
+			onclick="demo.className='mask-composite4';text.innerHTML=this.value"/>
+			</dt>
+			<dt>
+			<input id="no-repeat"  type="button" value="destination-over"
+			onclick="demo.className='mask-composite5';text.innerHTML=this.value"/>
+			</dt>
+			<dt>
+			<input id="repeat"  type="button" value="destination-in"
+			onclick="demo.className='mask-composite6';text.innerHTML=this.value"/>
+			</dt>
+			<dt>
+			<input id="repeat-x"  type="button" value="destination-out"
+			onclick="demo.className='mask-composite7';text.innerHTML=this.value"/>
+			</dt>
+			<dt>
+			<input id="repeat-y"  type="button" value="destination-atop"
+			onclick="demo.className='mask-composite8';text.innerHTML=this.value"/>
+			</dt>
+			<dt>
+			<input id="no-repeat"  type="button" value="xor"
+			onclick="demo.className='mask-composite9';text.innerHTML=this.value"/>
+			</dt>
+			<dt>
+			<input id="no-repeat"  type="button" value="copy"
+			onclick="demo.className='mask-composite10';text.innerHTML=this.value"/>
+			</dt>			
+		</dl>
+		<div id="show_wrap">
+			<div id="demo">
+			</div>
+		</div>
+		<script type="text/javascript">
+			var demo = document.getElementById('demo');
+			// var text = document.getElementsByTagName('span')[0];
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>webkit-box-sizing demo</title>
+	<style type="text/css">
+		.txt-center {text-align: center; }
+		.wrap {width: 200px; height: 200px; margin: 10px auto; border: 1px solid #000; }
+		.test {color: #fff; width: 150px; height: 150px; border: 25px solid #aaa; background-color: #f60; }
+		.border_box {-webkit-box-sizing: border-box;}
+		.content_box {-webkit-box-sizing: content-box;}
+	</style>
+</head>
+<body>
+
+	<h1>-webkit-box-sizing</h1>
+	<dl id="control_panel" class="control_panel">
+		
+	</dl>
+	<div class="txt-center wrap">
+		<div class="test border_box">border-box</div>
+	</div>
+	<div class="txt-center wrap">
+		<div class="test content_box">content-box</div>
+	</div>
+</body>
+</html>

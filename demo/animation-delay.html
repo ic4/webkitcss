@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>-webkit-animation-delay demo</title>
+<style>
+@-webkit-keyframes ani-trans{
+	0%{-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+	100%{-webkit-transform: translate3d(400px,0,0);transform: translate3d(400px,0,0);}
+}
+@keyframes ani-trans{
+	0%{-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+	100%{-webkit-transform: translate3d(400px,0,0);transform: translate3d(400px,0,0);}
+}
+body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+h1{margin-bottom:30px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+ul,li{list-style: none;margin:0;padding: 0;}
+.info_panel{float: left;}
+.info_panel li{height: 100px;line-height: 100px;font-size: 20px;}
+.show_panel{position: relative;margin-left: 120px;}
+.show_panel div{position:absolute;width: 100px;height: 100px;border-radius: 100%;background-color: #3983E4;}
+#circle1{top:0;left:0;-webkit-animation: ani-trans 2s linear -0.5s infinite alternate forwards;animation: ani-trans 2s linear -0.5s infinite alternate forwards;}
+#circle2{top:100px;left:0;-webkit-animation: ani-trans 2s linear 0s infinite alternate forwards;animation: ani-trans 2s linear 0s infinite alternate forwards;}
+#circle3{top:200px;left:0;-webkit-animation: ani-trans 2s linear 0.5s infinite alternate forwards;animation: ani-trans 2s linear 0.5s infinite alternate forwards;}
+</style>
+</head>
+<body>
+<h1>-webkit-animation-delay</h1>
+<ul class="info_panel">
+	<li>“超前”0.5s。</li>
+	<li>无延迟。</li>
+	<li>延迟0.5s。</li>
+</ul>
+<div class="show_panel">
+	<div id="circle1"></div>
+	<div id="circle2"></div>
+	<div id="circle3"></div>
+</div>
+</body>
+</html>
+			

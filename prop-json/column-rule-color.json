@@ -1,0 +1,48 @@
+{
+  "name" : "-webkit-column-rule-color",
+  "discribe" : "列规则指定的<span class="ex">颜色</span>。这个属性的改变可以是动态的。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "3.0+",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-column-rule-color ",
+      "gram_detail" : "color | currentcolor | -webkit-activelink | -webkit-focus-ring-color | -webkit-link | -webkit-text"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "color",
+      "prop_content" : "指定颜色"
+    },
+    {
+      "prop_title" : "currentcolor",
+      "prop_content" : "元素的颜色属性的值"
+    },
+    {
+      "prop_title" : "-webkit-activelink",
+      "prop_content" : "被点击了一个超链接的默认颜色"
+    },
+    {
+      "prop_title" : "-webkit-focus-ring-color",
+      "prop_content" : "围绕着一个UI元素，如文本字段的颜色，有重点"
+    },
+    {
+      "prop_title" : "-webkit-link",
+      "prop_content" : "已访问过的超链接的默认颜色"
+    },
+    {
+      "prop_title" : "-webkit-text",
+      "prop_content" : "默认的文本颜色"
+    }
+  ],
+  "iframeUrl" : "../demo/column.html"
+}

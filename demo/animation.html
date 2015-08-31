@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>-webkit-animation demo</title>
+<style>
+@-webkit-keyframes bg-color{
+	0%{background-color: rgba(57,131,228,0.1);}
+	100%{background-color: rgba(57,131,228,1);}
+}
+@keyframes bg-color{
+	0%{background-color: rgba(57,131,228,0.1);}
+	100%{background-color: rgba(57,131,228,1);}
+}
+@-webkit-keyframes ani-trans{
+	0%{-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+	100%{-webkit-transform: translate3d(400px,0,0);transform: translate3d(400px,0,0);}
+}
+@keyframes ani-trans{
+	0%{-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+	100%{-webkit-transform: translate3d(400px,0,0);transform: translate3d(400px,0,0);}
+}
+@-webkit-keyframes bg-color-trans{
+	0%{background-color: rgba(57,131,228,0.1);-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+	100%{background-color: rgba(57,131,228,1);-webkit-transform: translate3d(400px,0,0);transform: translate3d(400px,0,0);}
+}
+@keyframes bg-color-trans{
+	0%{background-color: rgba(57,131,228,0.1);-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+	100%{background-color: rgba(57,131,228,1);-webkit-transform: translate3d(400px,0,0);transform: translate3d(400px,0,0);}
+}
+body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+dl,dt,dd{margin: 0;padding: 0}
+select,option,input{margin:0;padding:0;font:14px/1.0 Tahoma, Arial, "Microsoft Yahei", serif;}
+dt{font-size: 16px;}
+dd{margin-bottom: 10px;}
+h1{margin-bottom:30px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+.control_panel{float: left;}
+.show_panel{margin-left: 240px;margin-top: 200px;padding:10px 20px;width:160px;text-align: center;color:#fff;font-size: 20px;font-weight: bold;background-color: #3983E4;}
+</style>
+</head>
+<body>
+<h1>-webkit-animation</h1>
+<dl id="control_panel" class="control_panel">
+	<dt>动画名称</dt>
+	<dd>
+		<select id="name">
+			<option value="none">无动画</option>
+			<option value="bg-color">背景渐变</option>
+			<option value="ani-trans">平移</option>
+			<option value="bg-color-trans">背景渐变+平移</option>
+		</select>
+	</dd>
+	<dt>动画持续时间</dt>
+	<dd>
+		<select id="duration">
+			<option value="0s">0s</option>
+			<option value="300ms">300ms</option>
+			<option value="800ms">800ms</option>
+			<option value="1s">1s</option>
+			<option value="1.5s">1.5s</option>
+			<option value="2s">2s</option>
+			<option value="2s">5s</option>
+		</select>
+	</dd>
+	<dt>动画时间函数</dt>
+	<dd>
+		<select id="timingFunc">
+			<option value="ease">ease</option>
+			<option value="linear">linear</option>
+			<option value="ease-in">ease-in</option>
+			<option value="ease-out">ease-out</option>
+			<option value="ease-in-out">ease-in-out</option>
+			<option value="cubic-bezier(0.2,0.7,0.9,0.4)">cubic-bezier(0.2,0.7,0.9,0.4)</option>
+			<option value="cubic-bezier(0.6,-0.5,0.4,1.4)">cubic-bezier(0.6,-0.5,0.4,1.4)</option>
+			<option value="steps(4,end)">steps(4,end)</option>
+			<option value="steps(4,start)">steps(4,start)</option>
+		</select>
+	</dd>
+	<dt>动画延迟时间</dt>
+	<dd>
+		<select id="delay">
+			<option value="0s">0s</option>
+			<option value="0.5s">0.5s</option>
+			<option value="-0.5s">-0.5s</option>
+		</select>
+	</dd>
+	<dt>动画循环次数</dt>
+	<dd>
+		<select id="iterCount">
+			<option value="1">1</option>
+			<option value="2.5">2.5</option>
+			<option value="infinite">infinite</option>
+		</select>
+	</dd>
+	<dt>动画运动方向</dt>
+	<dd>
+		<select id="direction">
+			<option value="normal">normal</option>
+			<option value="alternate">alternate</option>
+			<option value="alternate-reverse">alternate-reverse</option>
+			<option value="reverse">reverse</option>
+		</select>
+	</dd>
+	<dt>动画结束状态</dt>
+	<dd>
+		<select id="fillMode">
+			<option value="none">none</option>
+			<option value="forwards">forwards</option>
+			<option value="backwards">backwards</option>
+			<option value="both">both</option>
+		</select>
+	</dd>
+	<dt>动画状态</dt>
+	<dd>
+		<select id="playState">
+			<option value="running">running</option>
+			<option value="paused">paused</option>
+		</select>
+	</dd>
+</dl>
+<div id="show_wrap">
+	<div id="show_panel" class="show_panel">Ctrip携程2014 - Ctrip UED</div>
+</div>
+<script type="text/javascript">
+window.onload=function(){
+	var ctrlPanel=document.getElementById("control_panel"),
+		showWrap=document.getElementById("show_wrap"),
+		selectArr=Array.prototype.slice.call(ctrlPanel.querySelectorAll("select"));
+
+	var aniList={
+		name:"none",
+		duration:"0s",
+		timingFunc:"ease",
+		delay:"0s",
+		iterCount:"1",
+		direction:"normal",
+		fillMode:"none",
+		playState:"running"
+	},i=0, len=selectArr.length,styleStr="";
+
+	for(i;i<len;i++){
+		selectArr[i].onchange=function(){
+			var idName=this.id, selectValue=this.value;
+
+			aniList[idName]=selectValue;
+			styleStr="";
+			for(var obj in aniList){
+				if(aniList.hasOwnProperty(obj)){
+					console.log(aniList[obj]);
+					styleStr+=" "+aniList[obj];
+				}
+			}
+
+			if(parseInt(aniList.duration)!==0){
+				showWrap.innerHTML="";
+				showWrap.innerHTML='<div id="show_panel" class="show_panel">Ctrip携程2014 - Ctrip UED</div>';
+				var showPanel=Array.prototype.slice.call(showWrap.querySelectorAll("#show_panel"))[0];
+				showPanel.style.webkitAnimation=styleStr;
+				showPanel.style.animation=styleStr;
+			}
+		}
+	}
+}
+</script>
+</body>
+</html>
+			

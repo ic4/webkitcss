@@ -1,0 +1,48 @@
+{
+  "name" : "-webkit-align-content",
+  "discribe" : "基于Flex布局，用来指定<span class="ex">多行伸缩容器的对齐</span>。在使用 wrap 关键字的多行伸缩容器上，你也可以指定行与行之间空白的分配方法。仅在伸缩容器在侧轴占有固定的空间时（例：伸缩子元素横排的时候伸缩容器有固定高）才有作用。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "21+",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-align-content ",
+      "gram_detail" : " flex-start | flex-end | center | stretch | space-around | space-between"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "flex-start",
+      "prop_content" : "将伸缩行捆在主轴起始端，将空白留到结尾端"
+    },
+    {
+      "prop_title" : "flex-end",
+      "prop_content" : "将伸缩行捆在主轴结尾端，将空白留到起始端"
+    },
+    {
+      "prop_title" : "center",
+      "prop_content" : "将伸缩行捆在主轴的中间位置，将空白平均分到两端"
+    },
+    {
+      "prop_title" : "stretch",
+      "prop_content" : "将所有项目伸长，让项目占据了整个侧轴的长度"
+    },
+    {
+      "prop_title" : "space-around",
+      "prop_content" : "沿着侧轴将空白均分到伸缩行之间与外侧（行之间空白的二分之一）"
+    },
+    {
+      "prop_title" : "space-between",
+      "prop_content" : "跟 space-around 的效果很相像，但是分配到开始、结尾两端的空间比较少"
+    }
+  ],
+  "iframeUrl" : "../demo/align-content.html"
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>-webkit-transition demo</title>
+	<style type="text/css">
+		body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+		dl,dt,dd{margin: 0;padding: 0}
+		select,option,input{margin:0;padding:0;font:14px/1.0 Tahoma, Arial, "Microsoft Yahei", serif;}
+		dt{font-size: 16px;}
+		dd{margin-bottom: 10px;}
+		h1{margin-bottom:30px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+		.control_panel{float: left;}
+		.show_panel{margin-left: 260px;margin-top: 100px;padding:10px 20px;width:160px;text-align: center;color:#fff;font-size: 20px;font-weight: bold;background-color: #3983E4;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);opacity: 1;}
+		.all{-webkit-transform:translate3d(400px,0,0);transform:translate3d(400px,0,0);opacity: 0.4;}
+		.transform{-webkit-transform:translate3d(400px,0,0);transform:translate3d(400px,0,0);}
+		.opacity{opacity: 0.4;}
+	</style>
+</head>
+<body>
+	<h1>-webkit-transition</h1>
+	<dl id="control_panel" class="control_panel">
+		<dt>-webkit-transition-property</dt>
+		<dd>
+			<select id="prop">
+				<option value="all">all</option>
+				<option value="transform">transform</option>
+				<option value="opacity">opacity</option>
+				<option value="none">none</option>
+			</select>
+		</dd>
+		<dt>-webkit-transition-duration</dt>
+		<dd>
+			<select id="duration">
+				<option value="0s">0s</option>
+				<option value="500ms">500ms</option>
+				<option value="1s">1s</option>
+				<option value="5s">5s</option>
+			</select>
+		</dd>
+		<dt>-webkit-transition-timing-function</dt>
+		<dd>
+			<select id="timingFunc">
+				<option value="ease">ease</option>
+				<option value="linear">linear</option>
+				<option value="ease-in">ease-in</option>
+				<option value="ease-out">ease-out</option>
+				<option value="ease-in-out">ease-in-out</option>
+				<option value="cubic-bezier(0.2,0.7,0.9,0.4)">cubic-bezier(0.2,0.7,0.9,0.4)</option>
+				<option value="cubic-bezier(0.6,-0.5,0.4,1.4)">cubic-bezier(0.6,-0.5,0.4,1.4)</option>
+			</select>
+		</dd>
+		<dt>-webkit-transition-delay</dt>
+		<dd>
+			<select id="delay">
+				<option value="0s">0s</option>
+				<option value="0.5s">0.5s</option>
+				<option value="-0.5s">-0.5s</option>
+			</select>
+		</dd>
+		<p class="btn_panel"><button id="go">GO</button><button id="reset">RESET</button></p>
+	</dl>
+	<div id="show_wrap">
+		<div id="show_panel" class="show_panel">Ctrip携程2014 - Ctrip UED</div>
+	</div>
+<script type="text/javascript">
+	window.onload=function(){
+		var ctrlPanel=document.getElementById("control_panel"),
+			showWrap=document.getElementById("show_wrap"),
+			selectArr=Array.prototype.slice.call(ctrlPanel.querySelectorAll("select")),
+			showPanel=Array.prototype.slice.call(showWrap.querySelectorAll("#show_panel"))[0],
+			btnGo=document.getElementById("go"),
+			btnReset=document.getElementById("reset");
+
+		var tranList={
+			prop:"all",
+			duration:"0s",
+			timingFunc:"ease",
+			delay:"0s"
+		},i=0, len=selectArr.length,styleStr="",lastId="";
+
+		for(i;i<len;i++){
+			selectArr[i].onchange=function(){
+				var idName=this.id, selectValue=this.value;
+
+				tranList[idName]=selectValue;
+			}
+		}
+
+		btnGo.onclick=function(){
+			styleStr="";
+			for(var obj in tranList){
+				if(tranList.hasOwnProperty(obj)){
+					styleStr+=" "+tranList[obj];
+				}
+			}
+
+			showPanel.style.webkitTransition=styleStr;
+			showPanel.style.transition=styleStr;
+
+			if(parseInt(tranList.duration)!==0){
+				lastId=tranList.prop;
+				showPanel.classList.add(lastId);
+			}
+		}
+
+		btnReset.onclick=function(){
+			if(lastId!==""){
+				showPanel.classList.remove(lastId);
+			}
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>-webkit-border-image demo</title>
+	<style type="text/css">
+		body{font-size:14px;font-family:microsoft yahei;}
+		h1{margin-bottom:10px;padding-bottom:10px;font-size:22px;border-bottom:1px solid #999;}
+		#wbi{
+				width:500px;
+				height:100px;
+				padding: 10px;
+				margin:30px auto;
+				border-image-source:url(../img/c_logo2012.png);
+				border-image-slice:20;
+				border-image-width:20px;
+				border-image-repeat:round;
+				border-image-outset:20px;
+			}
+		p span{margin-left:10px;color:#F00;}
+	</style>
+</head>
+<body>
+	<h1>-webkit-border-image:</h1>
+	<div id="wbi">test test test test test test test test test test test test test test test test test test test test </div>
+	<p>border-image-source:url(http://pic.c-ctrip.com/common/c_logo2012.png);</p>
+	<p>border-image-slice:<span id="bis">10</span>;</p>
+	<p>border-image-width:<span id="biw">20px</span>;</p>
+	<p>border-image-repeat:<span id="bir">round</span>;</p>
+	<p>border-image-outset:<span id="bio">20px</span>;</p>
+	<p>
+		border-image-slice:
+		<input type="button" value="10" onclick="wbi.style.borderImageSlice='10';bis.innerHTML='10';" />
+		<input type="button" value="20" onclick="wbi.style.borderImageSlice='20';bis.innerHTML='20';" />
+		<input type="button" value="30" onclick="wbi.style.borderImageSlice='30';bis.innerHTML='30';" />
+		<input type="button" value="40" onclick="wbi.style.borderImageSlice='40';bis.innerHTML='40';" />
+	</p>
+	<p>
+		border-image-width:
+		<input type="button" value="10px" onclick="wbi.style.borderImageWidth='10px';biw.innerHTML='10px';" />
+		<input type="button" value="20px" onclick="wbi.style.borderImageWidth='20px';biw.innerHTML='20px';" />
+		<input type="button" value="30px" onclick="wbi.style.borderImageWidth='30px';biw.innerHTML='30px';" />
+		<input type="button" value="40px" onclick="wbi.style.borderImageWidth='40px';biw.innerHTML='40px';" />
+	</p>
+	<p>
+		border-image-repeat:
+		<input type="button" value="stretch" onclick="wbi.style.borderImageRepeat='stretch';bir.innerHTML='stretch';" />
+		<input type="button" value="repeat" onclick="wbi.style.borderImageRepeat='repeat';bir.innerHTML='repeat';" />
+		<input type="button" value="round" onclick="wbi.style.borderImageRepeat='round';bir.innerHTML='round';" />
+		<input type="button" value="space" onclick="wbi.style.borderImageRepeat='space';bir.innerHTML='space';" />
+	</p>
+	<p>
+		border-image-outset:
+		<input type="button" value="10px" onclick="wbi.style.borderImageOutset='10px';bio.innerHTML='10px';" />
+		<input type="button" value="15px" onclick="wbi.style.borderImageOutset='15px';bio.innerHTML='15px';" />
+		<input type="button" value="20px" onclick="wbi.style.borderImageOutset='20px';bio.innerHTML='20px';" />
+		<input type="button" value="30px" onclick="wbi.style.borderImageOutset='30px';bio.innerHTML='30px';" />
+	</p>
+	<script type="text/javascript">
+		var wbi=document.getElementById('wbi');
+		var bir=document.getElementById('bir');
+		var biw=document.getElementById('biw');
+		var biw=document.getElementById('bio');
+		var bis=document.getElementById('bis');
+	</script>
+</body>
+</html>

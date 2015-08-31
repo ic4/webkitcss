@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>-webkit-text-emphasis-style | CtripUED Webkit CSS Library</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+<div class="head">
+	<div class="wrap">
+		<a href="http://ued.ctrip.com/webkitcss/index.html" class="logo">CtripUED Webkit CSS Library</a>
+		<div class="nav">
+			<ul>
+				<li><a href="../index.html">首页</a></li>
+				<li><a href="../aboutus.html#about">关于我们</a></li>
+				<li><a href="../aboutus.html#about_box">意见反馈</a></li>
+				<li><a href="http://ued.ctrip.com">CtripUED 博客</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrap">
+	<div class="side">
+		<div class="filter_box">
+			<div class="field" id="catalogFilter">
+				<input type="search" id="key" placeholder="属性搜索..." />
+			</div>
+		</div>
+		<div class="categorys"></div>
+	</div>
+
+	<div class="main" id="main">
+		<div class="position" id="position">
+			您的位置: <a href="../index.html">首页</a> &gt; -webkit-text-emphasis-style
+		</div>
+		<div class="prop_intro">
+			<div class="tit">
+				<h1>-webkit-text-emphasis-style 属性</h1>
+			</div>
+			<div class="prop_detail">
+				设置元素文本的着重号。当符号有关键字但"filled"和"open"均未规定，符号为实心"filled"；如果关键字仅为"filled"或"open"，则横排模式的符号位"circle"，竖排为"sesame"。
+			</div>
+			<!-- /prop_detail -->
+			<div class="prop_comp">
+				<p>
+					<b>有-webkit前缀：</b>
+					<i class="ico_browser ico_browser_saf"><small>6.1</small></i>
+					<i class="ico_browser ico_browser_chr"><small>25</small></i>
+					<i class="ico_browser ico_browser_and"><small>4.4</small></i>
+					<i class="ico_browser ico_browser_ios"><small>7.1</small></i>
+				</p>
+				<p>
+					<b>无-webkit前缀：</b>
+					<i class="ico_browser ico_browser_saf"><small>7.1</small></i>
+					<i class="ico_browser ico_browser_chr"><small>?</small></i>
+					<i class="ico_browser ico_browser_and"><small>?</small></i>
+					<i class="ico_browser ico_browser_ios"><small>7.1</small></i>
+				</p>
+			</div>
+		</div>
+
+		<div class="mod prop_gramm">
+			<h2 class="mod_tit">语法</h2>
+			<p class="mod_con">
+				<strong>-webkit-text-emphasis-style: </strong>none | [ [ filled | open ] || [ dot | circle | double-circle | triangle | sesame ] ] | &lt;string&gt;
+			</p>
+		</div>
+		<!-- /prop_gramm -->
+		<div class="mod prop_value">
+			<h2 class="mod_tit">取值</h2>
+			<div class="mod_con">
+				<table>
+					<tr>
+						<th>none </th>
+						<td>无着重号。<span class="ex">默认值</span>。</td>
+					</tr>
+					<tr>
+						<th>filled</th>
+						<td>符号由实心的。</td>
+					</tr>
+					<tr>
+						<th>open</th>
+						<td>符号是空心的。</td>
+					</tr>
+					<tr>
+						<th>dot</th>
+						<td>着重号为小圆。实心为U+2022；空心为U+25E6。</td>
+					</tr>
+					<tr>
+						<th>circle</th>
+						<td>着重号为大圆。实心为U+25CF；空心为U+25CB。</td>
+					</tr>
+					<tr>
+						<th>double-circle</th>
+						<td>着重号为双圈。实心为U+25C9；空心为U+25CE。</td>
+					</tr>
+					<tr>
+						<th>triangle</th>
+						<td>着重号为三角。实心为U+25B2；空心为U+25B3。</td>
+					</tr>
+					<tr>
+						<th>sesame</th>
+						<td>着重号为芝麻点。实心为U+FE45；空心为U+FE46。</td>
+					</tr>
+					<tr>
+						<th>&lt;string&gt;</th>
+						<td>着重号为给定的字符。字符不能超过1个；若超过，会被浏览器截断。</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div class="mod prop_demo">
+			<h2 class="mod_tit">示例</h2>
+			<div class="mod_con">
+				<iframe id="iframedemo"style="border:1px solid #ccc;" src="../demo/text-emphasis.html" width="100%" height="400" frameborder="0"></iframe id="test">
+				<div class="btns">
+					<a href="../demo/text-emphasis.html" target="_blank" class="btn_primary">演示</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /main -->
+</div>
+<!-- /wrap -->
+</body>
+</html>

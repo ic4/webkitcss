@@ -1,0 +1,27 @@
+{
+  "name" : "-webkit-wrap-padding",
+  "discribe" : "适用于<span class="ex">排除元素</span>",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "&times;",
+        "safari" : "&times;",
+        "android" : "&times;",
+        "ios" : "&times;"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-wrap-padding ",
+      "gram_detail" : "length "
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "length",
+      "prop_content" : "指定绕排页边空白值"
+    }
+  ]
+}

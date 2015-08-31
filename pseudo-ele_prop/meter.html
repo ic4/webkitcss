@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>meter的伪元素</title>
+    <style>
+        div{margin:50px 0;}
+        meter{width:100px;}
+        .pseudo_bg, .pseudo{-webkit-appearance:none;}
+        .pseudo_bg::-webkit-meter-inner-element, .pseudo::-webkit-meter-inner-element{height: 50px;width:100px;}
+        .pseudo::-webkit-meter-bar{background-color:#fff;border:1px solid #FF9913;height:40px;width:80px;}
+        .pseudo::-webkit-meter-even-less-good-value{background: #3983E4;}
+        .pseudo::-webkit-meter-optimum-value{background: #FF9913;}
+        .pseudo::-webkit-meter-suboptimum-value{background: #639;}
+    </style>
+</head>
+<body>
+<h1>meter的伪元素</h1>
+<dl>
+    <dt>::-webkit-meter-inner-element</dt>
+    <dd>自定义仪表盘的样式，样式会被后面四个伪元素样式覆盖。</dd>
+    <dt>::-webkit-meter-bar</dt>
+    <dd>自定义仪表盘范围的样式</dd>
+    <dt>::-webkit-meter-even-less-good-value</dt>
+    <dd>自定义低值的样式</dd>
+    <dt>::-webkit-meter-suboptimum-value</dt>
+    <dd>自定义中值的样式</dd>
+    <dt>::-webkit-meter-optimum-value</dt>
+    <dd>自定义高值的样式</dd>
+</dl>
+<div>
+    <meter low="30" high="80" max="100" optimum="100" value="50"></meter>
+    <meter low="30" high="80" max="100" optimum="100" value="90"></meter>
+    <meter low="30" high="80" max="100" optimum="100" value="20"></meter>
+</div>
+<div>
+    <meter class="pseudo" low="30" high="80" max="100" optimum="100" value="50"></meter>
+    <meter class="pseudo" low="30" high="80" max="100" optimum="100" value="90"></meter>
+    <meter class="pseudo" low="30" high="80" max="100" optimum="100" value="20"></meter>
+</div>
+<div>
+    <meter class="pseudo_bg" low="30" high="80" max="100" optimum="100" value="50"></meter>
+    <meter class="pseudo_bg" low="30" high="80" max="100" optimum="100" value="90"></meter>
+    <meter class="pseudo_bg" low="30" high="80" max="100" optimum="100" value="20"></meter>
+</div>
+</body>
+</html>

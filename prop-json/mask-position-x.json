@@ -1,0 +1,44 @@
+{
+  "name" : "-webkit-mask-position-x",
+  "discribe" : "定义遮罩层的出现位置的横坐标。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "1.0",
+        "safari" : "4.0",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-mask-position-x",
+      "gram_detail" : "[ <percentage> | <length> | left | center | right ]"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "<percentage>",
+      "prop_content" : "遮罩物在水平方向上到左上角的距离，此距离为整个宽的百分比。"
+    },
+    {
+      "prop_title" : "<length>",
+      "prop_content" : "遮罩物在水平方向上到左上角的距离。"
+    },
+    {
+      "prop_title" : "left",
+      "prop_content" : "相当于水平方向的0%。"
+    },
+    {
+      "prop_title" : "right",
+      "prop_content" : "相当于水平方向的100%。"
+    },
+    {
+      "prop_title" : "center",
+      "prop_content" : "相当于水平方向的50%。"
+    }
+  ],
+  "iframeUrl" : "../demo/mask-position-x.html"
+}

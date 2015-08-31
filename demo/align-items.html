@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>-webkit-align-items demo</title>
+	<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+	<style type="text/css">
+		.wrap{width: 500px; margin:0 auto;}
+		.test{display:-webkit-flex; background-color:#f60}
+		.flex-start{-webkit-align-items:flex-start;}
+		.flex-end{-webkit-align-items:flex-end}
+		.center{-webkit-align-items:center}
+		.stretch{-webkit-align-items:stretch}
+		.baseline{-webkit-align-items:baseline}
+		.test p{margin-top: 10px;}
+		.test div{color:#fff;}
+		.red{background-color:red; width:100px;}
+		.green{background-color: green;  width:100px;}
+		.black{background-color: black; width:100px;}
+		.blue{background-color: blue; width:100px;}
+	</style>
+</head>
+<body>
+
+	<h1>-webkit-align-items:</h1>
+	<dl id="control_panel" class="control_panel">
+		<label><input type="radio" name="align" value="flex-start" />flex-start</label>
+		<label><input type="radio" name="align" value="flex-end" />flex-end</label>
+		<label><input type="radio" name="align" value="center" />center</label>
+		<label><input type="radio" name="align" value="baseline" />baseline</label>
+		<label><input type="radio" name="align" value="stretch" />stretch</label>
+	</dl>
+
+	<div class="wrap">
+		<div class="test">
+			<div class="red"><p>1</p><p>10</p></div>
+			<div class="green"><p>2</p><p>20</p><p>200</p></div>
+			<div class="black"><p>3</p><p>30</p><p>300</p><p>30</p><p>300</p></div>
+			<div class="blue"><p>4</p><p>400</p></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var radio = document.querySelectorAll(".control_panel label input");
+		var test = document.querySelector(".test");
+		for(var i=0;i<radio.length;i++) {
+			radio[i].onclick = (function(index) {
+				return function(){
+					if(radio[index].checked){
+						test.style.cssText = "-webkit-align-items:"+radio[index].value+";";
+					}
+				}
+			})(i);
+		}
+	</script>
+</body>
+</html>

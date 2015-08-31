@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>-webkit-margin demo</title>
+<style type="text/css">
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, em, button { margin:0; padding:0; }
+body { font:normal 16px Calibri,Tahoma,"Microsoft Yahei",Simsun; }
+ul li, ol li { list-style:none; }
+#adjust_box, #display_box { float:left; }
+#adjust_box { width:380px; margin:10px; background-color:#FEE9CC; }
+#display_box { position:relative; width:600px; height:600px; margin-top:10px; border:10px dashed #CCC; }
+#display_box div { width:200px; height:200px; }
+dl { padding:0 10px; }
+dt { margin-bottom:10px; padding:5px 0; font-size:30px; text-align:center; border-bottom:1px solid #CCC; box-shadow:0 1px 1px #EFEFEF; }
+dd { margin-bottom:20px; }
+dd label { margin-right:10px; }
+dd span { display:block; font-size:20px; font-weight:bold; }
+dd b { margin-left:10px; vertical-align:middle; }
+dd i { font-size:24px; font-style:normal; color:#F00; }
+input { margin-right:3px; vertical-align:middle; }
+#display_box .pop { position:absolute; right:50px; width:180px; height:80px; margin-top:50px; padding:10px; background-color:#ECFBFF; border:5px solid #D7F1FF; border-radius:20px; }
+#display_box b { position:absolute; top:50%; left:-16px; width:20px; height:20px; margin-top:-16px; background-color:#ECFBFF; border:5px solid #D7F1FF; border-top:0 none; border-right:0 none; -webkit-transform:rotate(45deg); }
+</style>
+</head>
+<body>
+<dl id="adjust_box">
+	<dt>-webkit-margin</dt>
+	<dd><span>-webkit-margin-bottom-collapse</span>
+		<label><input type="radio" name="bottom" id="" />collapse</label>
+		<label><input type="radio" name="bottom" id="" />discard</label>
+		<label><input type="radio" name="bottom" id="" />separate</label>
+	</dd>
+	<dd><span>-webkit-margin-top-collapse</span>
+		<label><input type="radio" name="top" id="" />collapse</label>
+		<label><input type="radio" name="top" id="" />discard</label>
+		<label><input type="radio" name="top" id="" />separate</label>
+	</dd>
+	<dd><span>-webkit-margin-collapse</span>
+		<label><input type="radio" name="collapse" id="" />collapse</label>
+		<label><input type="radio" name="collapse" id="" />discard</label>
+		<label><input type="radio" name="collapse" id="" />separate</label>
+	</dd>
+	</dd>
+	<dd><span>-webkit-margin-start</span>
+		<input type="range" min="0" max="100" value="0" id="slideStart" /><b class="value" id="valueOfStart"><i>0</i>px</b>
+	</dd>
+</dl>
+<div id="display_box">
+	<div id="one_element" style="background:url(http://prototype.ui.sh.ctriptravel.com/code_beta/webkitlibrary/img/female.jpg) no-repeat;"><div class="pop" id="pop1"><b></b></div></div>
+	<div id="another_element" style="background:url(http://prototype.ui.sh.ctriptravel.com/code_beta/webkitlibrary/img/male.jpg) no-repeat;"><div class="pop" id="pop2"><b></b></div></div>
+</div>
+
+<script type="text/javascript">
+	var $ = function(a) {
+			return document.getElementById(a);
+		},
+		adjustBox = $('adjust_box'),
+		inputGroup = document.getElementsByTagName('input'),
+		pop1 = $('pop1'),
+		pop2 = $('pop2'),
+		oneElement = $('one_element'),
+		anotherElement = $('another_element'),
+		slideStart = $('slideStart'),
+		valueOfStart = $('valueOfStart'),
+		makeEffects = function(methodString,eff){
+			for(var i = 0; i <= inputGroup.length - 2; i++) {
+				inputGroup[i].checked = false;
+			}
+			pop1.innerHTML = '<b></b>margin-bottom:50px;';
+			pop2.innerHTML = '<b></b>margin-top:10px;';
+			oneElement.style.marginBottom = '50px';
+			anotherElement.style.marginTop = '10px';
+			anotherElement.style.webkitMarginTopCollapse = '';
+			oneElement.style.webkitMarginBottomCollapse = '';
+			oneElement.style.webkitMarginCollapse = '';
+			if(methodString == 'b') {
+				switch(eff) {
+					case 'collapse' : oneElement.style.webkitMarginBottomCollapse = 'collapse'; break;
+					case 'discard' : oneElement.style.webkitMarginBottomCollapse = 'discard'; break;
+					case 'separate' : oneElement.style.webkitMarginBottomCollapse = 'separate'; break;
+					default : break;
+				}
+			}
+			else if(methodString == 't') {
+				switch(eff) {
+					case 'collapse' : anotherElement.style.webkitMarginTopCollapse = 'collapse'; break;
+					case 'discard' : anotherElement.style.webkitMarginTopCollapse = 'discard'; break;
+					case 'separate' : anotherElement.style.webkitMarginTopCollapse = 'separate'; break;
+					default : break;
+				}
+			}
+			else if(methodString == 'c') {
+				switch(eff) {
+					case 'collapse' : oneElement.style.webkitMarginCollapse = 'collapse'; break;
+					case 'discard' : oneElement.style.webkitMarginCollapse = 'discard'; break;
+					case 'separate' : oneElement.style.webkitMarginCollapse = 'separate'; break;
+					default : break;
+				}
+			}
+		};
+	adjustBox.onmousedown = function(event) {
+		var e = event ? event : window.event,
+			target = e.target || e.srcElement,
+			effection = '',
+			method = '';
+		if(target.parentNode.nodeName.toLowerCase() == 'label') {
+			effection = target.parentNode.childNodes[1].nodeValue;
+			method = target.parentNode.parentNode.childNodes[0].innerHTML;
+		}
+		else if(target.nodeName.toLowerCase() == 'label') {
+			effection = target.childNodes[1].nodeValue;
+			method = target.parentNode.childNodes[0].innerHTML;
+		}
+		if(target.type != 'range') makeEffects(method.substr(15,1),effection);
+	}
+	adjustBox.onchange = function(event) {
+		var e = event ? event : window.event,
+			target = e.target || e.srcElement;
+		if(target.type == 'range' && target.id == 'slideStart') {
+			pop1.innerHTML = '<b></b>margin-left:20px;<br />And my left margin has been covered.';
+			oneElement.style.marginLeft = '20px';
+			target.nextSibling.getElementsByTagName('i')[0].innerHTML = target.value;
+			oneElement.style.webkitMarginStart = target.value + 'px';
+		}
+	}
+</script>
+</body>
+</html>

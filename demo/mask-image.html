@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>-webkit-mask-image demo</title>
+		<style type="text/css">
+			body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+			dl,dt,dd{margin: 0;padding: 0;}
+			select,option,input{margin:0;padding:0;font:14px/1.0 Tahoma, Arial, "Microsoft Yahei", serif;}
+			dt{font-size: 16px;}
+			dd{margin-bottom: 10px;}
+			h1{margin-bottom:30px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+			#control_panel{float: left;width: 500px;}
+			#show_panel{
+				float: left;
+				text-align: center;
+				color:#fff;
+				font-size: 20px;
+				font-weight: bold;
+			}
+			#demo{
+				width: 650px;
+				height:500px;
+				margin: 50px auto;
+				padding: 30px;
+				font-size: 20px;
+				font-weight: bold;
+				color:red;
+				background:url(../img/eric.jpg) no-repeat ; 
+				
+			}
+			input[type='button']{
+				display: inline-block;
+				width: 150px;
+				height: 36px;
+				line-height: 30px;
+				background-color: #ffbb01;
+				color: #fff;
+				border: 1px solid #ffbb01;
+				border-bottom: 5px solid #ff9c01;
+				text-align: center;
+				font-size: 16px;
+				font-family: "microsoft yahei", "Times New Roman", Simsun;
+				cursor: pointer;
+				outline: 0;
+				margin-bottom: 5px;
+
+			}
+			input[type='button']:hover{
+				border: 1px solid #ff9c01;
+				border-bottom: 5px solid #ec8211;
+				background-color: #ff9c01;
+				border-bottom-color: #ec8211;
+			}
+			span {color: red;font-weight: bold;}
+			.mask_img{
+				-webkit-mask-image:url(../img/ctrip5.png);
+				-webkit-mask-repeat:no-repeat;
+			}
+			.title{text-align: center;}
+		</style>
+	</head>
+	<body>
+		<h1>-webkit-mask-image</h1>
+		<dl id="control_panel">
+			<dt>
+			<input id="img"  type="button" value="添加mask-image"
+			onclick="demo.className='mask_img';text.innerHTML=this.value"/>
+			</dt>
+			<dt>
+			<input id="noimg" type="button" value="去掉mask-image" 
+			onclick="demo.className='';text.innerHTML=this.value"/>
+			</dt>
+
+			<dt>-webkit-mask-repeat:<span>no-repeat</span></dt>
+		</dl>
+		<div id="show_panel">
+			<div id="demo">
+			</div>
+			
+		</div>
+		<script type="text/javascript">
+			var demo = document.getElementById('demo');
+		</script>
+	</body>
+</html>

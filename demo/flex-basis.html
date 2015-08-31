@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>-webkit-flex-basis demo</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" href="../css/demo.css" />
+<style>
+  header{background:#F1F1F1;padding:20px;color:#333333;border-bottom:1px solid #DDDDDD;font:18px "Microsoft Yahei";}
+  section .intro{padding:10px;margin:10px 0;border:1px solid #DDDDDD;background:#F2F2F2;}
+  .flexbox {
+      display: -webkit-flex;  // 目前需要浏览器引擎前缀支持
+      -webkit-flex-flow: row; // 子元素以行排列
+      -webkit-flex-wrap: nowrap;
+      width: 100%;
+  }
+  .flexbox div{color:#ffffff;font-size:14px;text-align:center;height:100px;}
+  .flexbox .item1{-webkit-flex:1 1 auto;background:#ff6600;}
+  .flexbox .item2{-webkit-flex:1 1 auto;background:#0099ff;}
+  .flexbox .item3{-webkit-flex:2 1 auto;background:#ff9900;}
+  .flexbox .item4{-webkit-flex:4 1 auto;background:#ff0000;}
+  .flexbox .item5{-webkit-flex:5 1 auto;background:#339966;}
+  .flexbox .item7{width:50%;background:#ff9900;}
+</style>
+
+</head>
+<body>
+
+  <h1>-webkit-flex-basis</h1>
+  <dl id="control_panel" class="control_panel">
+    
+  </dl>
+  
+  <div class="wrapper">
+  	<header>
+      属性名称：-webkit-flex-basis
+    </header>
+    <section>
+
+      <div class="flexbox">
+        <div class="item1">DIV 1 <br/>-webkit-flex:1;</div>
+        <div class="item2">DIV 2 <br/><br/>-webkit-flex:1;</div>
+        <div class="item3">DIV 3 <br/>-webkit-flex:2;</div>
+      </div>
+      <div class="intro">
+          <p>flex-basis初始值auto,「相对」伸缩（以项目的内容大小为基准值开始），分配除内容外的留白空间</p>
+      </div>
+      <div class="flexbox">
+        <div class="item1" style="-webkit-flex-basis:0;">DIV 1 <br/>-webkit-flex:1;</div>
+        <div class="item2" style="-webkit-flex-basis:0;">DIV 2 <br/><br/>-webkit-flex:1;</div>
+        <div class="item3" style="-webkit-flex-basis:0;">DIV 3 <br/>-webkit-flex:2;</div>
+      </div>
+      <div class="intro">
+          <p>flex-basis为0，显示「绝对」伸缩（以零为基准值开始）,分配所有空间</p>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

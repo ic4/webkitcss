@@ -1,0 +1,44 @@
+{
+  "name" : "-webkit-align-self",
+  "discribe" : "基于Flex布局，用来指定<span class="ex">多行伸缩容器的对齐</span>。align-self 可以让你为单独的伸缩子元素设置 align-items 的行为，会覆盖 align-items。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "21+",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-align-self ",
+      "gram_detail" : " flex-start | flex-end | center | stretch | baseline"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "flex-start",
+      "prop_content" : "将所有项目对着侧轴的起始方向对齐"
+    },
+    {
+      "prop_title" : "flex-end",
+      "prop_content" : "将所有项目对着侧轴的结尾方向对齐"
+    },
+    {
+      "prop_title" : "center",
+      "prop_content" : "将所有项目对着侧轴的中心对齐"
+    },
+    {
+      "prop_title" : "stretch",
+      "prop_content" : "将所有项目伸长，让项目占据了整个侧轴的长度。如果侧轴长度属性的值为「auto」，则此值会使项目的外边距盒的尺寸在遵照「min/max-width/height」属性的限制下尽可能接近所在行的尺寸。注：注意：如果伸缩伸缩的高度有限制，此可能导致伸缩项目的内容溢出该项目。伸缩项目在侧轴起点边的外边距会紧靠住该行在侧轴起点的边。"
+    },
+    {
+      "prop_title" : "baseline",
+      "prop_content" : "如果伸缩项目的行内轴与侧轴为同一条，则该值与「flex-start」等效。 其它情况下，该值将参与基线对齐。所有参与该对齐方式的伸缩项目将按下列方式排列：首先将这些伸缩项目的基线进行对齐，随后其中基线至侧轴起点边的外边距距离最长的那个项目将紧靠住该行在侧轴起点的边"
+    }
+  ],
+  "iframeUrl" : "../demo/align-self.html"
+}

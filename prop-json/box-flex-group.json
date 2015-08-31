@@ -1,0 +1,29 @@
+{
+  "name" : "-webkit-box-flex-group",
+  "discribe" : "设置或检索弹性盒模型对象的子元素的所属组。动态给<span class=\"ex\">数值较大的组</span>分配其内容所需的实际空间（如无内容、padding、border则不占空间），剩余空间则均分给数值最小的那个组（可能有1个或多个元素）<br />
+        对应的脚本特性为boxFlexGroup。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-box-flex-group: ",
+      "gram_detail" : " &lt;interger&gt;"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "&lt;interger&gt;",
+      "prop_content" : "用整数值来定义弹性盒模型对象的子元素所在的组"
+    }
+  ],
+  "iframeUrl" : "../demo/box-flex-group.html"
+}

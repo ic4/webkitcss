@@ -1,0 +1,31 @@
+{
+  "name" : "-webkit-wrap-margin",
+  "discribe" : "由此属性所创建的偏移从排除项的外面进行抵销。抵销排除项外面所环绕的内联流内容。可将此属性设置为任何受支持的长度值。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "&times;",
+        "safari" : "&times;",
+        "android" : "&times;",
+        "ios" : "&times;"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-wrap-margin ",
+      "gram_detail" : "length | percentage"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "length",
+      "prop_content" : "浮点数，后跟绝对单位符(cm, mm, in, pt, pc)或者相对单位符 (em, ex, or px)"
+    },
+    {
+      "prop_title" : "percentage",
+      "prop_content" : "整数，后跟百分号，百分比的值和背景位置区域有关系。"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>-webkit-mask-clip demo</title>
+		<style type="text/css">
+			body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+			dl,dt,dd{margin: 0;padding: 0;}
+			select,option,input{margin:0;padding:0;font:14px/1.0 Tahoma, Arial, "Microsoft Yahei", serif;}
+			dt{font-size: 16px;}
+			dd{margin-bottom: 10px;}
+			h1{margin-bottom:30px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+			.control_panel{float: left;}
+			.show_panel{
+				margin-left: 240px;
+				margin-top: 200px;
+				padding:10px 20px;
+				width:160px;
+				text-align: center;
+				color:#fff;
+				font-size: 20px;
+				font-weight: bold;
+				background-color: #3983E4;
+			}
+			#demo{
+				width: 300px;
+				height:300px;
+				margin: 50px auto;
+				padding: 30px;
+				font-size: 20px;
+				font-weight: bold;
+				color:red;
+				border: 20px dashed #CCC;
+				background-color:#006cb8;
+				-webkit-mask-image: url('../img/apple.png');
+				-webkit-mask-repeat: no-repeat;
+			}
+			input[type='button']{
+				display: inline-block;
+				width: 120px;
+				height: 36px;
+				line-height: 30px;
+				background-color: #ffbb01;
+				color: #fff;
+				border: 1px solid #ffbb01;
+				border-bottom: 5px solid #ff9c01;
+				text-align: center;
+				font-size: 16px;
+				font-family: "microsoft yahei", "Times New Roman", Simsun;
+				cursor: pointer;
+				outline: 0;
+				margin-bottom: 5px;
+
+			}
+			input[type='button']:hover{
+				border: 1px solid #ff9c01;
+				border-bottom: 5px solid #ec8211;
+				background-color: #ff9c01;
+				border-bottom-color: #ec8211;
+			}
+			span {color: red;font-weight: bold;}
+			.bb{-webkit-mask-clip:border;}
+			.pb{-webkit-mask-clip:padding;}
+			.cb{-webkit-mask-clip:content;}
+			.tt{-webkit-mask-clip:text;}
+		</style>
+	</head>
+	<body>
+		<h1>-webkit-mask-clip</h1>
+		<dl class="control_panel">
+			<dt>
+			<input id="border" name="-webkit-mask-clip" type="button" value="border" checked
+			onclick="demo.className='bb';text.innerHTML=this.value"/>&nbsp;默认，图片遮罩延伸到元素border
+			</dt>
+			<dt>
+			<input id="padding" name="-webkit-mask-clip" type="button" value="padding" 
+			onclick="demo.className='pb';text.innerHTML=this.value"/>&nbsp;图片遮罩延伸到元素padding
+			</dt>
+			<dt>
+			<input id="content" name="-webkit-mask-clip" type="button" value="content"
+			onclick="demo.className='cb';text.innerHTML=this.value"/>&nbsp;图片遮罩延伸到元素内容部分
+			</dt>
+			<dt>
+			<input id="text" name="-webkit-mask-clip" type="button" value="text"
+			onclick="demo.className='tt';text.innerHTML=this.value"/>&nbsp;图片遮罩延伸到元素内容部分
+			</dt>
+			<dt>background-origin: <span>border</span></dt>
+		</dl>
+		<div id="show_wrap">
+			<div id="demo">
+				Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED
+			</div>
+			
+		</div>
+		<script type="text/javascript">
+			var demo = document.getElementById('demo');
+			var text = document.getElementsByTagName('span')[0];
+		</script>
+	</body>
+</html>

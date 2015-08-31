@@ -1,0 +1,65 @@
+{
+  "name" : "-webkit-animation",
+  "discribe" : "
+      设置动画效果。接受多组值，用,隔开。<span class="ex">设置动画效果。接受多组值，用,隔开。</span>。<br>
+      该属性是 <a target="_blank" href="animation-name.html">-webkit-animation-name</a>、
+      <a target="_blank" href="animation-duration.html">-webkit-animation-duration</a>、
+      <a target="_blank" href="animation-timing-function.html">-webkit-animation-timing-function</a>、
+      <a target="_blank" href="animation-delay.html">-webkit-animation-delay</a>、
+      <a target="_blank" href="animation-iteration-count.html">-webkit-animation-iteration-count</a>、
+      <a target="_blank" href="animation-direction.html">-webkit-animation-direction</a>、
+      <a target="_blank" href="animation-fill-mode.html">-webkit-animation-fill-mode</a>、
+      <a target="_blank" href="animation-play-state.html">-webkit-animation-play-state</a>的简写形式。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "？",
+        "safari" : "4.0+",
+        "android" : "?",
+        "ios" : "2.0+"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-animation ",
+      "gram_detail" : " <single-animation-name> || <single-animation-duration> || <single-animation-timing-function> || <single-animation-delay> || <single-animation-iteration-count> || <single-animation-direction> || <single-animation-fill-mode> || <single-animation-play-state>"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "single-animation-name",
+      "prop_content" : "指定对象引用的动画名称。"
+    },
+    {
+      "prop_title" : "single-animation-duration",
+      "prop_content" : "指定对象动画的持续时间。"
+    },
+    {
+      "prop_title" : "single-animation-timing-function",
+      "prop_content" : "检索或设置对象动画的时间函数。"
+    },
+    {
+      "prop_title" : "single-animation-delay",
+      "prop_content" : "指定对象动画延迟的时间。"
+    },
+    {
+      "prop_title" : "single-animation-iteration-count",
+      "prop_content" : "指定对象动画的循环次数。"
+    },
+    {
+      "prop_title" : "single-animation-direction",
+      "prop_content" : "检索或设置对象动画在循环中是否反向运动。"
+    },
+    {
+      "prop_title" : "single-animation-fill-mode",
+      "prop_content" : "检索或设置对象动画时间之外的状态。"
+    },
+    {
+      "prop_title" : "single-animation-play-state",
+      "prop_content" : "检索或设置对象动画的状态。"
+    }
+  ],
+  "iframeUrl" : "../demo/animation.html"
+}

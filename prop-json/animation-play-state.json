@@ -1,0 +1,32 @@
+{
+  "name" : "-webkit-animation-play-state",
+  "discribe" : " 检索或设置对象动画的状态。<span class="ex">默认值为running</span>。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "4.0+",
+        "android" : "?",
+        "ios" : "2.0+"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-animation-play-state ",
+      "gram_detail" : " running | paused"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "running",
+      "prop_content" : "动画运动中。"
+    },
+    {
+      "prop_title" : "paused",
+      "prop_content" : "动画暂停。"
+    }
+  ],
+  "iframeUrl" : "../demo/animation-play-state.html"
+}

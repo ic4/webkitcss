@@ -1,0 +1,31 @@
+{
+  "name" : "-webkit-wrap-through",
+  "discribe" : "使元素成为<span class="ex">排除项元素</span>",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "&times;",
+        "safari" : "&times;",
+        "android" : "&times;",
+        "ios" : "&times;"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-wrap-through ",
+      "gram_detail" : "wrap | none "
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "wrap",
+      "prop_content" : "<span class="ex">默认值</span>。该元素继承其父节点的环绕上下文。其后代内联内容环绕指定在元素外面的排除项。"
+    },
+    {
+      "prop_title" : "none",
+      "prop_content" : "该元素不继承其父节点的环绕上下文。其后代仅从属于该元素内部指定的排除项形状。"
+    }
+  ]
+}

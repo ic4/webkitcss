@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>-webkit-animation-play-state demo</title>
+<style>
+@-webkit-keyframes ani-trans{
+	0%{-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+	100%{-webkit-transform: translate3d(400px,0,0);transform: translate3d(400px,0,0);}
+}
+@keyframes ani-trans{
+	0%{-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+	100%{-webkit-transform: translate3d(400px,0,0);transform: translate3d(400px,0,0);}
+}
+body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+h1{margin-bottom:30px;font-size: 28px;width: 420px;border-bottom: 1px solid #ccc;}
+select,option{margin:0;padding:0;font:14px/1.0 Tahoma, Arial, "Microsoft Yahei", serif;}
+.info_panel{float: left;}
+.show_panel{margin-left: 240px;margin-top: 20px;padding:10px 20px;width:160px;text-align: center;color:#fff;font-size: 20px;font-weight: bold;background-color: #3983E4;-webkit-animation: ani-trans 2s linear 0s infinite alternate forwards;animation: ani-trans 2s linear 0s infinite alternate forwards;}
+</style>
+</head>
+<body>
+<h1>-webkit-animation-play-state</h1>
+<select id="playState" class="info_panel">
+	<option value="running">running</option>
+	<option value="paused">paused</option>
+</select>
+<div id="show_wrap">
+	<div id="show_panel" class="show_panel">Ctrip携程2014 - Ctrip UED</div>
+</div>
+<script type="text/javascript">
+	window.onload=function(){
+		var showWrap=document.getElementById("show_wrap"),
+			delay=document.getElementById("playState");
+
+		delay.onchange=function(){
+			var delayValue=this.value;
+
+			showPanel=Array.prototype.slice.call(showWrap.querySelectorAll('#show_panel'))[0];
+			showPanel.style.webkitAnimationPlayState=delayValue;
+			showPanel.style.animationPlayState=delayValue;
+		}
+	}
+</script>
+</body>
+</html>
+			

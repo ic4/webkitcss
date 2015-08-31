@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>-webkit-justify-content demo</title>
+	<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+	<style>
+		h1 {font-size:24px;}
+		h1 span {font-size:18px;font-weight:normal;}
+		dt {font-size:20px;margin-bottom:5px;}
+		.test {display:-webkit-flex;width:500px;height:80px;margin-bottom:40px;background-color:#ccc;}
+		.item1 {width:10%;background-color:#ff0;}
+		.item2 {width:25%;background-color:#0ff;}
+		.item3 {width:40%;background-color:#f00;}
+		.eg_flex-start {-webkit-justify-content: flex-start;}
+		.eg_flex-end {-webkit-justify-content: flex-end;}
+		.eg_center {-webkit-justify-content: center;}
+		.eg_space-between {-webkit-justify-content: space-between;}
+		.eg_space-around {-webkit-justify-content: space-around;}
+
+	</style>
+</head>
+<body>
+
+	<h1>-webkit-justify-content</h1>
+	<dl id="control_panel" class="control_panel">
+		<label><input type="radio" name="justify_content" value="flex-start" />flex-start</label>
+		<label><input type="radio" name="justify_content" value="flex-end" />flex-end</label>
+		<label><input type="radio" name="justify_content" value="center" />center</label>
+		<label><input type="radio" name="justify_content" value="space-between" />space-between</label>
+		<label><input type="radio" name="justify_content" value="space-around" />space-around</label>
+	</dl>
+
+	<div class="demo">
+		<!-- test start -->
+		<div class="test">
+			<div class="item1">A</div>
+			<div class="item2">B</div>
+			<div class="item3">C</div>
+		</div>
+		<!-- test end -->
+	</div>
+	
+	<script type="text/javascript">
+		var radio = document.querySelectorAll(".control_panel label input");
+		var test = document.querySelector(".test");
+		for(var i=0;i<radio.length;i++) {
+			radio[i].onclick = (function(index) {
+				return function(){
+					if(radio[index].checked){
+						test.style.cssText = "-webkit-justify-content:"+radio[index].value+";";
+					}
+				}
+			})(i);
+		}
+	</script>
+</body>
+</html>

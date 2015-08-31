@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>-webkit-transform demo</title>
+	<style type="text/css">
+	body, h1, dl, dt, input{margin: 0;padding:0;}
+	h1{margin-bottom:30px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+	body{color: #333;font: 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+	input[type="number"]{width: 30px; margin: 0 2px;padding: 0px;text-align: center;border-width:0;border-bottom: 1px solid #3983E4;outline:none;}
+	input[type=number]::-webkit-inner-spin-button, 
+	input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none; margin:0;}
+
+	.control{float: left;width: 460px;padding:10px;}
+	.trans_css_line, #trans_css{font-size:16px;margin-bottom: 10px;}
+	#trans_css{border-bottom: 1px solid #3983E4;}
+	#show_area{float: left;margin-left:20px;padding: 40px 10px;color:#fff;background: #3983E4;}
+	</style>
+</head>
+<body>
+<h1>-webkit-transform</h1>
+<dl id="control" class="control">
+	<dt class="trans_css_line">transform: <span id="trans_css"></span>;</dt>
+	<dt>transform 2D:</dt>
+	<dd>translate(<input type="number" id="translate_x" min="-100" max="100" step="10" value="0" />px, <input type="number" id="translate_y" min="-100" max="100" step="10" value="0" />px)</dd>
+	<dd>rotate(<input type="number" id="rotate" min="0" max="360" step="10" value="0" />deg)</dd>
+	<dd>scale(<input type="number" id="scale_x" min="0" max="2" step="0.2" value="1" />, <input type="number" id="scale_y" min="0" max="2" step="0.2" value="1" />)</dd>
+	<dd>skew(<input type="number" id="skew_x" min="0" max="90" step="5" value="0" />, <input type="number" id="skew_y" min="0" max="90" step="5" value="0" />)</dd>
+	<dd>matrix(<input type="number" id="matrix_a" min="-5" max="5" step="1" value="1" />, <input type="number" id="matrix_b" min="-5" max="5" step="1" value="0" />, <input type="number" id="matrix_c" min="-5" max="5" step="1" value="0" />, <input type="number" id="matrix_d" min="-5" max="5" step="1" value="1" />, <input type="number" id="matrix_e" min="-100" max="100" step="10" value="0" />, <input type="number" id="matrix_f" min="-100" max="100" step="10" value="0" />)</dd>
+	<dt>transform 3D:</dt>
+	<dd>translateZ(<input type="number" id="3d_translateZ" min="-100" max="100" step="10" value="0" />px)</dd>
+	<dd>rotate3d(<input type="number" id="3d_rotateX" min="-200" max="200" step="10" value="0" />, <input type="number" id="3d_rotateY" min="-200" max="200" step="10" value="0" />, <input type="number" id="3d_rotateZ" min="-200" max="200" step="10" value="0" />, <input type="number" id="3d_rotateR" min="0" max="360" step="10" value="0" />deg)</dd>
+	<dd>scaleZ(<input type="number" id="3d_scaleZ" min="0" max="2" step="0.2" value="1" />)</dd>
+	<dd>perspective(<input type="number" id="3d_perspective" min="0" max="1200" step="50" value="0" />px)</dd>
+</dl>
+<div id="show_area">Ctrip携程2014</div>
+<script type="text/javascript">
+	window.onload=function(){
+		var control=document.getElementById('control'),
+			transCSS=document.getElementById('trans_css'),
+			showArea=document.getElementById('show_area'),
+			inputList=document.getElementsByTagName('input');
+
+		var len=inputList.length, i=0, transStyle="", trans3DStyle="", totalTransStyle="",
+			transList={
+				"translate_x":0,
+				"translate_y":0,
+				"rotate":0,
+				"scale_x":1,
+				"scale_y":1,
+				"skew_x":0,
+				"skew_y":0
+			},
+			transMatrix={
+				"matrix_a":1,
+				"matrix_b":0,
+				"matrix_c":0,
+				"matrix_d":1,
+				"matrix_e":0,
+				"matrix_f":0
+			},
+			trans3DList={
+				"3d_translateZ":0,
+				"3d_rotateX":0,
+				"3d_rotateY":0,
+				"3d_rotateZ":0,
+				"3d_rotateR":0,
+				"3d_scaleZ":1,
+				"3d_perspective":0
+			};
+
+		for(i; i<len; i++){
+			inputList[i].onchange=function(){
+				var idName=this.id, filterStr=idName.substring(0, idName.indexOf('_')), inputVal=parseFloat(this.value);
+
+				switch(filterStr){
+					case "matrix":
+						transStyle="";
+						transMatrix[idName]=inputVal?inputVal:0;
+						transStyle="matrix("+
+									transMatrix['matrix_a']+","+
+									transMatrix['matrix_b']+","+
+									transMatrix['matrix_c']+","+
+									transMatrix['matrix_d']+","+
+									transMatrix['matrix_e']+","+
+									transMatrix['matrix_f']+
+									")";
+						break;
+					case "3d":
+						trans3DStyle="";
+						trans3DList[idName]=inputVal?inputVal:0;
+						if(trans3DList["3d_translateZ"]){
+							trans3DStyle+=" translateZ("+trans3DList['3d_translateZ']+"px)";
+						}
+						if(trans3DList["3d_rotateR"]){
+							trans3DStyle+=" rotate3d("+trans3DList['3d_rotateX']+","+trans3DList['3d_rotateY']+","+trans3DList['3d_rotateZ']+","+trans3DList['3d_rotateR']+"deg)";
+						}
+						if(!(trans3DList["3d_scaleZ"]===1)){
+							trans3DStyle+=" scaleZ("+trans3DList['3d_scaleZ']+")";
+						}
+						if(trans3DList["3d_perspective"]){
+							trans3DStyle+=" perspective("+trans3DList['3d_perspective']+"px)";
+						}
+						break;
+					default:
+						transStyle="";
+						transList[idName]=inputVal?inputVal:0;
+						if(transList["translate_x"]||transList["translate_y"]){
+							transStyle+=" translate("+transList['translate_x']+"px, "+transList['translate_y']+"px)";
+						}
+						if(transList["rotate"]){
+							transStyle+=" rotate("+transList['rotate']+"deg)";
+						}
+						if((transList["scale_x"]!==1)||(transList["scale_y"]!==1)){
+							transStyle+=transList["scale_x"]===transList["scale_y"]?" scale("+transList['scale_x']+")":" scale("+transList['scale_x']+", "+transList['scale_y']+")";
+						}
+						if(transList["skew_x"]||transList["skew_y"]){
+							transStyle+=" skew("+transList['skew_x']+"deg, "+transList['skew_y']+"deg)";
+						}
+				}
+
+				totalTransStyle=transStyle+trans3DStyle;
+				showArea.style.webkitTransform=totalTransStyle;
+				showArea.style.transform=totalTransStyle;
+				transCSS.innerHTML=totalTransStyle;
+			}
+		}
+	}
+</script>
+</body>
+</html>

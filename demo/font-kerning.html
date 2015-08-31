@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>-webkit-font-kerning demo</title>
+<style type="text/css">
+@font-face{
+    font-family: 'ambleregular';
+    src: url('FiraSans-Regular.otf');
+}
+
+body{font: normal 14px/1.5 "ambleregular", Tahoma, Arial, "Microsoft Yahei", serif;}
+ul, li{list-style: none;margin:0;padding: 0;}
+h1{margin-bottom:30px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+.show_panel{margin-left: 240px;padding:10px 20px;width:497px;border:1px solid #3983E4;}
+.control_panel{float: left;}
+.control_panel li, .show_panel li{height: 160px;line-height: 160px;}
+</style>
+</head>
+<body>
+<h1>-webkit-font-kerning</h1>
+<ul class="control_panel">
+    <li>-webkit-font-kerning: 
+        <select id="control_panel">
+            <option value="auto">auto</option>
+            <option value="normal">normal</option>
+            <option value="none">none</option>
+        </select>;
+    </li>
+    <li>-webkit-font-kerning: auto;</li>
+</ul>
+<div id="show_panel" class="show_panel" style="-webkit-font-kerning: auto;font-kerning: auto;">In 'auto' setting, user agents can determine whether to apply kerning or not based on a number of factors like text size, script, or other factors that influence text processing speed. Authors who what proper kerning should use 'normal' to explicitly enable kerning. Likewise, use none to explicitly disable kerning. There is a performance tradeoff when enabling kerning which might not have a large impact on text rendering speed for modern implementations.</div>
+<div class="show_panel" style="-webkit-font-kerning: auto;font-kerning: auto;">In 'auto' setting, user agents can determine whether to apply kerning or not based on a number of factors like text size, script, or other factors that influence text processing speed. Authors who what proper kerning should use 'normal' to explicitly enable kerning. Likewise, use 'none' to explicitly disable kerning. There is a performance tradeoff when enabling kerning which might not have a large impact on text rendering speed for modern implementations.</div>
+<script type="text/javascript">
+    window.onload=function(){
+        var ctrlPanel=document.getElementById("control_panel"),
+            showPanel=document.getElementById("show_panel");
+
+        ctrlPanel.onchange=function(){
+            var propVal=this.value;
+
+            showPanel.style.webkitFontKerning=propVal;
+            showPanel.style.fontKerning=propVal;
+        }
+    }
+</script>
+</body>
+</html>

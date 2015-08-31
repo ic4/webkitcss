@@ -1,0 +1,30 @@
+{
+  "name" : "-webkit-box-ordinal-group",
+  "discribe" : "设置或检索弹性盒模型对象的子元素的<span class=\"ex\">显示顺序</span>。<br />
+        数值较低的元素显示在数值较高的元素前面；相同数值的元素，它们的显示顺序取决于它们的代码顺序<br />
+        对应的脚本特性为boxOrdinalGroup。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-box-ordinal-group: ",
+      "gram_detail" : " &lt;interger&gt;"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "&lt;interger&gt;",
+      "prop_content" : "用整数值来定义弹性盒模型对象的子元素显示顺序。"
+    }
+  ],
+  "iframeUrl" : "../demo/box-ordinal-group.html"
+}

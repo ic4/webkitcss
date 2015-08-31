@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>-webkit-flex-direction demo</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+<style>
+  header{background:#F1F1F1;padding:20px;color:#333333;border-bottom:1px solid #DDDDDD;font:18px "Microsoft Yahei";}
+  section .intro{padding:10px;margin:10px 0;border:1px solid #DDDDDD;background:#F2F2F2;}
+  .flexbox {
+      display: -webkit-flex;  // 目前需要浏览器引擎前缀支持
+      -webkit-flex-direction: row; // 子元素以行排列
+      -webkit-flex-wrap: nowrap;
+      width: 100%;
+      height: 200px;
+  }
+  .flexbox div{color:#ffffff;font-size:14px;text-align:center;}
+  .flexbox .item1{-webkit-flex:1 1 auto;background:#ff6600;}
+  .flexbox .item2{-webkit-flex:1 1 auto;background:#0099ff;}
+  .flexbox .item3{-webkit-flex:2 1 auto;background:#ff9900;}
+</style>
+
+</head>
+<body>
+
+  <h1>-webkit-flex-direction</h1>
+  <dl id="control_panel" class="control_panel">
+    <label><input type="radio" name="direction" value="row" />row</label>
+    <label><input type="radio" name="direction" value="row-reverse" />row-reverse</label>
+    <label><input type="radio" name="direction" value="column" />column</label>
+    <label><input type="radio" name="direction" value="column-reverse" />column-reverse</label>
+  </dl>
+
+  <div class="demo">
+    <div class="flexbox test">
+      <div class="item1">DIV 1 <br/>-webkit-flex:1;</div>
+      <div class="item2">DIV 2 <br/><br/>-webkit-flex:1;</div>
+      <div class="item3">DIV 3 <br/>-webkit-flex:2;</div>
+    </div>
+  </div>
+      
+
+  <script type="text/javascript">
+    var radio = document.querySelectorAll(".control_panel label input");
+    var test = document.querySelector(".test");
+    for(var i=0;i<radio.length;i++) {
+      radio[i].onclick = (function(index) {
+        return function(){
+          if(radio[index].checked){
+            test.style.cssText = "-webkit-flex-direction:"+radio[index].value+";";
+          }
+        }
+      })(i);
+    }
+  </script>
+</body>
+</html>

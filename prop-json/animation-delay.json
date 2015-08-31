@@ -1,0 +1,28 @@
+{
+  "name" : "-webkit-animation-delay",
+  "discribe" : " 设置动画延迟时间。<span class="ex">默认值为0s</span>。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "4.0+",
+        "android" : "?",
+        "ios" : "2.0+"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-animation-delay ",
+      "gram_detail" : " <single-animation-delay>, [<single-animation-delay>]*"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "single-animation-delay",
+      "prop_content" : "指定对象动画的持续时间。若为负值，动画将立即执行，但动画将从动画周期某处开始。"
+    }
+  ],
+  "iframeUrl" : "../demo/animation-delay.html"
+}

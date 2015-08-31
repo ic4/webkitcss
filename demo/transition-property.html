@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>-webkit-transition-property demo</title>
+	<style type="text/css">
+	body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+	h1{margin-bottom:30px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+	ul,li{margin:5px 0;padding: 0;list-style: none;font-size: 16px;}
+	.control_panel{float: left;}
+	.runner_list{position: relative;margin-left: 200px;}
+	.runner_list li{position: absolute;background-color: #3983E4;color:#fff;font-size: 12px;}
+	.runner_list .runner{z-index: 2;padding:4px 10px;}
+	#runner1{top: 0; left: 0;-webkit-transition: -webkit-transform 2s linear 0s;transition: transform 2s linear 0s;}
+	#runner2{top: 30px; left: 0;-webkit-transition: background-color 2s linear 0s;transition: background-color 2s linear 0s;}
+	#runner3{top: 60px; left: 0;-webkit-transition: padding 2s linear 0s;transition: padding 2s linear 0s;}
+	#runner1.go{-webkit-transform: translate3d(200px,0,0);transform: translate3d(200px,0,0);}
+	#runner2.go{background-color: #f91;}
+	#runner3.go{padding: 4px 40px;}
+	</style>
+</head>
+<body>
+<h1>-webkit-transition-property</h1>
+<div class="control_panel">
+	<ul>
+		<li>1：transform过渡。</li>
+		<li>2：background-color过渡。</li>
+		<li>3：padding过渡。</li>
+	</ul>
+	<p class="btn_panel">
+		<button id="go">GO</button>
+		<button id="ready">RESET</button>
+	</p>
+</div>
+<ul id="runner_list" class="runner_list">
+	<li id="runner1" class="runner">1</li>
+	<li id="runner2" class="runner">2</li>
+	<li id="runner3" class="runner">3</li>
+</ul>
+<script type="text/javascript">
+	window.onload=function(){
+		var runnerList=document.getElementById("runner_list"),
+			btnGo=document.getElementById("go"),
+			btnReady=document.getElementById("ready"),
+			runnerArr=Array.prototype.slice.call(runnerList.querySelectorAll("li"));
+
+		btnGo.onclick=function(){
+			runnerArr.forEach(function(i){
+				i.classList.add('go');
+			});
+		};
+		btnReady.onclick=function(){
+			runnerArr.forEach(function(i){
+				i.classList.remove('go');
+			});
+		}
+	}
+</script>
+</body>
+</html>

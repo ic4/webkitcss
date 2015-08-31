@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title>-webkit-border-radius demo</title>
+    <style>
+		#div1 {
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+			-webkit-border-radius: 30px;
+		}
+		#div2 {
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+			-webkit-border-radius: 10%;			
+		}
+		#div3 {
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+			-webkit-border-radius: 60px/30px;			
+		}
+		#div4 {
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+			-webkit-border-radius: 20%/10%;			
+		}
+		p {
+			font-size: 18px;
+			color: #999;
+			text-align: center;
+		}
+    </style> 
+</head>
+<body>
+    <h1>-webkit-border-radius</h1>
+    <div id="div1">
+    	<p>水平半径：30px</p>
+    </div>
+    <div id="div2">
+    	<p>水平半径：10%</p>
+    </div>
+    <div id="div3">
+    	<p>水平半径：60;垂直半径：30px</p>
+    </div>
+    <div id="div4">
+    	<p>水平半径：20%;垂直半径：10%</p>
+    </div>
+</body>
+</html>

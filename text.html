@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>webkit property test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<style>
+	body{color:#333;font:14px/1.5 Tahoma, Arial, "Microsoft Yahei";}
+	ul, li{margin:0;padding:0;list-style:none;}
+	#ua{position: fixed;top:0;left:0; right:0;margin:0;padding:10px;color:#fff;background-color:rgba(0,0,0,0.6)}
+	.webkit_property{max-width:1280px;margin:20px auto;}
+	.prop{float:left;width:100%;margin:10px 0 0;padding:10px 0 4px;font-size:18px;color:#333;}
+	.prop_value-no{color:#f00;font-weight:bold;}
+	.prop_value-yes{color:#2577E3;}
+	</style>
+</head>
+<body>
+<p id="ua"></p>
+<ul id="webkit-property" class="webkit_property"></ul>
+<p id="test"></p>
+<script type="text/javascript" src="js/propertyList.js"></script>
+<script>
+	window.onload=function(){
+		var webkitProperty=document.getElementById("webkit-property"),
+			ua=document.getElementById("ua"),
+			testEle=document.getElementById("test"),
+			styleObj=document.body.style,
+			webkitArr=[], prop="", unprefixProp="",
+			webkitPropStr="", propLen=0, i=0;
+
+		ua.textContent=navigator.userAgent;
+		for(prop in styleObj){
+			if(prop.indexOf("webkit")===0){
+				prop="-"+prop;
+				prop=prop.replace(/([A-Z])/g, function(l){return "-"+l.toLowerCase();});
+				webkitArr.push(prop);
+				
+				unprefixProp=prop.slice(8)
+				if(styleObj.hasOwnProperty(unprefixProp)){
+					webkitArr.push(unprefixProp);
+				}
+			}
+		}
+
+		propLen=webkitArr.length;
+		for(i; i<propLen; i++){
+			webkitPropStr+="<li class=\"prop\">"+webkitArr[i]+"</li>";
+			if(window.propertyList.hasOwnProperty(webkitArr[i])||window.propertyList.hasOwnProperty("-webkit-"+webkitArr[i])){
+				var propSpecArr=(webkitArr[i].indexOf("webkit")<0)?window.propertyList["-webkit-"+webkitArr[i]]:window.propertyList[webkitArr[i]],
+					propSpecLen=propSpecArr.length,
+					p=0, matchLen=0,
+					jsWebkitStr="", jsWebkitStrNoPrefix="",
+					propRes="",
+					supportRes=false;
+
+				if(webkitArr[i].indexOf("webkit")>=0){
+					jsWebkitStr=webkitArr[i].slice(1).replace(/(\-[a-z]{1})/g, function(l){return l.slice(1).toUpperCase();});
+
+					jsWebkitStrNoPrefix=webkitArr[i].slice(8).replace(/(\-[a-z]{1})/g, function(l){return l.slice(1).toUpperCase();});
+					testEle.style[jsWebkitStrNoPrefix]="";
+				}else{
+					jsWebkitStr=webkitArr[i].replace(/(\-[a-z]{1})/g, function(l){return l.slice(1).toUpperCase();});					
+				}
+
+				console.log("++++++++++++++++++++++++"+jsWebkitStr+"++++++++++++++++++++++++");
+				testEle.style[jsWebkitStr]="";
+
+				for(p; p<propSpecLen; p++){
+					try{
+						testEle.style[jsWebkitStr]=propSpecArr[p];
+					}catch(e){}
+
+					if(!testEle.style[jsWebkitStr]){
+						console.log("1:"+testEle.style[jsWebkitStr]+"  2:"+propSpecArr[p]+"  "+(!!testEle.style[jsWebkitStr]));
+						webkitPropStr+="<li class=\"prop_value-no\">不支持: "+propSpecArr[p]+"</li>";
+					}else{
+						webkitPropStr+="<li class=\"prop_value-yes\">支持: "+propSpecArr[p]+"</li>";
+					}
+					testEle.style[jsWebkitStr]="";
+					testEle.style[jsWebkitStrNoPrefix]="";
+				}
+
+			}
+			
+		}
+		webkitProperty.innerHTML=webkitPropStr;
+		// console.log(styleObj);
+	}
+</script>
+</body>
+</html>

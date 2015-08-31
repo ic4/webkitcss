@@ -1,0 +1,44 @@
+{
+  "name" : "-webkit-mask-size",
+  "discribe" : "定义遮罩层的大小。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-mask-size",
+      "gram_detail" : "auto | contain | cover | <length> | <percentage>"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "auto",
+      "prop_content" : "继承遮罩图的宽度和高度。"
+    },
+    {
+      "prop_title" : "contain",
+      "prop_content" : "放大图像到最大的尺寸，同时保持原有的图像纵横比，使得宽高完全地适应背景位置区域。"
+    },
+    {
+      "prop_title" : "cover",
+      "prop_content" : "缩放图像到最小的尺寸，同时保持原有的图像纵横比，使得宽高完全地覆盖背景位置区域。"
+    },
+    {
+      "prop_title" : "<length>",
+      "prop_content" : "数字后跟绝对单位符(cm, mm, in, pt, pc)或者相对单位符 (em, ex, or px)。"
+    },
+    {
+      "prop_title" : "<percentage>",
+      "prop_content" : "数字后跟百分号，百分比的值和背景位置区域有关系。"
+    }
+  ],
+  "iframeUrl" : "../demo/mask-size.html"
+}

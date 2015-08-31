@@ -1,0 +1,42 @@
+{
+  "name" : "-webkit-backface-visibility",
+  "discribe" : "决定元素背面在面向用户时是否可见。",
+  "support" : [
+    {
+      "type" : "有-webkit-前缀",
+      "browser" : {
+        "chrome" : "12.0+",
+        "safari" : "4.0+",
+        "android" : "3.0+",
+        "ios" : "2.0+"
+      }
+    },
+    {
+      "type" : "无-webkit-前缀",
+      "browser" : {
+        "chrome" : "36+",
+        "safari" : "&times;",
+        "android" : "&times;",
+        "ios" : "&times;"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-backface-visibility: ",
+      "gram_detail" : "visible | hidden"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "visible",
+      "prop_content" : "<span class=\"ex\">默认值</span>。背面内容可见，显示正面内容的镜像。"
+    },
+    {
+      "prop_title" : "hidden",
+      "prop_content" : "背面内容不可见。"
+    }
+  ],
+  "iframeUrl" : "../demo/backface-visibility.html"
+}

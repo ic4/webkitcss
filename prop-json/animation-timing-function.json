@@ -1,0 +1,60 @@
+{
+  "name" : "-webkit-animation-timing-function",
+  "discribe" : " 检索或设置对象动画的时间函数。<span class="ex">默认值为ease</span>。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "4.0+",
+        "android" : "?",
+        "ios" : "2.0+"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-animation-timing-function ",
+      "gram_detail" : " linear | ease | ease-in | ease-out | ease-in-out | cubic-bezier(x1, y1, x2, y2) | steps(, ) | step-start | step-end"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "linear",
+      "prop_content" : "线性过渡；等同于贝塞尔曲线(0.0, 0.0, 1.0, 1.0)。"
+    },
+    {
+      "prop_title" : "ease",
+      "prop_content" : "<span class="ex">默认值</span>。平滑过渡；等同于贝塞尔曲线(0.25, 0.1, 0.25, 1.0)。"
+    },
+    {
+      "prop_title" : "ease-in",
+      "prop_content" : "由慢到快；等同于贝塞尔曲线(0.42, 0, 1.0, 1.0)。"
+    },
+    {
+      "prop_title" : "ease-out",
+      "prop_content" : "由快到慢；等同于贝塞尔曲线(0, 0, 0.58, 1.0)。"
+    },
+    {
+      "prop_title" : "ease-in-out",
+      "prop_content" : "由慢到快再到慢；等同于贝塞尔曲线(0.42, 0, 0.58, 1.0)。"
+    },
+    {
+      "prop_title" : "cubic-bezier(x1, y1, x2, y2)",
+      "prop_content" : "自定义时间函数，x1、x2必须在[0, 1]区间内，y1、y2可超过此范围。Chr16+、Saf Nightly、Android ?。"
+    },
+    {
+      "prop_title" : "steps(, )",
+      "prop_content" : "阶跃时间函数，第一个参数设定时间函数中的间隔次数，必须是正整数；第二个可选，设定动画在间隔的开始还是结束发生阶跃变化，接受start或end关键字，默认为end。Chr8+、Saf5.1+、Android 4.0+、iOS 5.0+。"
+    },
+    {
+      "prop_title" : "step-start",
+      "prop_content" : "相当于steps(1, start)。"
+    },
+    {
+      "prop_title" : "step-end",
+      "prop_content" : "相当于steps(1, end)。"
+    }
+  ],
+  "iframeUrl" : "../demo/animation-timing-function.html"
+}

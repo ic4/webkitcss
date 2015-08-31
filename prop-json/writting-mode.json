@@ -1,0 +1,36 @@
+{
+  "name" : "-webkit-writing-mode",
+  "discribe" : "设置或检索对象的内容块固有的书写方向。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-writing-mode ",
+      "gram_detail" : "horizontal-tb | vertical-rl |  vertical-lr "
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "horizontal-tb",
+      "prop_content" : "<span class="ex">默认值</span>。水平方向从左向右、垂直方向自上而下的书写方式。即left-right-top-bottom（类似IE私有值lr-tb）。后一行位于前一行的下方。"
+    },
+    {
+      "prop_title" : "vertical-rl",
+      "prop_content" : "垂直方向自上而下、水平方向从右向左的书写方式。即top-bottom-right-left（类似IE私有值tb-rl）。后一列位于前一列的右边。"
+    },
+    {
+      "prop_title" : "vertical-lr",
+      "prop_content" : "垂直方向自上而下、水平方向从左向右的书写方式。即top-bottom-left-right。后一列位于前一列的左边。"
+    }
+  ],
+  "iframeUrl" : "../demo/writing-mode.html"
+}

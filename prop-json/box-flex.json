@@ -1,0 +1,30 @@
+{
+  "name" : "-webkit-box-flex",
+  "discribe" : "设置或检索弹性盒模型对象的子元素<span class=\"ex\">如何分配其剩余空间</span>。box-flex生效需定义其父元素display为box或inline-box<br />
+        误区：注意box-flex只是动态分配父元素的剩余空间，而不是整个父元素的空间。子元素所分到的应该是除内容外所剩余下来的宽度<br />
+        对应的脚本特性为boxFlex。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-box-flex: ",
+      "gram_detail" : " &lt;number&gt;"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "&lt;number&gt;",
+      "prop_content" : "使用浮点数指定对象所分配其父元素剩余空间的比例。"
+    }
+  ],
+  "iframeUrl" : "../demo/box-flex.html"
+}

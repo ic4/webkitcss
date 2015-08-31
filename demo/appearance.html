@@ -1,0 +1,472 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>-webkit-appearance demo</title>
+<style type="text/css">
+    body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+    table{margin:0 auto;border-collapse:collapse;}
+    th,td{border:1px solid #ccc; border-spacing: 0; padding:4px;}
+    b{color:red;}
+    .appearance{display: inline-block;width:60px;height: 20px;}
+    .yes, .no{color: #fff;text-align: center;}
+    .yes{background-color: #3983E4;}
+    .no{background-color: #FF9913}
+</style>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>-webkit-appearance取值</th>
+            <th>代码效果</th>
+            <th>介绍</th>
+            <th>Chrome</th>
+            <th>Safari</th>
+            <th>iOS Safari</th>
+            <th>Android Browser</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>none</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:none"></span>
+                </td>
+                <td>去除系统默认appearance的样式,<b>常用于IOS下移除原生样式</b></td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+            </tr>
+            <tr>
+                <td>button</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:button"></span>
+                </td>
+                <td>渲染成button的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+            </tr>
+            <tr>
+                <td>button-bevel</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:button-bevel"></span>
+                </td>
+                <td>渲染成button-bevel的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>caret</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:caret"></span>
+                </td>
+                <td>渲染成caret的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>checkbox</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:checkbox"></span>
+                </td>
+                <td>渲染input:checkbox样式的复选框按钮</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+            </tr>
+            <tr>
+                <td>listbox</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:listbox"></span>
+                </td>
+                <td>渲染为listbox样式的复选框按钮</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+            </tr>
+            <tr>
+                <td>listitem</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:listitem"></span>
+                </td>
+                <td>渲染成listitem的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>media-fullscreen-button</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:media-fullscreen-button"></span>
+                </td>
+                <td>渲染成media-fullscreen-button的风格</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>media-mute-button</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:media-mute-button"></span>
+                </td>
+                <td>渲染成media-mute-button的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>media-seek-back-button</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:media-seek-back-button"></span>
+                </td>
+                <td>渲染成media-seek-back-button的风格</td>
+                <td class="no">不支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>media-seek-forward-button</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:media-seek-forward-button"></span>
+                </td>
+                <td>渲染成media-seek-forward-button的风格</td>
+                <td class="no">不支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>media-slider</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:media-slider"></span>
+                </td>
+                <td>渲染成media-slider的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+             <tr>
+                <td>media-sliderthumb</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:media-sliderthumb"></span>
+                </td>
+                <td>渲染成media-sliderthumb的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>menulist</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:menulist"></span>
+                </td>
+                <td>渲染成menulist的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>menulist-button</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:menulist-button"></span>
+                </td>
+                <td>渲染成menulist-button的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>menulist-text</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:menulist-text"></span>
+                </td>
+                <td>渲染成menulist-text的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>menulist-textfield</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:menulist-textfield"></span>
+                </td>
+                <td>渲染成menulist-textfield的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>push-button</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:push-button"></span>
+                </td>
+                <td>渲染成push-button的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+            </tr>
+            <tr>
+                <td>radio</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:radio"></span>
+                </td>
+                <td>渲染成radio的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+            </tr>
+             <tr>
+                <td>searchfield</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:searchfield"></span>
+                </td>
+                <td>渲染成searchfield的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="yes">支持</td>
+            </tr>
+             <tr>
+                <td>searchfield-cancel-button</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:searchfield-cancel-button"></span>
+                </td>
+                <td>渲染成searchfield-cancel-button的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="yes">支持</td>
+            </tr>
+            <tr>
+                <td>searchfield-decoration</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:searchfield-decoration"></span>
+                </td>
+                <td>渲染成searchfield-decoration的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+             <tr>
+                <td>searchfield-results-button</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:searchfield-results-button"></span>
+                </td>
+                <td>渲染成searchfield-results-button的风格</td>
+                <td class="no">不支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>searchfield-results-decoration</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:searchfield-results-decoration"></span>
+                </td>
+                <td>渲染成searchfield-results-decoration的风格</td>
+                <td class="no">不支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>slider-horizontal</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:slider-horizontal"></span>
+                </td>
+                <td>渲染成slider-horizontal的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+            </tr>
+            <tr>
+                <td>slider-vertical</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance: slider-vertical"></span>
+                </td>
+                <td>渲染成slider-horizontal的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+            </tr>
+            <tr>
+                <td>sliderthumb-horizontal</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance: sliderthumb-horizontal"></span>
+                </td>
+                <td>渲染成sliderthumb-horizontal的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+            </tr>
+            <tr>
+                <td>sliderthumb-vertical</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:sliderthumb-vertical"></span>
+                </td>
+                <td>渲染成sliderthumb-vertical的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+            </tr>
+            <tr>
+                <td>square-button</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:square-button"></span>
+                </td>
+                <td>渲染成square-button的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+            </tr>
+             <tr>
+                <td>textarea</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:textarea"></span>
+                </td>
+                <td>渲染成textarea的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="yes">支持</td>
+            </tr>
+             <tr>
+                <td>textfield</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:textfield;"></span>
+                </td>
+                <td>渲染成textfield的风格</td>
+                <td class="yes">支持</td>
+                <td class="yes">支持</td>
+                <td class="no">不支持</td>
+                <td class="yes">支持</td>
+            </tr>
+            <tr>
+                <td>scrollbarbutton-down</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:scrollbarbutton-down"></span>
+                </td>
+                <td>渲染成scrollbarbutton-down的风格</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>scrollbarbutton-left</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:scrollbarbutton-left"></span>
+                </td>
+                <td>渲染成scrollbarbutton-left的风格</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>scrollbarbutton-right</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:scrollbarbutton-right"></span>
+                </td>
+                <td>渲染成scrollbarbutton-right的风格</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>scrollbargripper-horizontal</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:scrollbargripper-horizontal"></span>
+                </td>
+                <td>渲染成scrollbargripper-horizontal的风格</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>scrollbargripper-vertical</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:scrollbargripper-vertical"></span>
+                </td>
+                <td>渲染成scrollbargripper-vertical的风格</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>scrollbarthumb-horizontal</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:scrollbarthumb-horizontal"></span>
+                </td>
+                <td>渲染成scrollbarthumb-horizontal的风格</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>scrollbarthumb-vertical</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:scrollbarthumb-vertical"></span>
+                </td>
+                <td>渲染成scrollbarthumb-vertical的风格</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+            <tr>
+                <td>scrollbartrack-horizontal</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:scrollbartrack-horizontal"></span>
+                </td>
+                <td>渲染成scrollbartrack-horizontal的风格</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+             <tr>
+                <td>scrollbartrack-vertical</td>
+                <td>
+                    <span class="appearance" style="-webkit-appearance:scrollbartrack-vertical"></span>
+                </td>
+                <td>渲染成scrollbartrack-horizontal的风格</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+                <td class="no">不支持</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

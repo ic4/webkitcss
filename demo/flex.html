@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>-webkit-flex demo</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" href="../css/demo.css" />
+<style>
+  header{background:#F1F1F1;padding:20px;color:#333333;border-bottom:1px solid #DDDDDD;font:18px "Microsoft Yahei";}
+  section .intro{padding:10px;margin:10px 0;border:1px solid #DDDDDD;background:#F2F2F2;}
+  .flexbox {
+      display: -webkit-flex;  // 目前需要浏览器引擎前缀支持
+      -webkit-flex-flow: row; // 子元素以行排列
+      -webkit-flex-wrap: nowrap;
+      width: 100%;
+  }
+  .flexbox div{color:#ffffff;font-size:14px;text-align:center;height:100px;}
+  .flexbox .item1,.flexbox .item6{-webkit-flex:1;background:#ff6600;}
+  .flexbox .item2,.flexbox .item8{-webkit-flex:2;background:#0099ff;}
+  .flexbox .item3{-webkit-flex:3;background:#ff9900;}
+  .flexbox .item4{-webkit-flex:4;background:#ff0000;}
+  .flexbox .item5{-webkit-flex:5;background:#339966;}
+  .flexbox .item7{width:50%;background:#ff9900;}
+</style>
+
+</head>
+<body>
+
+  <h1>-webkit-flex</h1>
+  <dl id="control_panel" class="control_panel">
+    
+  </dl>
+
+  <div class="wrapper">
+  	<header>
+      属性名称：-webkit-flex
+    </header>
+    <section>
+
+      <div class="flexbox">
+        <div class="item1">DIV 1 <br/>-webkit-flex:1;</div>
+        <div class="item2">DIV 2 <br/><br/>-webkit-flex:2;</div>
+        <div class="item3">DIV 3 <br/>-webkit-flex:3;</div>
+        <div class="item4">DIV 4 <br/>-webkit-flex:4;</div>
+        <div class="item5">DIV 5 <br/>-webkit-flex:5;</div>
+      </div>
+      <div class="intro">
+          <p>节点flexbox是属性display:-webkit-flex;即将此元素盒模型定义为可伸缩盒模型;</p>
+          <p>给子元素使用flex伸缩属性，并分别赋值1、2、3、4、5，那么空间就会按照1/15、2/15、3/15、4/15、5/15分割给这五个子元素</p>
+      </div>
+      <div class="flexbox">
+        <div class="item6">DIV 6 <br/>-webkit-flex:1;</div>
+        <div class="item7">DIV 7 <br/><br/>width:50%;</div>
+        <div class="item8">DIV 8 <br/>-webkit-flex:2;</div>
+      </div>
+      <div class="intro">
+          <p>给子元素7定义了width，子元素6和8定义了flex伸缩属性，那么留白空间就会按照1/3、2/3分割给6、8这两个子元素</p>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

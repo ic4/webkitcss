@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>input[type="search"]的伪元素</title>
+    <style>
+        #pseudo{-webkit-appearance:none;}
+        /*#pseudo::-webkit-search-results-button{margin:0 20px;}
+        #pseudo::-webkit-search-result-decoration{padding:4px 8px;color: #FF9913;}*/
+        #pseudo::-webkit-search-decoration{padding:10px;color: #FF9913;border:2px solid #FF9913;}
+
+        #pseudo::-webkit-search-cancel-button{opacity: 1 !important;}
+        #pseudo::-webkit-textfield-decoration-container{border:2px solid #3983E4;margin-left:10px;}
+    </style>
+</head>
+<body>
+<h1>input[type="search"]的伪元素</h1>
+<dl>
+    <dt>::-webkit-textfield-decoration-container</dt>
+    <dd>自定义输入区域的样式</dd>
+    <dt>::-webkit-search-decoration</dt>
+    <dd>自定义搜索装饰的样式</dd>
+    <dt>::-webkit-search-cancel-button</dt>
+    <dd>自定义删除内容按钮的样式。由于该伪元素opacity默认为0，若要使其可见，需重置其opacity样式。</dd>
+</dl>
+<input type="search"/>
+<input id="pseudo" type="search"/>
+</body>
+</html>

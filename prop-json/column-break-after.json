@@ -1,0 +1,60 @@
+{
+  "name" : "-webkit-column-break-after",
+  "discribe" : "确定一个分栏符是否可以或者应该发生在多列布局中的一个元素后。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "3.0+",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-column-break-after: ",
+      "gram_detail" : "always | auto | avoid | avoid-page | avoid-column | avoid-page | avoid-region | left | right | page | region"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "always",
+      "prop_content" : "总是在元素之后断行并产生新列"
+    },
+    {
+      "prop_title" : "auto",
+      "prop_content" : "既不强迫也不禁止在元素之后断行并产生新列"
+    },
+    {
+      "prop_title" : "avoid",
+      "prop_content" : "避免在元素之后断行并产生新列"
+    },
+    {
+      "prop_title" : "avoid-page",
+      "prop_content" : "暂不支持"
+    },
+    {
+      "prop_title" : "avoid-column",
+      "prop_content" : "暂不支持"
+    },
+    {
+      "prop_title" : "left",
+      "prop_content" : "总是在元素之后断行并产生新的左列"
+    },
+    {
+      "prop_title" : "right",
+      "prop_content" : "总是在元素之后断行并产生新的右列"
+    },
+    {
+      "prop_title" : "page",
+      "prop_content" : "暂不支持"
+    },
+    {
+      "prop_title" : "region",
+      "prop_content" : "暂不支持"
+    }
+  ],
+  "iframeUrl" : "../demo/column.html"
+}

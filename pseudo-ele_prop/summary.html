@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>summary的伪元素</title>
+    <style>
+        #pseudo{-webkit-appearance:none;}
+        #pseudo::-webkit-details-marker{height: 40px;width:40px;margin-left:10px;background-color: #3983E4;}
+    </style>
+</head>
+<body>
+<h1>summary的伪元素</h1>
+<dl>
+    <dt>::-webkit-details-marker</dt>
+    <dd>自定义收起展开图标的样式</dd>
+</dl>
+<details>
+    <summary>Ctrip携程</summary>
+    <p>携程是中国最大的在线旅游服务公司。</p>
+</details>
+<details>
+    <summary id="pseudo">Ctrip携程</summary>
+    <p>携程是中国最大的在线旅游服务公司。</p>
+</details>
+</body>
+</html>

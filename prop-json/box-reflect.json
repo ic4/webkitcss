@@ -1,0 +1,89 @@
+{
+  "name" : "-webkit-box-reflect",
+  "discribe" : "设置或检索对象<span class=\"ex\">倒影</span>。<br />
+        对应的脚本特性为boxReflect。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "4+",
+        "safari" : "4+",
+        "android" : "2.1+",
+        "ios" : "3.2+"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-box-reflect: ",
+      "gram_detail" : " none | &lt;direction&gt; &lt;offset&gt; &lt;mask-box-image&gt;"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "none",
+      "prop_content" : "无倒影"
+    },
+    {
+      "prop_title" : "&lt;direction&gt;",
+      "prop_content" : "指定倒影与对象的方向"
+    },
+    {
+      "prop_title" : "above",
+      "prop_content" : "指定倒影在对象的上边"
+    },
+    {
+      "prop_title" : "below",
+      "prop_content" : "指定倒影在对象的下边"
+    },
+    {
+      "prop_title" : "left",
+      "prop_content" : "指定倒影在对象的左边"
+    },
+    {
+      "prop_title" : "right",
+      "prop_content" : "指定倒影在对象的右边"
+    },
+    {
+      "prop_title" : "&lt;offset&gt;",
+      "prop_content" : "设置倒影与对象的距离"
+    },
+    {
+      "prop_title" : "&lt;length&gt;",
+      "prop_content" : "用长度值来定义倒影与对象之间的间隔。可以为负值"
+    },
+    {
+      "prop_title" : "&lt;precentage&gt;",
+      "prop_content" : "用百分比来定义倒影与对象之间的间隔。可以为负值"
+    },
+    {
+      "prop_title" : "&lt;mask-box-image&gt;",
+      "prop_content" : "设置倒影的遮罩图像"
+    },
+    {
+      "prop_title" : "none",
+      "prop_content" : "无遮罩图像"
+    },
+    {
+      "prop_title" : "&lt;url&gt;",
+      "prop_content" : "使用绝对或相对地址指定遮罩图像。"
+    },
+    {
+      "prop_title" : "&lt;linear-gradient&gt;",
+      "prop_content" : "使用线性渐变创建遮罩图像。"
+    },
+    {
+      "prop_title" : "&lt;radial-gradient&gt;",
+      "prop_content" : "使用径向(放射性)渐变创建遮罩图像。"
+    },
+    {
+      "prop_title" : "&lt;repeating-linear-gradient&gt;",
+      "prop_content" : "使用重复的线性渐变创建背遮罩像。"
+    },
+    {
+      "prop_title" : "&lt;repeating-url&gt;",
+      "prop_content" : "使用重复的径向(放射性)渐变创建遮罩图像。"
+    }
+  ],
+  "iframeUrl" : "../demo/box-reflect.html"
+}

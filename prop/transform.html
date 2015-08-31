@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>-webkit-transform | CtripUED Webkit CSS Library</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+<div class="head">
+	<div class="wrap">
+		<a href="http://ued.ctrip.com/webkitcss/index.html" class="logo">CtripUED Webkit CSS Library</a>
+		<div class="nav">
+			<ul>
+				<li><a href="../index.html">首页</a></li>
+				<li><a href="../aboutus.html#about">关于我们</a></li>
+				<li><a href="../aboutus.html#about_box">意见反馈</a></li>
+				<li><a href="http://ued.ctrip.com">CtripUED 博客</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrap">
+	<div class="side">
+		<div class="filter_box">
+			<div class="field" id="catalogFilter">
+					<input type="search" id="key" placeholder="属性搜索..." />
+			</div>
+		</div>
+		<div class="categorys"></div>
+	</div>
+
+	<div class="main" id="main">
+		<div class="position" id="position">
+			您的位置: <a href="../index.html">首页</a> &gt; -webkit-transform
+		</div>
+		<!-- /position -->
+		<div class="prop_intro">
+			<div class="tit">
+				<h1>-webkit-transform 属性</h1>
+			</div>
+			<div class="prop_detail">
+				设置或检索对象的<span class="ex">转换</span>。
+			</div>
+			<!-- /prop_detail -->
+			<div class="prop_comp">
+				<p>
+					<b>2D:</b>
+					<i class="ico_browser ico_browser_chr"><small>?</small></i>
+					<i class="ico_browser ico_browser_saf"><small>3.1+</small></i>
+					<i class="ico_browser ico_browser_and"><small>2.1+</small></i>
+					<i class="ico_browser ico_browser_ios"><small>3.2+</small></i>
+				</p>
+				<p>
+					<b>3D:</b>
+					<i class="ico_browser ico_browser_chr"><small>12.0+</small></i>
+					<i class="ico_browser ico_browser_saf"><small>4.0+</small></i>
+					<i class="ico_browser ico_browser_and"><small>3.0+</small></i>
+					<i class="ico_browser ico_browser_ios"><small>3.2+</small></i>
+				</p>
+				<p>
+					<b>无-webkit-前缀:</b>
+					<i class="ico_browser ico_browser_chr"><small>36+</small></i>
+					<i class="ico_browser ico_browser_saf_no"><small>&times;</small></i>
+					<i class="ico_browser ico_browser_and_no"><small>&times;</small></i>
+					<i class="ico_browser ico_browser_ios_no"><small>&times;</small></i>
+				</p>
+				<p>?: 表示版本号未知，但该属性可用。</p>
+			</div>
+			<!-- /prop_comp -->
+
+		</div>
+		<!-- /prop_intro -->
+		<div class="mod prop_gramm">
+			<h2 class="mod_tit">语法</h2>
+			<p class="mod_con">
+				<strong>(2D)-webkit-transform:</strong> none | matrix(&lt;number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;)? translate(&lt;length&gt;[,&lt;length&gt;])? translateX(&lt;length&gt;)? translateY(&lt;length&gt;)? rotate(&lt;angle&gt;)? scale(&lt;number&gt;[,&lt;number&gt;])? scaleX(&lt;number&gt;)? scaleY(&lt;number&gt;)? skew(&lt;angle&gt;[,&lt;angle&gt;])? skewX(&lt;angle&gt;) | skewY(&lt;angle&gt;)?
+			</p>
+			<p class="mod_con">
+				<strong>(3D)-webkit-transform:</strong> matrix3d(&lt;number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;)? translate3d(&lt;length&gt;,&lt;length&gt;,&lt;length&gt;)? translateZ(&lt;length&gt;)? rotate3d(&lt;length&gt;,&lt;length&gt;,&lt;length&gt;,&lt;angle&gt;)? scale3d(&lt;number&gt;,&lt;number&gt;,&lt;number&gt;)? scaleZ(&lt;number&gt;)? perspective(&lt;number&gt;)?
+			</p>
+		</div>
+		<!-- /prop_gramm -->
+		<div class="mod prop_value">
+			<h2 class="mod_tit">取值</h2>
+			<div class="mod_con">
+				<table>
+					<tr>
+						<th>none</th>
+						<td>无转换。</td>
+					</tr>
+					<tr>
+						<th>matrix(...)</th>
+						<td>以一个含六值的(a,b,c,d,e,f)变换矩阵的形式指定一个2D变换，相当于直接应用一个[a,b,c,d,e,f]变换矩阵。</td>
+					</tr>
+					<tr>
+						<th>translate(&lt;length&gt;[, &lt;length&gt;])</th>
+						<td>指定对象的2D translation（2D平移）。第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认值为0。</td>
+					</tr>
+					<tr>
+						<th>translateX(&lt;length&gt;)</th>
+						<td>指定对象X轴（水平方向）的平移。</td>
+					</tr>
+					<tr>
+						<th>translateY(&lt;length&gt;)</th>
+						<td>指定对象Y轴（垂直方向）的平移。</td>
+					</tr>
+					<tr>
+						<th>rotate(&lt;angle&gt;)</th>
+						<td>指定对象的2D rotation（2D旋转），需先有transform-origin属性的定义。</td>
+					</tr>
+					<tr>
+						<th>scale(&lt;number&gt;[, &lt;number&gt;])</th>
+						<td>指定对象的2D scale（2D缩放）。第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认取第一个参数的值。</td>
+					</tr>
+					<tr>
+						<th>scaleX(&lt;number&gt;)</th>
+						<td>指定对象X轴的（水平方向）缩放。</td>
+					</tr>
+					<tr>
+						<th>scaleY(&lt;number&gt;)</th>
+						<td>指定对象Y轴的（垂直方向）缩放。</td>
+					</tr>
+					<tr>
+						<th>skew(&lt;angle&gt; [, &lt;angle&gt;])</th>
+						<td>指定对象skew transformation（斜切扭曲）。第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认值为0。</td>
+					</tr>
+					<tr>
+						<th>skewX(&lt;angle&gt;)</th>
+						<td>指定对象X轴的（水平方向）扭曲。</td>
+					</tr>
+					<tr>
+						<th>skewY(&lt;angle&gt;)</th>
+						<td>指定对象Y轴的（垂直方向）扭曲。</td>
+					</tr>
+					<tr>
+						<th>matrix3d(...)</th>
+						<td>以一个含16值的4&times;4变换矩阵的形式指定一个3D变换。</td>
+					</tr>
+					<tr>
+						<th>translate3d(&lt;length&gt;,&lt;length&gt;,&lt;length&gt;)</th>
+						<td>指定对象的3D translation（3D平移）。第一个参数对应X轴，第二个参数对应Y轴，第三个参数对应Y轴。</td>
+					</tr>
+					<tr>
+						<th>translateZ(&lt;length&gt;)</th>
+						<td>指定对象Z轴（垂直于屏幕平面）的平移。</td>
+					</tr>
+					<tr>
+						<th>rotate3d(&lt;length&gt;,&lt;length&gt;,&lt;length&gt;,&lt;angle&gt;)</th>
+						<td>指定对象的3D rotation（3D旋转）。在前三个参数构成的向量上旋转。</td>
+					</tr>
+					<tr>
+						<th>scale3d(&lt;number&gt;,&lt;number&gt;,&lt;number&gt;)</th>
+						<td>指定对象在X轴（水平方向）、Y轴（垂直方向）、Z轴（垂直于屏幕平面）的缩放。</td>
+					</tr>
+					<tr>
+						<th>scaleZ(&lt;number&gt;)</th>
+						<td>指定对象Z轴的（垂直于屏幕平面）缩放。</td>
+					</tr>
+					<tr>
+						<th>perspective(&lt;number&gt;)</th>
+						<td>指定对象的视角。根据参数对指定对象在X轴和Y轴上缩放。</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!-- /prop_value -->
+		<div class="mod prop_demo">
+			<h2 class="mod_tit">示例</h2>
+			<div class="mod_con">
+				<iframe id="iframedemo" style="border:1px solid #ccc;" src="../demo/transform.html" width="100%" height="400" frameborder="0"></iframe >
+				<div class="btns">
+					<a href="../demo/transform.html" target="_blank" class="btn_primary">演示</a>
+				</div>
+
+			</div>
+		</div>
+		<!-- /prop_demo -->
+	</div>
+	<!-- /main -->
+</div>
+<!-- /wrap -->
+</body>
+</html>

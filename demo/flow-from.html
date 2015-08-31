@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>-webkit-flow-from demo</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" href="../css/demo.css" />
+<style>
+.flowbox{overflow:hidden;}
+.flowbox article{float:left;width:800px;border:1px solid #ff6600;background:#f3f3f3;padding:50px;}
+.flowbox aside{float:left;width:500px;border:1px solid #0099ff;background:#f3f3f3;display:block;}
+.flowbox .element{
+  height:50px;
+  color:#333333;
+  border:1px solid green;
+  -webkit-flow-from:foo;
+}
+@media (max-width:800px){
+  aside{
+    display:none;
+    -webkit-flow:'foo';
+    -webkit-flow-into:foo;
+  }
+  .flowbox .element{
+    display:block;
+  }
+}
+</style>
+
+</head>
+<body>
+
+  <h1>-webkit-flow-from</h1>
+  <dl id="control_panel" class="control_panel">
+    
+  </dl>
+  
+  <div class="wrapper">
+  	<header>
+      属性名称：-webkit-flow[-webkit-flow-from/-webkit-flow-into]
+    </header>
+    <section>
+      <h2>Demo flow</h2>
+      <div class="flowbox">
+        <article>
+          这里是一个article区域
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <div class="element">
+            <!-- 这里是即将流入的容器！ -->
+          </div>
+        </article>
+        <aside>
+          这是<b>aside</b>  ！将其内容流向了流体对象foo<br/>
+          -webkit-flow-into:foo;其中foo变量被定义为了flow对象。
+        </aside>
+      </div>
+      <div class="intro">
+          当屏幕宽度小于800px时，目标容器element[绿色边框的位置]将会获得流体对象foo的内容【来源是aside】！<br/>
+          .element{-webkit-flow-from:foo;}
+      </div>
+      <p>
+        演示说明：<br/>
+        Chrome19+ 需要在 chrome://flags/下面开启CSS Regions <br/>
+        Chrome23+ 需要在 chrome://flags/下面开启CSS webkit研究中属性
+      </p>
+      
+      
+    </section>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name" : "-webkit-box-decoration-break",
+  "discribe" : "设置在<span class=\"ex\">分页符处断开方框</span>的方式，设置为是否以独立方式呈现。<br />
+        对于分为多个列的方框，受影响的列被视为单个连续元素。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-box-decoration-break: ",
+      "gram_detail" : " slice | clone"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "slice",
+      "prop_content" : "不会针对整个方框呈现 border 、 padding 、 box-shadow 、 border-radius 和 border-image ，就好像方框是连续的一样。 <span class=\"ex\">此值为默认值</span>"
+    },
+    {
+      "prop_title" : "clone",
+      "prop_content" : "将在分页符处插入 border 和 padding 值，包括 border-image 、 border-radius 和 box-shadow 值。任何背景图像均以独立方式呈现"
+    }
+  ],
+  "iframeUrl" : "../demo/box-decoration-break.html"
+}

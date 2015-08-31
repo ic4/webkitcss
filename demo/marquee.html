@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>-webkit-marquee demo</title>
+	<link rel="stylesheet" href="../css/demo.css" />
+</head>
+<body>
+
+	<h1>-webkit-marquee</h1>
+	<dl id="control_panel" class="control_panel">
+		<h2>direction</h2>
+		<p class="dir">
+			<label><input type="radio" name="dir" value="ahead" />ahead</label>
+			<label><input type="radio" name="dir" value="auto" />auto</label>
+			<label><input type="radio" name="dir" value="forwards" />forwards</label>
+			<label><input type="radio" name="dir" value="backwards" />backwards</label>
+			<label><input type="radio" name="dir" value="up" />up</label>
+			<label><input type="radio" name="dir" value="down" />down</label>
+			<label><input type="radio" name="dir" value="left" />left</label>
+			<label><input type="radio" name="dir" value="right" />right</label>
+			<label><input type="radio" name="dir" value="reverse" />reverse</label>
+		</p>
+		<h2>increment</h2>
+		<p class="inc">
+			<label><input type="radio" name="inc" value="large" />large</label>
+			<label><input type="radio" name="inc" value="medium" />medium</label>
+			<label><input type="radio" name="inc" value="backwards" />backwards</label>
+			<label><input type="radio" name="inc" value="small" />small</label>
+		</p>
+		<h2>repetition</h2>
+		<p class="rep">
+			<label><input type="radio" name="rep" value="infinite" />infinite</label>
+			<label><input type="radio" name="rep" value="3" />3</label>
+		</p>
+		<h2>style</h2>
+		<p class="stylea">
+			<label><input type="radio" name="stylea" value="alternate" />alternate</label>
+			<label><input type="radio" name="stylea" value="none" />none</label>
+			<label><input type="radio" name="stylea" value="scroll" />scroll</label>
+			<label><input type="radio" name="stylea" value="slide" />slide</label>
+		</p>
+		<h2>speed</h2>
+		<p class="speed">
+			<label><input type="radio" name="speed" value="fast" />fast</label>
+			<label><input type="radio" name="speed" value="normal" />normal</label>
+			<label><input type="radio" name="speed" value="slow" />slow</label>
+		</p>
+	</dl>
+
+	<style type="text/css">
+		.test {border: 5px dashed #666; padding: 20px 0; }
+	</style>
+	<div class="demo">
+		<div id="test">
+			<marquee class="test" direction="right" bgcolor="cccccc" behavior="alternate">携程UED 携程UED 携程UED 携程UED 携程UED</marquee>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var test = document.querySelector(".test");
+		var dir = document.getElementsByName("dir");
+		var inc = document.getElementsByName("inc");
+		var rep = document.getElementsByName("rep");
+		var stylea = document.getElementsByName("stylea");
+		var speed = document.getElementsByName("speed");
+
+		var comm = {
+			dir:"",
+			inc:"",
+			rep:"",
+			stylea:"",
+			speed:""
+		}
+
+		for(var i=0;i<dir.length;i++) {
+			dir[i].onclick = (function(index) {
+				return function(){
+					if(dir[index].checked){
+						comm.dir = dir[index].value;
+					}
+					changeStyle();
+				}
+			})(i);
+		}
+
+		for(var i=0;i<inc.length;i++) {
+			inc[i].onclick = (function(index) {
+				return function(){
+					if(inc[index].checked){
+						comm.inc = inc[index].value;
+					}
+					changeStyle();
+				}
+			})(i);
+		}
+
+		for(var i=0;i<rep.length;i++) {
+			rep[i].onclick = (function(index) {
+				return function(){
+					if(rep[index].checked){
+						comm.rep = rep[index].value;
+					}
+					changeStyle();
+				}
+			})(i);
+		}
+
+		for(var i=0;i<stylea.length;i++) {
+			stylea[i].onclick = (function(index) {
+				return function(){
+					if(stylea[index].checked){
+						comm.stylea = stylea[index].value;
+					}
+					changeStyle();
+				}
+			})(i);
+		}
+
+		for(var i=0;i<speed.length;i++) {
+			speed[i].onclick = (function(index) {
+				return function(){
+					if(speed[index].checked){
+						comm.speed = speed[index].value;
+					}
+					changeStyle();
+				}
+			})(i);
+		}
+
+		function changeStyle() {
+			test.style.cssText = "-webkit-marquee:"+comm.dir+" "+comm.inc+" "+comm.rep+" "+comm.stylea+" "+comm.speed;
+			str = "-webkit-marquee:"+comm.dir+" "+comm.inc+" "+comm.rep+" "+comm.stylea+" "+comm.speed;
+			console.log(str);
+		}
+	</script>
+</body>
+</html>

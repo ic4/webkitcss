@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>-webkit-justify-content | CtripUED Webkit CSS Library</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+<div class="head">
+	<div class="wrap">
+		<a href="http://ued.ctrip.com/webkitcss/index.html" class="logo">CtripUED Webkit CSS Library</a>
+		<div class="nav">
+			<ul>
+				<li><a href="../index.html">首页</a></li>
+				<li><a href="../aboutus.html#about">关于我们</a></li>
+				<li><a href="../aboutus.html#about_box">意见反馈</a></li>
+				<li><a href="http://ued.ctrip.com">CtripUED 博客</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrap">
+	<div class="side">
+		<div class="filter_box">
+			<div class="field" id="catalogFilter">
+					<input type="search" id="key" placeholder="属性搜索..." />
+			</div>
+		</div>
+		<div class="categorys"></div>
+	</div>
+
+	<div class="main" id="main">
+		<div class="position" id="position">
+			您的位置: <a href="../index.html">首页</a> &gt; -webkit-justify-content
+		</div>
+		<!-- /position -->
+		<div class="prop_intro">
+			<div class="tit">
+				<h1>-webkit-justify-content 属性</h1>
+			</div>
+			<div class="prop_detail">
+				<p>属性用于调整主轴上伸缩项目的位置。它指定<span class="ex">子元素间多余的空白要如何处理</span>（在你让子元素与其外边距占满主轴上的所有空间的时候，这个属性没有作用）</p>
+			</div>
+			<!-- /prop_detail -->
+			<div class="prop_comp">
+				<p>
+					<i class="ico_browser ico_browser_saf_no"><small>&times;</small></i>
+					<i class="ico_browser ico_browser_chr"><small>21+</small></i>
+					<i class="ico_browser ico_browser_and_no"><small>&times;</small></i>
+					<i class="ico_browser ico_browser_ios_no"><small>&times;</small></i>
+				</p>
+			</div>
+			<!-- /prop_comp -->
+			<!-- Baidu Button BEGIN -->
+			<!-- Baidu Button BEGIN -->
+
+		</div>
+		<!-- /prop_intro -->
+		<div class="mod prop_gramm">
+			<h2 class="mod_tit">语法</h2>
+			<p class="mod_con">
+				<strong>-webkit-justify-content:</strong>flex-start | flex-end | center  | space-between | space-around
+			</p>
+		</div>
+		<!-- /prop_gramm -->
+		<div class="mod prop_value">
+			<h2 class="mod_tit">取值</h2>
+			<div class="mod_con">
+				<table>
+					<tr>
+						<th>flex-start</th>
+						<td>伸缩项目向一行的起始位置靠齐。该行的第一个伸缩项目在主轴起点边的外边距与该行在主轴起点的边对齐，同时所有后续的伸缩项目与其前一个项目对齐</td>
+					</tr>
+					<tr>
+						<th>flex-end</th>
+						<td>伸缩项目向一行的结束位置靠齐。该行的最后一个伸缩项目在主轴终点边的外边距与该行在主轴终点的边对齐，同时所有前面的伸缩项目与其后一个项目对齐</td>
+					</tr>
+					<tr>
+						<th>center</th>
+						<td>伸缩项目向一行的中间位置靠齐。该行的伸缩项目将相互对齐并在行中居中对齐，同时第一个项目与该行的在主轴起点的边的距离等同与最后一个项目与该行在主轴终点的边的距离（如果剩余空间是负数，则保持两端溢出的长度相等）</td>
+					</tr>
+					<tr>
+						<th>space-between</th>
+						<td>伸缩项目会平均地分布在一行里。如果剩余空间是负数，或该行只有一个伸缩项目，则此值等效于「flex-start」。在其它情况下，第一个项目在主轴起点边的外边距会与该行在主轴起点的边对齐，同时最后一个项目在主轴终点边的外边距与该行在主轴终点的边对齐，而剩下的伸缩项目在确保两两之间的空白空间相等下平均分布</td>
+					</tr>
+					<tr>
+						<th>space-around</th>
+						<td>伸缩项目会平均地分布在一行里。如果剩余空间是负数，或该行只有一个伸缩项目，则此值等效于flex-start。在其它情况下，第一个项目在主轴起点边的外边距会与该行在主轴起点的边对齐，同时最后一个项目在主轴终点边的外边距与该行在主轴终点的边对齐，而剩下的伸缩项目在确保两两之间的空白空间相等下平均分布</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!-- /prop_value -->
+		<div class="mod prop_demo">
+			<h2 class="mod_tit">示例</h2>
+			<div class="mod_con">
+				<iframe id="iframedemo"style="border:1px solid #ddd;" src="../demo/justify-content.html" width="100%" height="400" frameborder="0"></iframe id="test">
+				<div class="btns">
+					<a href="../demo/justify-content.html" target="_blank" class="btn_primary">演示</a>
+				</div>
+			</div>
+		</div>
+		<!-- /prop_demo -->
+	</div>
+	<!-- /main -->
+</div>
+<!-- /wrap -->
+</body>
+</html>

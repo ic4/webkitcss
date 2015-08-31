@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>-webkit-line-break demo</title>
+	<style>
+		body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+		h1{margin-bottom:20px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+		dl,dt,dd{margin: 0;padding: 0}
+		dd{margin-left: 20px;}
+		.eg_auto {-webkit-line-break:auto;}
+		.eg_loose {width:160px;-webkit-line-break:loose;}
+		.eg_normal {-webkit-line-break:normal;}
+		.eg_strict {-webkit-line-break:strict;}
+		.eg_after-white-space {-webkit-line-break:after-white-space;}
+	</style>
+</head>
+<body>
+	<h1>-webkit-line-break</h1>
+	<dl>
+		<dt>auto</dt>
+		<dd class="eg_auto">由用户代理决定使用哪种的换行规则。指定用于中文、日语和韩语（CJK）文本的换行规则。</dd>
+		<dt>loose</dt>
+		<dd class="eg_loose">使用限制最少的换行规则。指定用于中文、日语和韩语（CJK）文本的换行规则。</dd>
+		<dt>normal</dt>
+		<dd class="eg_normal">使用常用的换行规则。指定用于中文、日语和韩语（CJK）文本的换行规则。</dd>
+		<dt>strict</dt>
+		<dd class="eg_strict">使用最严格的换行规则。指定用于中文、日语和韩语（CJK）文本的换行规则。</dd>
+		<dt>after-white-space</dt>
+		<dd class="eg_after-white-space">指定用于中文、日语和韩语（CJK）文本的换行规则。&nbsp;指定用于中文、日语和韩语（CJK）文本的换行规则。</dd>		
+	</dl>
+	
+</body>
+</html>

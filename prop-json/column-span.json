@@ -1,0 +1,32 @@
+{
+  "name" : "-webkit-column-span",
+  "discribe" : "指定某个段落<span class="ex">通栏显示</span>。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "3.0+",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-column-span ",
+      "gram_detail" : " all | none"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "all",
+      "prop_content" : "某段内容扩展为整行显示"
+    },
+    {
+      "prop_title" : "none",
+      "prop_content" : "<span class="ex">默认值</span>，不扩展"
+    }
+  ],
+  "iframeUrl" : "../demo/column.html"
+}

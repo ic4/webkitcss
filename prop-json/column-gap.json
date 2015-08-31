@@ -1,0 +1,32 @@
+{
+  "name" : "-webkit-column-gap",
+  "discribe" : "指定在多流的<span class="ex">列之间的空间</span>。这个属性的改变可以是动态的。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "3.0+",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-column-gap ",
+      "gram_detail" : "length | normal"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "length",
+      "prop_content" : "用长度值来定义列与列之间的间隙。不允许负值"
+    },
+    {
+      "prop_title" : "normal",
+      "prop_content" : "与font-size大小相同。假设该对象的font-size为16px，则normal值为16px，类推"
+    }
+  ],
+  "iframeUrl" : "../demo/column.html"
+}

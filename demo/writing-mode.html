@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>-webkit-writing-mode demo</title>
+	<style type="text/css">
+	body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+	h1{margin-bottom:20px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+	ul,li{list-style:none;margin:0;padding:0;}
+	.test{width:200px;height:200px;margin:10px;border:1px solid #ccc;}
+	.horizontal-tb{-webkit-writing-mode:horizontal-tb;writing-mode:horizontal-tb;}
+	.vertical-rl{-webkit-writing-mode:vertical-rl;writing-mode:vertical-rl;}
+	.vertical-lr{-webkit-writing-mode:vertical-lr;writing-mode:vertical-lr;}
+	</style>
+</head>
+<body>
+	<div class="test horizontal-tb">本段文字将按照水平方向从左向右、垂直方向自上而下的书写方式。-webkit-writing-mode:horizontal-tb;</div>
+	<div class="test vertical-rl">本段文字将按照垂直方向自上而下、水平方向从右向左的书写方式。-webkit-writing-mode:vertical-rl;</div>
+	<div class="test vertical-lr">本段文字将按照垂直方向自上而下、水平方向从左向右的书写方式。-webkit-writing-mode:vertical-lr;</div>
+</body>
+</html>

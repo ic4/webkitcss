@@ -1,0 +1,71 @@
+{
+  "name" : "-webkit-mask-composite",
+  "discribe" : "定义同一个元素上有多个图片遮罩时的相对顺序。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "1.0",
+        "safari" : "4.0",
+        "android" : "2.1",
+        "ios" : "3.2"
+      }
+    }
+  ],
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-mask-composite",
+      "gram_detail" : "*clear | copy | source-over | source-in | source-out | source-atop | destination-over | destination-in | destination-out | destination-atop | xor"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "clear",
+      "prop_content" : "源图片和目标图片重叠的像素被清除"
+    },
+    {
+      "prop_title" : "copy",
+      "prop_content" : "源图片替代目标图片"
+    },
+    {
+      "prop_title" : "source-over",
+      "prop_content" : "源图片呈现在目标图片上"
+    },
+    {
+      "prop_title" : "source-in",
+      "prop_content" : "源图片和目标图片重叠的像素被源图片替代，其他像素被清除"
+    },
+    {
+      "prop_title" : "source-out",
+      "prop_content" : "源图片和目标图片重叠的像素被清除，源图片剩下的像素被呈现"
+    },
+    {
+      "prop_title" : "source-in",
+      "prop_content" : "源图片和目标图片重叠的像素被源图片替代，其他像素被清除"
+    },
+    {
+      "prop_title" : "source-atop",
+      "prop_content" : "目标图片被呈现。只有在重叠像素在目标图片的不透明部分时，源图片被呈现。这导致源图片不起作用"
+    },
+    {
+      "prop_title" : "destination-over",
+      "prop_content" : "目标图片呈现在源图片上"
+    },
+    {
+      "prop_title" : "destination-in",
+      "prop_content" : "源图片和目标图片的重叠像素中，属于源图片的保留，其他像素被清除"
+    },
+    {
+      "prop_title" : "destination-out",
+      "prop_content" : "图片和目标图片的重叠像素被清除，源图片剩余的像素被展示"
+    },
+    {
+      "prop_title" : "destination-atop",
+      "prop_content" : "源图片的像素被展示。只有在重叠部分在目标图片的不透明时。目标图片被呈现。这导致目标图片不起作用"
+    },
+    {
+      "prop_title" : "xor",
+      "prop_content" : "如果源图片与目标图片都透明时，重叠像素全变为透明"
+    }
+  ],
+  "iframeUrl" : "../demo/mask-composite.html"
+}

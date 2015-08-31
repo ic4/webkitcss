@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>-webkit-perspective demo</title>
+	<style type="text/css"> 
+		body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+		h1{margin-bottom:30px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+		#div1{height: 150px;width: 150px;margin: 50px auto;padding:10px;border: 1px solid #ccc;}
+
+		#div2{padding:50px 20px;text-align:center;background-color: #3983E4;color: #fff;-webkit-transform: rotateX(45deg);transform: rotateX(45deg);}
+	</style>  
+</head>
+<body>
+<h1>-webkit-perspective</h1>
+<p>-webkit-perspective:<span id="pers_value">100</span><br /><input type="range" min="0" max="2000" step="50" id="pers_length" value="100" /></p>
+<div id="div1" style="-webkit-perspective:100;">
+  <div id="div2">Ctrip携程2014 - Ctrip UED</div>
+</div>
+<script type="text/javascript">
+	window.onload=function() {
+		var persLen=document.getElementById("pers_length"),
+			persVal=document.getElementById("pers_value"),
+			parentDiv=document.getElementById("div1");
+
+		persLen.onchange=function(){
+			var persNum=this.value?parseInt(this.value):0;
+
+			persVal.innerHTML=persNum;
+			parentDiv.style.webkitPerspective=persNum;
+		}
+	}
+</script>
+</body>
+</html>
+

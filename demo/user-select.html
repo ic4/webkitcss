@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>-webkit-user-select demo</title>
+<style>
+body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+h1{margin-bottom:30px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+ul, li{list-style: none;margin: 0;padding:0;}
+.modify li { width:500px; height:40px; padding:10px; margin-bottom:10px; border:1px solid #ccc; }
+.modify li:focus{outline:none;border:1px solid #3983E4;}
+</style>
+</head>
+<body>
+<h1>-webkit-user-select</h1>
+<ul class="modify">
+	<li style="-webkit-user-select:auto;">auto:用户可以选择元素内容<img src="../img/ctriplogo.png" title="[携程logo]" width="126" height="43" style="vertical-align:middle;" /></li>
+	<li style="-webkit-user-select:none;">none:用户不能选择元素内容<img src="../img/ctriplogo.png" title="[携程logo]" width="126" height="43" style="vertical-align:middle;" /></li>
+	<li style="-webkit-user-select:text;">text:用户可以选择元素文本<img src="../img/ctriplogo.png" title="[携程logo]" width="126" height="43" style="vertical-align:middle;" /></li>
+</ul>
+</body>
+</html>

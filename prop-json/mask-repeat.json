@@ -1,0 +1,47 @@
+{
+  "name" : "-webkit-mask-repeat",
+  "discribe" : "定义遮罩层的出现位置。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "1.0",
+        "safari" : "4.0",
+        "android" : "2.1",
+        "ios" : "3.2"
+      }
+    }
+  ],
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-mask-repeat",
+      "gram_detail" : "repeat | repeat-x | repeat-y | space | round | no-repeat"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "repeat",
+      "prop_content" : "遮罩图片水平和垂直方向都重复。"
+    },
+    {
+      "prop_title" : "repeat-x",
+      "prop_content" : "遮罩图片仅在水平方向重复。"
+    },
+    {
+      "prop_title" : "repeat-y",
+      "prop_content" : "遮罩图片仅在垂直方向重复。"
+    },
+    {
+      "prop_title" : "space",
+      "prop_content" : "遮盖图像重复的次数使其可容纳在背景放置区域中，同时不经过裁剪，图像将拉开间隔以填满区域。"
+    },
+    {
+      "prop_title" : "round",
+      "prop_content" : "遮盖图像经过缩放，以便可放下整数个该图片。"
+    },
+    {
+      "prop_title" : "no-repeat",
+      "prop_content" : "遮罩图片不重复。"
+    }
+  ],
+  "iframeUrl" : "../demo/mask-repeat.html"
+}

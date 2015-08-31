@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>-webkit-user-drag demo</title>
+<style>
+body, textarea{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+h1{margin-bottom:30px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+ul, li{list-style: none;margin: 0;padding:0;}
+dl,dt,dd{margin:0;padding:0;}
+dt{margin: 0 0 10px;font-size: 18px;}
+dd{margin: 6px 20px; padding: 4px 10px;border:2px dashed #ccc;text-align: center;}
+.drag_panel{float: left;width: 240px;}
+.show_panel{margin-left: 260px;margin-top: 170px;}
+.show_panel .container{height: 150px;width: 200px;}
+</style>
+</head>
+<body>
+<h1>-webkit-user-drag</h1>
+<dl class="drag_panel">
+	<dt>-webkit-user-drag:element;</dt>
+	<dd id="drag_text" style="-webkit-user-drag:element;-webkit-user-select:none; cursor:move;">Ctrip携程2014 - Ctrip UED</dd>
+	<dd id="drag_img" ondragstart="return onDragStart(event);" style="-webkit-user-drag:element;-webkit-user-select:none; cursor:move;"><img src="../img/ctriplogo.png" title="[携程logo]" width="126" height="43" style="vertical-align:middle;" /></dd>
+	<dt>-webkit-user-drag:auto;</dt>
+	<dd style="-webkit-user-drag:auto;">Ctrip携程2014 - Ctrip UED</dd>
+	<dd><img src="../img/ctriplogo.png" title="[携程logo]" width="126" height="43" style="vertical-align:middle;-webkit-user-drag:auto;" /></dd>
+	<dt>-webkit-user-drag:none;</dt>
+	<dd style="-webkit-user-drag:none;">Ctrip携程2014 - Ctrip UED</dd>
+	<dd><img src="../img/ctriplogo.png" title="[携程logo]" width="126" height="43" style="vertical-align:middle;-webkit-user-drag:none;" /></dd>
+</dl>
+<div class="show_panel">
+	<textarea class="container">Drag the right content here.</textarea>
+</div>
+<script>
+window.onload=function(){
+	var dragText=document.getElementById("drag_text"),
+		dragImg=document.getElementById("drag_img");
+
+	dragText.ondragstart=function(e){
+		e.dataTransfer.setData("text/plain", e.target.innerHTML);
+	};
+
+	dragImg.ondragstart=function(e){
+		e.dataTransfer.setData("text/uri-list", e.target.src);
+	}
+}
+</script>
+</body>
+</html>

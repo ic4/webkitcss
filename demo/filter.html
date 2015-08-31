@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>-webkit-filter demo</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<style type="text/css">
+body {font:normal 13px/1.5em "MicroSoft Yahei", Tahoma, simsun, Verdana, Lucida, Arial, Helvetica, sans-serif;}
+pre{position:relative;width: 290px;margin: 0;padding: 6px 0;font:12px/1.2 Tahoma, Arial, sans-serif; overflow-x: auto; background-color: #fff;box-sizing:border-box;border:1px solid #ccc;}
+h1{margin:20px 0 30px;padding-bottom: 10px;font-size: 28px;width: 320px;border-bottom: 1px solid #ccc;}
+.togglebar{height: 44px;font-size: 16px;list-style: none;}
+.togglebar li{float: left;width: 160px;border-bottom:1px solid #ccc;text-align: center;padding: 12px 0;background-color:#F0F0F0;cursor: pointer;box-sizing: border-box;}
+.togglebar li + li{border-left: 1px solid #ccc;}
+.togglebar li:hover{background-color: #ccc;}
+.tit {position:absolute;width:320px;height:50px;overflow:hidden;margin:0;line-height:50px;font-size:24px;text-indent:25px;border-bottom:1px solid #CCCCCC;background-color:#F0F0F0;}
+.control, .svg_control{float:left;width:270px;overflow:hidden;padding:15px 25px;margin-right:10px;background-color:#F0F0F0;}
+.svg_control{width:290px;padding: 15px 20px 15px 10px;max-height: 700px;overflow-y: auto;}
+.shadow_ctrl{clear:both;float:left;overflow:hidden;margin:-30px 0 0;border-top:0 none;}
+.control input,.shadow_ctrl input {vertical-align:middle;}
+.control span,.shadow_ctrl span {padding:0 5px;font-weight:bold;font-size:22px;font-family:Georgia;color:#FF0000;}
+.svg_control dd{margin: 4px 0 10px;}
+.svg_control input[type="number"], .svg_control input[type="text"]{width: 24px;padding:2px 4px;text-align: center;}
+.svg_control input[type=number]::-webkit-inner-spin-button, 
+.svg_control input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none; margin:0;}
+.svg_control input[type="text"]{width: 200px;}
+#show_pic {margin:10px 0 0 20px; max-width:534px;}
+#show_code {margin:0;}
+.show_code {overflow:hidden;padding:10px;margin:10px 0 0;font-family: Tahoma, Arial, sans-serif;background-color:#fff;border:1px solid #ccc;}
+.file_select{margin-left: 340px;margin-top: -42px;}
+</style>
+</head>
+
+<body>
+<h1>-webkit-filter</h1>
+<ul class="togglebar"><li id="func">函数</li><li id="svg_func">SVG</li></ul>
+<dl class="control" id="control" style="display:none;">
+	<dt>blur</dt>
+	<dd><input type="range" min="0" max="20" id="blur_input_00" value="0" /><span id="blur_value"></span>px</dd>
+	<dt>brightness</dt>
+	<dd><input type="range" min="0" max="200" id="brightness_input_01" value="100" /><span id="brightness_value"></span>%</dd>
+	<dt>contrast</dt>
+	<dd><input type="range" min="0" max="100" id="contrast_input_02" value="100" /><span id="contrast_value"></span>%</dd>
+	<dt>grayscale</dt>
+	<dd><input type="range" min="0" max="100" id="grayscale_input_03" value="0" /><span id="grayscale_value"></span>%</dd>
+	<dt>hue-rotate</dt>
+	<dd><input type="range" min="0" max="360" id="hue-rotate_input_04" value="0" /><span id="hue-rotate_value"></span>deg</dd>
+	<dt>invert</dt>
+	<dd><input type="range" min="0" max="100" id="invert_input_05" value="0" /><span id="invert_value"></span>%</dd>
+	<dt>opacity</dt>
+	<dd><input type="range" min="0" max="100" id="opacity_input_06" value="100" /><span id="opacity_value"></span>%</dd>
+	<dt>saturate</dt>
+	<dd><input type="range" min="0" max="240" id="saturate_input_07" value="100" /><span id="saturate_value"></span>%</dd>
+	<dt>sepia</dt>
+	<dd><input type="range" min="0" max="100" id="sepia_input_08" value="0" /><span id="sepia_value"></span>%</dd>
+	<dt>drop-shadow</dt>
+	<dd>X:<input type="range" min="-100" max="100" id="shadow_x_input_09" value="0" /><span id="shadow_x_value"></span>px</dd>
+	<dd>Y:<input type="range" min="-100" max="100" id="shadow_y_input_10" value="0" /><span id="shadow_y_value"></span>px</dd>
+	<dd>radius:<input type="range" min="0" max="30" id="shadow_ra_input_11" value="0" /><span id="shadow_ra_value"></span>px</dd>
+	<dd>R:<input type="range" min="0" max="255" id="shadow_r_input_12" value="0" /><span id="shadow_r_value"></span></dd>
+	<dd>G:<input type="range" min="0" max="255" id="shadow_g_input_13" value="0" /><span id="shadow_g_value"></span></dd>
+	<dd>B:<input type="range" min="0" max="255" id="shadow_b_input_14" value="0" /><span id="shadow_b_value"></span></dd>
+	<dd>A:<input type="range" min="0" max="1" step=".05" id="shadow_a_input_15" value="1" /><span id="shadow_a_value"></span></dd>
+	<dd class="show_code">
+		<p id="show_code">来这里复制CSS代码吧！</p>
+	</dd>
+</dl>
+<dl class="svg_control" id="svg_control">
+	<dt>blur</dt>
+	<dd>
+<pre>
+&lt;filter id="svg_blur"&gt;
+  &lt;feGaussianBlur in="SourceGraphic" stdDeviation="<input type="number" id="blurx_check" min="0" max="20" value="0" /> <input type="number" id="blury_check" min="0" max="20" value="0" />" /&gt;
+&lt;/filter&gt;
+</pre>
+	</dd>
+	<dt>brightness</dt>
+	<dd>
+<pre>
+&lt;filter id="svg_brightness"&gt;
+  &lt;feComponentTransfer&gt;
+    &lt;feFuncR type="linear" slope="<input type="number" id="brightnessr_check" min="0" max="5" value="1" />" /&gt;
+    &lt;feFuncG type="linear" slope="<input type="number" id="brightnessg_check" min="0" max="5" value="1" />" /&gt;
+    &lt;feFuncB type="linear" slope="<input type="number" id="brightnessb_check" min="0" max="5" value="1" />" /&gt;
+  &lt;/feComponentTransfer&gt;
+&lt;/filter&gt;
+</pre>
+	</dd>
+	<dt>contrast</dt>
+	<dd>
+<pre>
+&lt;filter id="svg_contrast"&gt;
+  &lt;feComponentTransfer&gt;
+    &lt;feFuncR type="linear" slope="1" intercept="<input type="number" id="contrastr_check" min="-1" max="0" step="0.1" value="0" />" /&gt;
+    &lt;feFuncG type="linear" slope="1" intercept="<input type="number" id="contrastg_check" min="-1" max="0" step="0.1" value="0" />" /&gt;
+    &lt;feFuncB type="linear" slope="1" intercept="<input type="number" id="contrastb_check" min="-1" max="0" step="0.1" value="0" />" /&gt;
+  &lt;/feComponentTransfer&gt;
+&lt;/filter&gt;
+</pre>
+	</dd>
+	<dt>drop-shadow</dt>
+	<dd>
+<pre>
+&lt;filter id="svg_drop-shadow"&gt;
+  &lt;feGaussianBlur in="SourceAlpha" stdDeviation="<input type="number" id="drop-shadowr_check" min="0" max="20" value="0" />" /&gt;
+  &lt;feOffset dx="<input type="number" id="drop-shadowx_check" min="-20" max="20" value="0" />" dy="<input type="number" id="drop-shadowy_check" min="-20" max="20" value="0" />" /&gt;
+<!--   &lt;feFlood flood-color="<input type="color" id="drop-shadowc_check" />"/&gt; -->
+  &lt;feMerge&gt;
+    &lt;feMergeNode /&gt;
+    &lt;feMergeNode in="SourceGraphic" /&gt;
+  &lt;/feMerge&gt;
+&lt;/filter&gt;
+</pre>
+	</dd>
+	<dt>grayscale</dt>
+	<dd>
+<pre>
+&lt;filter id="svg_grayscale"&gt;
+  &lt;feColorMatrix type="matrix" values="<input type="text" id="sepia_check" placeholder="请输入15个0-1数字，以空格隔开" />
+                                        0 0 0 1 0" /&gt;
+&lt;/filter&gt;
+</pre>
+	</dd>
+	<dt>hue-rotate</dt>
+	<dd>
+<pre>
+&lt;filter id="svg_hue-rotate"&gt;
+  &lt;feColorMatrix type="hueRotate" values="<input type="number" id="hue-rotate_check" min="0" max="360" value="0" step="10" />" /&gt;
+&lt;/filter&gt;
+</pre>
+	</dd>
+	<dt>invert</dt>
+	<dd>
+<pre>
+&lt;filter id="svg_invert"&gt;
+  &lt;feComponentTransfer&gt;
+    &lt;feFuncR type="table" tableValues="<input type="number" id="invertr1_check" min="0" max="1" value="0" step="0.1" /> <input type="number" id="invertr2_check" min="0" max="1" value="1" step="0.1" />" /&gt;
+    &lt;feFuncG type="table" tableValues="<input type="number" id="invertg1_check" min="0" max="1" value="0" step="0.1" /> <input type="number" id="invertg2_check" min="0" max="1" value="1" step="0.1" />" /&gt;
+    &lt;feFuncB type="table" tableValues="<input type="number" id="invertb1_check" min="0" max="1" value="0" step="0.1" /> <input type="number" id="invertb2_check" min="0" max="1" value="1" step="0.1" />" /&gt;
+  &lt;/feComponentTransfer&gt;
+&lt;/filter&gt;
+</pre>
+	</dd>	
+	<dt>opacity</dt>
+	<dd>
+<pre>
+&lt;filter id="svg_opacity"&gt;
+  &lt;feComponentTransfer&gt;
+    &lt;feFuncA type="table" tableValues="<input type="number" id="opacitya1_check" min="0" max="1" value="0" step="0.1" /> <input type="number" id="opacitya2_check" min="0" max="1" value="1" step="0.1" />" /&gt;
+  &lt;/feComponentTransfer&gt;
+&lt;/filter&gt;
+</pre>
+	</dd>
+	<dt>saturate</dt>
+	<dd>
+<pre>
+&lt;filter id="svg_saturate"&gt;
+  &lt;feColorMatrix type="saturate" values="<input type="number" id="saturate_check" min="0" max="3" value="1" step="0.1" />" /&gt;
+ &lt;/filter&gt;
+</pre>
+	</dd>
+	<dt>sepia</dt>
+	<dd>
+<pre>
+&lt;filter id="svg_sepia"&gt;
+  &lt;feColorMatrix type="matrix" values="<input type="text" id="sepia_check" placeholder="请输入15个0-1数字，以空格隔开" />
+                                       0 0 0 1 0" /&gt;
+&lt;/filter&gt;
+</pre>
+	</dd>
+</dl>
+<h3 class="file_select">
+    <label>我要换张图：</label>
+    <input type="file" id="files" name="files[]" multiple />
+</h3>
+<img src="../img/flower.jpg" alt="" id="show_pic" />
+
+<svg id="filter_effect">
+	<filter id="svg_blur">
+	    <feGaussianBlur in="SourceGraphic" stdDeviation="0 0" />
+	</filter>
+	<filter id="svg_brightness">
+		<feComponentTransfer>
+			<feFuncR type="linear" slope="1" />
+			<feFuncG type="linear" slope="1" />
+			<feFuncB type="linear" slope="1" />
+		</feComponentTransfer>
+	</filter>
+	<filter id="svg_contrast">
+		<feComponentTransfer>
+			<feFuncR type="linear" slope="1" intercept="0" />
+			<feFuncG type="linear" slope="1" intercept="0" />
+			<feFuncB type="linear" slope="1" intercept="0" />
+		</feComponentTransfer>
+	</filter>
+	<filter id="svg_drop-shadow">
+		<feGaussianBlur in="SourceAlpha" stdDeviation="0" />
+		<feOffset dx="0" dy="0" />
+		<feFlood flood-color="#888" />
+		<feMerge>
+			<feMergeNode />
+			<feMergeNode in="SourceGraphic" />
+		</feMerge>
+	</filter>
+	<filter id="svg_grayscale">
+		<feColorMatrix type="matrix" values="0.2126 0.7152 0.0722 0 0
+											0.2126 0.7152 0.0722 0 0
+											0.2126 0.7152 0.0722 0 0
+											0 0 0 1 0" />
+	</filter>
+	<filter id="svg_hue-rotate">
+		<feColorMatrix type="hueRotate" values="0" />
+	</filter>
+	<filter id="svg_invert">
+		<feComponentTransfer>
+			<feFuncR type="table" tableValues="1 0" />
+			<feFuncG type="table" tableValues="1 0" />
+			<feFuncB type="table" tableValues="1 0" />
+		</feComponentTransfer>
+	</filter>
+	<filter id="svg_opacity">
+		<feComponentTransfer>
+			<feFuncA type="table" tableValues="0 1" />
+		</feComponentTransfer>
+	</filter>
+	<filter id="svg_saturate">
+		<feColorMatrix type="saturate" values="2" />
+	</filter>
+	<filter id="svg_sepia">
+		<feColorMatrix type="matrix" values="0.393 0.769 0.189 0 0
+											0.349 0.686 0.168 0 0
+											0.272 0.534 0.131 0 0
+											0 0 0 1 0" />
+	</filter>
+</svg>
+<script type="text/javascript">
+window.onload = function() {
+	var func = document.getElementById("func"),
+		svgFunc = document.getElementById("svg_func"),
+		ctrlBox = document.getElementById("control"),
+		svgCtrlBox = document.getElementById("svg_control");
+		filterType = Array.prototype.slice.call(ctrlBox.querySelectorAll("input")),
+		filterValue = Array.prototype.slice.call(ctrlBox.querySelectorAll("span")),
+		svgFilterType = Array.prototype.slice.call(svgCtrlBox.querySelectorAll("input"));
+
+	func.addEventListener("click", function(){
+		ctrlBox.style.display="block";
+		svgCtrlBox.style.display="none";
+		showPic.style.webkitFilter="";
+		// showPic.setAttribute("style",  "-webkit-filter:"+svgLast);	
+	});
+	svgFunc.addEventListener("click", function(){
+		ctrlBox.style.display="none";
+		svgCtrlBox.style.display="block";
+		showPic.style.webkitFilter="";
+	});
+
+	var shadowCtrl = document.getElementById("shadow_ctrl"),
+		showPic = document.getElementById("show_pic"),
+		showCode = document.getElementById("show_code");
+
+	var dw = "", last = "", resObj = {}, numObj = {},
+		svgLast = "", resObjSvg = {};
+
+	//filter using svg
+	for(var si=0; si<svgFilterType.length;si++){
+		svgFilterType[si].onchange=function(){
+			var idName=this.id, svgFilterStr = idName.substring(0, idName.indexOf('_'));
+
+			resObjSvg[svgFilterStr]=this.value;
+			if(svgFilterStr.indexOf('blur')>=0){
+				resObjSvg["blurx"]=resObjSvg["blurx"]?parseFloat(resObjSvg["blurx"]):0;
+				resObjSvg["blury"]=resObjSvg["blury"]?parseFloat(resObjSvg["blury"]):0;
+
+				document.getElementById("svg_blur").innerHTML='<feGaussianBlur in="SourceGraphic" stdDeviation="'+resObjSvg["blurx"]+" "+resObjSvg["blury"]+'" />';
+				if(svgLast.indexOf("url(#svg_blur)")===-1){
+					svgLast += " url(#svg_blur)";
+					showPic.setAttribute("style",  "-webkit-filter:"+svgLast);					
+				}
+			}else if(svgFilterStr.indexOf("brightness")>=0){
+				resObjSvg["brightnessr"]=resObjSvg["brightnessr"]?parseFloat(resObjSvg["brightnessr"]):1;
+				resObjSvg["brightnessg"]=resObjSvg["brightnessg"]?parseFloat(resObjSvg["brightnessg"]):1;
+				resObjSvg["brightnessb"]=resObjSvg["brightnessb"]?parseFloat(resObjSvg["brightnessb"]):1;
+
+				document.getElementById("svg_brightness").innerHTML='<feComponentTransfer><feFuncR type="linear" slope="'+resObjSvg["brightnessr"]+'" /><feFuncG type="linear" slope="'+resObjSvg["brightnessg"]+'" /><feFuncB type="linear" slope="'+resObjSvg["brightnessb"]+'" /></feComponentTransfer>';
+				if(svgLast.indexOf("url(#svg_brightness)")===-1){
+					svgLast += " url(#svg_brightness)";
+					showPic.setAttribute("style",  "-webkit-filter:"+svgLast);					
+				}
+			}else if(svgFilterStr.indexOf("contrast")>=0){
+				resObjSvg["contrastr"]=resObjSvg["contrastr"]?parseFloat(resObjSvg["contrastr"]):0;
+				resObjSvg["contrastg"]=resObjSvg["contrastg"]?parseFloat(resObjSvg["contrastg"]):0;
+				resObjSvg["contrastb"]=resObjSvg["contrastb"]?parseFloat(resObjSvg["contrastb"]):0;
+
+				document.getElementById("svg_contrast").innerHTML='<feComponentTransfer><feFuncR type="linear" slope="2" intercept="'+resObjSvg["contrastr"]+'" /><feFuncG type="linear" slope="2" intercept="'+resObjSvg["contrastg"]+'" /><feFuncB type="linear" slope="2" intercept="'+resObjSvg["contrastb"]+'" /></feComponentTransfer>';
+				if(svgLast.indexOf("url(#svg_contrast)")===-1){
+					svgLast += " url(#svg_contrast)";
+					showPic.setAttribute("style",  "-webkit-filter:"+svgLast);					
+				}
+			}else if(svgFilterStr.indexOf("drop-shadow")>=0){
+				resObjSvg["drop-shadowr"]=resObjSvg["drop-shadowr"]?parseFloat(resObjSvg["drop-shadowr"]):0;
+				resObjSvg["drop-shadowx"]=resObjSvg["drop-shadowx"]?parseInt(resObjSvg["drop-shadowx"]):0;
+				resObjSvg["drop-shadowy"]=resObjSvg["drop-shadowy"]?parseInt(resObjSvg["drop-shadowy"]):0;
+				// resObjSvg["drop-shadowc"]=resObjSvg["drop-shadowc"]?resObjSvg["drop-shadowc"]:"#888888";
+
+				document.getElementById("svg_drop-shadow").innerHTML='<feGaussianBlur in="SourceAlpha" stdDeviation="'+resObjSvg["drop-shadowr"]+'" /><feOffset dx="'+resObjSvg["drop-shadowx"]+'" dy="'+resObjSvg["drop-shadowy"]+'" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>';
+				if(svgLast.indexOf("url(#svg_drop-shadow)")===-1){
+					svgLast += " url(#svg_drop-shadow)";
+					showPic.setAttribute("style",  "-webkit-filter:"+svgLast);					
+				}
+			}else if(svgFilterStr.indexOf("grayscale")>=0){
+				resObjSvg["grayscale"]=resObjSvg["grayscale"]?resObjSvg["grayscale"]:"1 0 0 0 0 0 1 0 0 0 0 0 1 0 0";
+
+				document.getElementById("svg_grayscale").innerHTML='<feColorMatrix type="matrix" values="'+resObjSvg["grayscale"]+' 0 0 0 1 0" />';
+				if(svgLast.indexOf("url(#svg_grayscale)")===-1){
+					svgLast += " url(#svg_grayscale)";
+					showPic.setAttribute("style",  "-webkit-filter:"+svgLast);					
+				}
+			}else if(svgFilterStr.indexOf("hue-rotate")>=0){
+				resObjSvg["hue-rotate"]=resObjSvg["hue-rotate"]?parseInt(resObjSvg["hue-rotate"]):0;
+
+				document.getElementById("svg_hue-rotate").innerHTML='<feColorMatrix type="hueRotate" values="'+resObjSvg["hue-rotate"]+'" />';
+				if(svgLast.indexOf("url(#svg_hue-rotate)")===-1){
+					svgLast += " url(#svg_hue-rotate)";
+					showPic.setAttribute("style",  "-webkit-filter:"+svgLast);					
+				}
+			}else if(svgFilterStr.indexOf("invert")>=0){
+				resObjSvg["invertr1"]=resObjSvg["invertr1"]?parseFloat(resObjSvg["invertr1"]):0;
+				resObjSvg["invertr2"]=resObjSvg["invertr2"]?parseFloat(resObjSvg["invertr2"]):1;
+				resObjSvg["invertg1"]=resObjSvg["invertg1"]?parseFloat(resObjSvg["invertg1"]):0;
+				resObjSvg["invertg2"]=resObjSvg["invertg2"]?parseFloat(resObjSvg["invertg2"]):1;
+				resObjSvg["invertb1"]=resObjSvg["invertb1"]?parseFloat(resObjSvg["invertb1"]):0;
+				resObjSvg["invertb2"]=resObjSvg["invertb2"]?parseFloat(resObjSvg["invertb2"]):1;
+
+				document.getElementById("svg_invert").innerHTML='<feComponentTransfer><feFuncR type="table" tableValues="'+resObjSvg["invertr1"]+' '+resObjSvg["invertr2"]+'" /><feFuncG type="table" tableValues="'+resObjSvg["invertg1"]+' '+resObjSvg["invertg2"]+'" /><feFuncB type="table" tableValues="'+resObjSvg["invertb1"]+' '+resObjSvg["invertb2"]+'" /></feComponentTransfer>';
+				if(svgLast.indexOf("url(#svg_invert)")===-1){
+					svgLast += " url(#svg_invert)";
+					showPic.setAttribute("style",  "-webkit-filter:"+svgLast);					
+				}
+			}else if(svgFilterStr.indexOf("opacity")>=0){
+				resObjSvg["opacitya1"]=resObjSvg["opacitya1"]?parseFloat(resObjSvg["opacitya1"]):0;
+				resObjSvg["opacitya2"]=resObjSvg["opacitya2"]?parseFloat(resObjSvg["opacitya2"]):0;
+
+				document.getElementById("svg_opacity").innerHTML='<feComponentTransfer><feFuncA type="table" tableValues="'+resObjSvg["opacitya1"]+' '+resObjSvg["opacitya2"]+'" /></feComponentTransfer>';
+				if(svgLast.indexOf("url(#svg_opacity)")===-1){
+					svgLast += " url(#svg_opacity)";
+					showPic.setAttribute("style",  "-webkit-filter:"+svgLast);					
+				}
+			}else if(svgFilterStr.indexOf("saturate")>=0){
+				resObjSvg["saturate"]=resObjSvg["saturate"]?parseFloat(resObjSvg["saturate"]):0;
+
+				document.getElementById("svg_saturate").innerHTML='<feColorMatrix type="saturate" values="'+resObjSvg["saturate"]+'" />';
+				if(svgLast.indexOf("url(#svg_saturate)")===-1){
+					svgLast += " url(#svg_saturate)";
+					showPic.setAttribute("style",  "-webkit-filter:"+svgLast);					
+				}
+			}else{
+				resObjSvg["sepia"]=resObjSvg["sepia"]?resObjSvg["sepia"]:"1 0 0 0 0 0 1 0 0 0 0 0 1 0 0";
+
+				document.getElementById("svg_sepia").innerHTML='<feColorMatrix type="matrix" values="'+resObjSvg["sepia"]+' 0 0 0 1 0" />';
+				if(svgLast.indexOf("url(#svg_sepia)")===-1){
+					svgLast += " url(#svg_sepia)";
+					showPic.setAttribute("style",  "-webkit-filter:"+svgLast);					
+				}
+			}
+		}
+	}
+
+	//filter using func
+	for (var i=0; i<=filterType.length; i++){
+		filterValue[i].innerHTML = filterType[i]?filterType[i].value:0;
+		filterType[i].onchange = function() {
+			svgLast = ""
+			var filterStr = this.id.substring(-1, this.id.length - 9);
+			var filterId = parseInt(this.id.substr(-2,3));
+
+			document.getElementById(filterStr + '_value').innerHTML = this.value;
+			if (filterStr=="blur"){
+				dw = "px";
+			}else if (filterStr=="hue-rotate"){
+				dw = "deg";
+			}else if (filterStr=="shadow_x" || filterStr=="shadow_y" || filterStr=="shadow_ra"){
+				dw = "px";
+			}else if (filterStr=="shadow_r" || filterStr=="shadow_g" || filterStr=="shadow_b" || filterStr=="shadow_a"){
+				dw = "";
+			}else {
+				dw = "%";
+			}
+
+			if (filterId >= 9){
+				resObj[filterId] = this.value + dw;
+			}else{
+				resObj[filterId] = filterStr + "(" + this.value + dw + ")";
+				numObj[filterId] = this.value;
+				showPic.setAttribute("style",  "-webkit-filter:" + filterStr + "(" + this.value + dw + ")");
+			}
+
+			last = "";
+			for (var j=0; j<=filterType.length; j++){
+				if(j>=9){
+					if(resObj[9]||resObj[10]||resObj[11]||resObj[12]||resObj[13]||resObj[14]||resObj[15]){
+						resObj[9]=resObj[9]||0;
+						resObj[10]=resObj[10]||0;							
+						resObj[11]=resObj[11]||0;
+						resObj[12]=resObj[12]||0;
+						resObj[13]=resObj[13]||0;
+						resObj[14]=resObj[14]||0;
+						resObj[15]=resObj[15]>=0?resObj[15]:1; //opacity defaults to 1
+
+						last = "drop-shadow(" + resObj[9] + " " + resObj[10] + " " + resObj[11] + " " + "rgba(" + resObj[12] + "," + resObj[13] + "," + resObj[14] + "," + resObj[15] + ")) ";
+						showPic.setAttribute("style",  "-webkit-filter: " + last);
+						showCode.innerHTML = "-webkit-filter: " + last;
+					}
+				}
+			}
+
+			for (var j=0; j<9; j++){
+				if (resObj[j] != undefined && numObj[j] != 0){
+					last += resObj[j] + " ";
+					showPic.setAttribute("style",  "-webkit-filter: " + last);
+					showCode.innerHTML = "-webkit-filter: " + last;
+				}
+			}
+
+		}
+	}
+
+}
+</script>
+<script type="text/javascript">
+	if (window.File && window.FileReader && window.FileList && window.Blob){
+		//全部支持
+		function handleFileSelect(evt) {
+			var files = evt.target.files, f = files[0];
+				if (!/image\/\w+/.test(f.type)){
+					 alert("请确保文件为图像类型");
+		             return false;
+				}
+				var reader = new FileReader();
+				reader.onload = (function(theFile) {
+				return function(e) {
+					var show_pic = document.getElementById("show_pic");
+					show_pic.src = e.target.result;
+				};
+				})(f);
+				reader.readAsDataURL(f);
+		}
+		document.getElementById('files').addEventListener('change', handleFileSelect, false);
+		}else {
+		alert('该浏览器不全部支持File APIs的功能');
+	}
+</script>
+</body>
+</html>

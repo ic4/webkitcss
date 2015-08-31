@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>-webkit-backface-visibility Demo</title>
+<style type="text/css">
+body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+h1{margin-bottom:30px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+dl,dt,dd{margin: 0;padding: 0}
+select,option,input{margin:0;padding:0;font:14px/1.0 Tahoma, Arial, "Microsoft Yahei", serif;}
+dt{font-size: 16px;}
+dd{margin-bottom: 10px;}
+.control_panel{float: left;}
+.show_panel{margin-left: 240px;margin-top: 200px;padding:10px 20px;width:160px;text-align: center;color:#fff;font-size: 20px;font-weight: bold;background-color: #fff;}
+
+#adjust_box { width:380px; margin:10px;}
+#display_box {margin-top:80px;}
+#display_box div { width:252px; height:86px; }
+dl { padding:0 10px; }
+dt { margin-bottom:10px; padding:5px 0;}
+dd { margin-bottom:20px; }
+dd label { margin-right:10px; cursor: pointer; }
+dd span { display:block; font-size:20px; font-weight:bold; }
+dd b { margin-left:10px; vertical-align:middle; }
+dd i { font-size:24px; font-style:normal; color:#F00; }
+input { margin-right:3px; vertical-align:middle; }
+</style>
+</head>
+<body>
+<h1>-webkit-backface-visibility</h1>
+<dl id="adjust_box" class="control_panel">
+	<dt>-webkit-backface-visibility:</dt>
+	<dd>
+		<form name ="name1" action="">
+		<label><input type="radio" checked ="checked" name="aaa" id="aaa" />visible</label>
+		<label><input type="radio"  name="aaa" id="bbb" />hidden</label>
+		</form>
+	</dd>
+	<dt>transform</dt>
+	<dd>
+		<form name ="name2" action="">
+		<label><input type="radio" checked="checked" name="ccc" id="ccc" />Yes</label>
+		<label><input type="radio" name="ccc" id="ddd" />No</label>
+		</form>
+	</dd>
+	<p class="pop" id="pop1">transform设置旋转且-webkit-backface-visibility设置为可见，图片可见。</p>
+</dl>
+<div id="display_box" class="show_panel">
+	<div id="one_element" style="background:url(../img/ctriplogo.png) no-repeat; -webkit-backface-visibility:visible;backface-visibility:visible;"></div>
+</div>
+<script type="text/javascript">
+	window.onload = function(){
+		var adjustBox = document.getElementById("adjust_box");
+		var one_element = document.getElementById("one_element");
+		var pop = document.getElementById("pop1");
+		one_element.style.webkitTransform = "rotateY(180deg)";
+		one_element.style.transform = "rotateY(180deg)";
+
+		adjustBox.onclick = function(e){
+			var target = e.target || e.srcElement;
+			if(document.getElementById("aaa").checked == true){
+				one_element.style.webkitBackfaceVisibility = "visible";
+				one_element.style.backfaceVisibility = "visible";
+				pop.innerHTML = "backface-visibility 设置为可见";
+			}
+			if(document.getElementById("bbb").checked == true){
+				one_element.style.webkitBackfaceVisibility = "hidden";
+				one_element.style.backfaceVisibility = "hidden";
+				pop.innerHTML = "backface-visibility 设置为不可见";
+			}
+			if(document.getElementById("ccc").checked == true){
+				one_element.style.webkitTransform = "rotateY(180deg)";
+				one_element.style.transform = "rotateY(180deg)";
+				pop.innerHTML = "transform 设置旋转";
+			}
+			if(document.getElementById("ddd").checked == true){
+				one_element.style.webkitTransform = "none";
+				one_element.style.transform = "none";
+				pop.innerHTML = "transform 不设置旋转";
+			}
+
+			if(document.getElementById("bbb").checked == true && document.getElementById("ccc").checked == true){
+				pop.innerHTML = "transform设置旋转，backface-visibility设置不可见，图片不可见";
+			}
+
+		}
+	}
+</script>
+</body>
+</html>

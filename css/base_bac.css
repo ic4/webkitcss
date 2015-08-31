@@ -1,0 +1,104 @@
+/*===== reset =====*/
+body, p, dl, dd, form {margin:0;}
+body {color:#333;font:14px/1.42 "Microsoft Yahei","Simsun",arial,tahoma, sans-serif;-webkit-text-size-adjust:none;}
+h1, h2, h3, h4, h5, h6 {margin:0;font-size:14px;}
+ul, ol {margin:0;padding:0;list-style:none;}
+fieldset, input {margin:0;padding:0;}
+legend, textarea {padding:0;}
+select, textarea, input, button {color:inherit;font-size:inherit;font-family:inherit;*font-size:11px;*color:#666666;}
+input {vertical-align:middle;}
+input[type="button"] {cursor:pointer;}
+button {vertical-align:middle;cursor:pointer;}
+img {border:0 none;vertical-align:middle;}
+em, dfn {font-style:normal;}
+table {border-collapse:collapse; border-spacing: 0;}
+a {color:#3983E4;text-decoration:none;}
+a:hover {text-decoration:none;}
+
+/* layout */
+.wrap{margin:0 auto; *zoom:1; position: relative;}
+.wrap:after{clear:both; visibility: hidden; height:0; content:"\20"; display:block;}
+.main{margin-left: 340px; margin-right: 40px; padding-bottom: 15px; padding-top: 15px;}
+.side{width: 300px;float:left;-webkit-transition: all .3s linear;box-shadow: 1px 0 8px 2px rgba(0, 0, 0, .15), inset -1px 0 0 0 #fff;padding-top: 15px;position: relative;}
+
+.btn_primary{padding:3px 20px; background:#F9A816; background-image:linear-gradient(bottom,#f9a40d 0,#f8ac22 100%);background-image:-webkit-linear-gradient(bottom,#f9a40d 0,#f8ac22 100%);color:#fff;text-align:center; font-size:14px; vertical-align: middle;}
+.btn{padding:3px 20px;background:#3983E4;background-image: linear-gradient(bottom,#3979d8 0,#3889ff 100%);background-image: -webkit-linear-gradient(bottom,#3979d8 0,#3889ff 100%);color: #fff;vertical-align: middle;text-align: center;font-size: 14px;}
+
+.filter_box{padding:0 10px 5px;}
+
+/* Browser icons */
+.ico_browser{width: 40px; height:40px; display:inline-block; background-image:url(../img/browser-icon.png?140728); background-repeat:no-repeat; background-size: 80px 160px; position: relative; font-style: normal; vertical-align: middle;}
+.ico_browser small{position:absolute; top:-8px; right:-12px;font-size:8px;}
+.ico_browser_chr{background-position: 0 0;}
+.ico_browser_chr_no{background-position: -40px 0;}
+.ico_browser_saf{background-position: 0 -40px;}
+.ico_browser_saf_no{background-position: -40px -40px;}
+.ico_browser_and{background-position: 0 -80px;}
+.ico_browser_and_no{background-position: -40px -80px;}
+.ico_browser_ios{background-position: 0 -120px;}
+.ico_browser_ios_no{background-position: -40px -120px;}
+
+/* head */
+.head{height:80px; background-color:#3983E4; position: relative;}
+.head .logo{position: absolute; left:26px; top:12px; display:block; background:url(../img/logo.png) no-repeat; width: 250px; height:60px; text-indent: -999px;}
+
+/* nav */
+.nav{float:right; position: absolute; left:315px; top:37px;}
+.nav ul{overflow: hidden; *zoom:1;}
+.nav li{margin-right: 58px; margin-bottom: 15px; float:left;}
+.nav li a{color:#fff; font-size:18px;}
+
+.filter_box:before {content:"\20";position: absolute;left:0;top:55px;background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0,0,0,.1)), to(transparent));width: 100%;height:5px;}
+
+input[type="search"],
+input[type="search"]::-webkit-search-cancel-button {-webkit-appearance: none;}
+.field, .need {position: relative;}
+
+.field input{height:30px;width: 255px;padding: 6px 10px;background: #fff;border:1px solid #ccc;box-shadow: inset 0 2px 3px 0 rgba(192,192,192,.2);}
+.categorys{overflow-y: auto;height: -webkit-calc(100% - 45px);}
+.categorys > ul{margin-top: 10px;}
+/* mod */
+.mod .mod_tit{color:#3983E4; font-size:18px; padding-bottom: 15px; border-bottom:2px solid #3983E4; margin-bottom: 15px; padding-left: 15px;}
+
+/* preface*/
+.preface .mod_con p{margin-bottom: 32px; text-indent: 35px}
+
+/* props_box */
+.prop_quicks{overflow: hidden; *zoom:1;}
+.props_box {padding-bottom: 12px; float:left;  width: 33%;}
+.props_box h3{background-color:#EFF4F7; padding: 4px 0 4px 18px; margin-right: 10px; margin-left: 14px;}
+.props_box li{margin-top: 8px;  margin-right: 10px; margin-left: 25px}
+
+
+.position{padding-bottom: 15px; padding-left: 15px;font-size:14px;}
+
+.prop_intro{position:relative; margin-bottom: 20px;}
+.prop_intro .tit{font-size:20px;margin-bottom: 10px; padding:20px; border: 1px solid #3983E4; border-width: 1px 0;}
+.prop_intro h1{display:inline-block; vertical-align: middle;font: 30px Microsoft Yahei;}
+.prop_intro #bdshare{display: inline-block !important; *zoom:1; float:none !important; *display:inline; vertical-align: middle; margin-left: 10px;}
+.prop_comp {margin-top:20px;/*display:none*/}
+.prop_comp big{display:block; font-size:18px; margin-bottom: 8px; font-weight:normal; margin-left: 20px; margin-bottom: 10px;}
+.prop_comp p{margin: 0 0 15px 15px;}
+.prop_comp .browser_remark{margin-left: 20px;}
+.prop_comp .ico_browser + .ico_browser{margin-left: 10px;}
+
+.prop_detail{font-size:18px; margin-top: 20px;margin-left: 20px; line-height: 30px;}
+.prop_detail p {margin-bottom: 20px; }
+
+.prop_gramm .mod_con{margin-top: 10px; margin-left: 20px; margin-bottom: 40px;}
+
+.prop_value .mod_con{/*padding-top: 20px;*/ padding-left: 20px; margin-bottom: 20px;}
+.prop_value table{border-spacing: 0; border-collapse: collapse;/* border:1px solid #ccc*/}
+
+.prop_value table td{border:1px solid #fff; border-width:0 0 1px 0; padding:2px 20px 2px 10px; background-color:#f0f0f0; min-width:450px;}
+.prop_value table th{background-color:#3983E4; color:#fff; padding:2px 4px; font-weight: normal; text-align: left; text-indent:20px; min-width: 120px; border:1px solid #fff; border-width:0 0 1px 0; }
+
+.prop_demo .mod_con{padding:10px 0 0 20px;}
+.prop_demo .mod_con .btns{margin-top: 20px;}
+.prop_demo .mod_con .btns a{margin-right: 30px;}
+
+.mod_about .mod_con{padding:0 15px; line-height: 30px; margin-bottom: 20px;}
+
+.advice p{margin-bottom: 10px;}
+.advice .mod_con{padding:15px;}
+.advice .btns{padding:10px 15px;}

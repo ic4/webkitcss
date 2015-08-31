@@ -1,0 +1,32 @@
+{
+  "name" : "-webkit-animation-name",
+  "discribe" : " 检索或设置对象所应用的动画名称列表，必须与规则@keyframes配合使用，动画名称由@keyframes定义。<span class="ex">默认值为none</span>。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "4.0+",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-animation-name ",
+      "gram_detail" : " none | <single-animation-name> [, <single-animation-name>]*"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "none",
+      "prop_content" : "元素不引用任何动画名称或禁用元素已有动画。"
+    },
+    {
+      "prop_title" : "single-animation-name",
+      "prop_content" : "引用动画的名称。"
+    }
+  ],
+  "iframeUrl" : "../demo/animation-name.html"
+}

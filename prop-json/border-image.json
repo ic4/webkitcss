@@ -1,0 +1,44 @@
+{
+  "name" : "-webkit-border-image",
+  "discribe" : "设置或检索对象的边框样式并且用图像来进行填充。border-image属性可以用图像替代border-style样式。<span class=\"ex\">当值为none时，将显示border-style样式。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "3.0+",
+        "safari" : "7.0+",
+        "android" : "3.2+",
+        "ios" : "2.1+"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-border-image: ",
+      "gram_detail" : " &lt;border-image-source&gt; | &lt;border-image-slice&gt;[&lt;border-image-width&gt; | &lt;border-image-width&gt; | &lt;border-image-outset&gt;]* | &lt;border-image-repeat&gt; "
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "&lt;boeder-image-source&gt;",
+      "prop_content" : "设置或检索对象的边框是否用图像定义样式或图像来源路径。"
+    },
+    {
+      "prop_title" : "&lt;boeder-image-slice&gt;",
+      "prop_content" : "设置或检索对象的边框背景图的分割方式。"
+    },
+    {
+      "prop_title" : "&lt;boeder-image-width&gt;",
+      "prop_content" : "设置或检索对象的边框厚度。"
+    },
+    {
+      "prop_title" : "&lt;boeder-image-outset&gt;",
+      "prop_content" : "设置或检索对象的边框背景图的扩展。"
+    },
+    {
+      "prop_title" : "&lt;boeder-image-repeat&gt;",
+      "prop_content" : "设置或检索对象的边框背景图的扩展。"
+    }
+  ],
+  "iframeUrl" : "../demo/border-image.html"
+}

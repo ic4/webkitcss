@@ -1,0 +1,36 @@
+{
+  "name" : "-webkit-user-modify",
+  "discribe" : "设置用户是否可以编辑元素内容。与标签的contentEditable属性类似。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "1.0+",
+        "safari" : "3.0+",
+        "android" : "?",
+        "ios" : "5.0+"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-user-modify ",
+      "gram_detail" : "read-only | read-write | read-write-plaintext-only"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "read-only",
+      "prop_content" : "内容只读。"
+    },
+    {
+      "prop_title" : "read-write",
+      "prop_content" : "内容可读写。"
+    },
+    {
+      "prop_title" : "read-write-plaintext-only",
+      "prop_content" : "内容可读写，但粘贴内容中的富文本格式（如文本的颜色、大小，图片等）会丢失。内容类似于以纯文本显示。"
+    }
+  ],
+  "iframeUrl" : "../demo/user-modify.html"
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>keygen的伪元素</title>
+    <style>
+        #pseudo{-webkit-appearance:none;}
+        #pseudo::-webkit-keygen-select{background-color: #3983E4;color: #FF9913;font-size: 20px;margin-left: 20px;}
+    </style>
+</head>
+<body>
+<h1>keygen的伪元素</h1>
+<dl>
+    <dt>::-webkit-keygen-select</dt>
+    <dd>自定义keygen选中的样式。</dd>
+</dl>
+<keygen />
+<keygen id="pseudo" />
+</body>
+</html>

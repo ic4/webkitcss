@@ -1,0 +1,32 @@
+{
+  "name" : "-webkit-column-width",
+  "discribe" : "在一个多流中指定的 <span class="ex">列宽</span>。这个属性的改变可以是动态的。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "3.0+",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-column-width ",
+      "gram_detail" : " width | auto"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "width",
+      "prop_content" : "用长度值来定义列宽。不允许负值"
+    },
+    {
+      "prop_title" : "auto",
+      "prop_content" : "根据column-count自定分配宽度"
+    }
+  ],
+  "iframeUrl" : "../demo/column.html"
+}

@@ -1,0 +1,35 @@
+{
+  "name" : "-webkit-mask-origin",
+  "discribe" : "定义遮罩图片路径。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "1.0",
+        "safari" : "4.0",
+        "android" : "2.1",
+        "ios" : "3.2"
+      }
+    }
+  ],
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-mask-origin",
+      "gram_detail" : "padding | border | content"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "padding",
+      "prop_content" : "<span class='ex'>默认值</span>，从padding开始计算-webkit-mask-position的值"
+    },
+    {
+      "prop_title" : "border",
+      "prop_content" : "从border开始计算-webkit-mask-position的值"
+    },
+    {
+      "prop_title" : "content",
+      "prop_content" : "从元素内容部分开始计算-webkit-mask-position的值"
+    }
+  ],
+  "iframeUrl" : "../demo/mask-origin.html"
+}

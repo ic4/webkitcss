@@ -1,0 +1,40 @@
+{
+  "name" : "-webkit-column-rule-width",
+  "discribe" : "指定<span class="ex">宽度的列规则</span>。这个属性的改变可以是动态的。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "3.0+",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-column-rule-width ",
+      "gram_detail" : " width | medium | thick | thin"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "width",
+      "prop_content" : "用长度值来定义边框的厚度。不允许负值"
+    },
+    {
+      "prop_title" : "medium",
+      "prop_content" : "定义默认厚度的边框"
+    },
+    {
+      "prop_title" : "thick",
+      "prop_content" : "定义比默认厚度细的边框"
+    },
+    {
+      "prop_title" : "thin",
+      "prop_content" : "定义比默认厚度粗的边框"
+    }
+  ],
+  "iframeUrl" : "../demo/column.html"
+}

@@ -1,0 +1,33 @@
+{
+  "name" : "-webkit-box-direction",
+  "discribe" : "设置或检索弹性盒模型对象的子元素的<span class=\"ex\">排列顺序</span>是否反转。<br />
+        对应的脚本特性为boxDirection。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-box-direction: ",
+      "gram_detail" : " normal | reverse"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "normal",
+      "prop_content" : "设置弹性盒模型对象的子元素按正常顺序排列。 <span class=\"ex\">此值为默认值</span>"
+    },
+    {
+      "prop_title" : "reverse",
+      "prop_content" : "反转弹性盒模型对象的子元素的排列顺序"
+    }
+  ],
+  "iframeUrl" : "../demo/box-direction.html"
+}

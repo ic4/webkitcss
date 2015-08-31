@@ -1,0 +1,43 @@
+{
+  "name" : "-webkit-box-pack",
+  "discribe" : "设置或检索弹性盒模型对象的子元素的<span class=\"ex\">对齐方式</span>。<br />
+        查看其兄弟属性<a href=\"box-align.html\">-webkit-box-align</a>，两者的效果正好（相反）互补。<br />
+        box-pack的对齐方式受<a href=\"box-orient.html\">-webkit-box-orient</a>影响；默认情况下（即box-orient设置为horizontal）start和end所呈现的效果等同于左对齐和右对齐；当box-orient设置为vertical时，start和end所呈现的效果等同于顶部对齐和底部对齐；<br />
+        对应的脚本特性为boxPack。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-box-pack: ",
+      "gram_detail" : " start | center | end | justify"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "start",
+      "prop_content" : "设置弹性盒模型对象的子元素从开始位置对齐（大部分情况等同于左对齐）"
+    },
+    {
+      "prop_title" : "center",
+      "prop_content" : "设置弹性盒模型对象的子元素居中对齐"
+    },
+    {
+      "prop_title" : "end",
+      "prop_content" : "设置弹性盒模型对象的子元素从结束位置对齐（大部分情况等同于右对齐）"
+    },
+    {
+      "prop_title" : "justify",
+      "prop_content" : "设置或弹性盒模型对象的子元素两端对齐"
+    }
+  ],
+  "iframeUrl" : "../demo/box-pack.html"
+}

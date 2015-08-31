@@ -1,0 +1,46 @@
+{
+  "name" : "-webkit-background-origin",
+  "discribe" : "设置或检索对象的背景图像计算background-position时的参考原点(位置)。对应的脚本特性为backgroundOrigin。",
+  "support" : [
+    {
+      "type" : "有-webkit-前缀",
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "3.0",
+        "android" : "?",
+        "ios" : "1.0"
+      }
+    },
+    {
+      "type" : "无-webkit-前缀",
+      "browser" : {
+        "chrome" : "4.0",
+        "safari" : "5.1.7",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-background-origin: ",
+      "gram_detail" : "padding-box | border-box | content-box"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "padding-box",
+      "prop_content" : "<span class=\"ex\">默认值</span>，从padding区域（含padding）开始显示背景图像。"
+    },
+    {
+      "prop_title" : "border-box",
+      "prop_content" : "从border区域（含border）开始显示背景图像。"
+    },
+    {
+      "prop_title" : "content-box",
+      "prop_content" : "从content区域开始显示背景图像。"
+    }
+  ],
+  "iframeUrl" : "../demo/background-origin.html"
+}

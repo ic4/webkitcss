@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>progress的伪元素</title>
+    <style>
+        #pseudo{-webkit-appearance:none;}
+        #pseudo::-webkit-progress-inner-element{width:120px;height:40px;border:4px solid #FF9913;}
+        #pseudo::-webkit-progress-bar{background-color:#FF9913;margin-top:4px;height:30px;width:100px;margin-left:10px;border:2px solid #3983E4;}
+        #pseudo::-webkit-progress-value{background-color:#3983E4;margin-top:3px;height:20px;}
+    </style>
+</head>
+<body>
+<h1>progress的伪元素</h1>
+<dl>
+    <dt>::-webkit-progress-inner-element</dt>
+    <dd>自定义进度条外层的样式</dd>
+    <dt>::-webkit-progress-bar</dt>
+    <dd>自定义进度条的样式</dd>
+    <dt>::-webkit-progress-value</dt>
+    <dd>自定义进度条取值的样式</dd>
+</dl>
+<progress value="90" max="100"></progress>
+<progress id="pseudo" value="90" max="100"></progress>
+</body>
+</html>

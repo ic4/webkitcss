@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Ctrip webkit CSS library</title>
+	<link rel="stylesheet" href="css/base.css">
+	<script type="text/javascript" src="js/base.js"></script>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+<div class="head">
+	<div class="wrap">
+		<a href="http://ued.ctrip.com/webkitcss/index.html" class="logo">Ctrip UED webkit library</a>
+		<div class="nav">
+			<ul>
+				<li><a href="aboutus.html#about">关于我们</a></li>
+				<li><a href="aboutus.html#about_box">意见反馈</a></li>
+				<li><a href="http://ued.ctrip.com">CtripUED 博客</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrap">
+	<div class="main index_main" id="main">
+		<div class="prop_intro">
+			<div class="tit brt_no">
+				<input id="search_box" type="search" placeholder="Search for webkit attribute..." />
+			</div>
+		</div>
+		<!-- /prop_intro -->
+		<div id="prop_list" class="prop_comp scroller"></div>
+	</div>
+	<!-- /main -->
+</div>
+<!-- /wrap -->
+<script type="text/javascript">
+	window.onload=function(){
+		/* == controller start == */
+		/* - addTree - */
+		$(".prop_comp").ajax("js/dataJson.json",function(str) {
+			var obj = JSON.parse(str);
+			$(".prop_comp").addTree(obj,null,"prop/");
+		});
+
+		$("#search_box").ele.focus();
+		$("#prop_list").css("height",document.documentElement.clientHeight-195+"px");
+
+		$("#search_box").ele.onkeyup = function() {
+
+			/* - show/hide attribute - */
+			for(var i=0;i<$("#prop_list a").ele.length;i++) {
+				if($("#prop_list a").ele[i].innerHTML.indexOf(this.value) == -1) {
+					$("#prop_list li").eq(i).hide();
+				}else {
+					$("#prop_list li").eq(i).show();
+				}
+			}
+
+			/* - show/hide h2 title - */
+			for(var j=0;j<$("#prop_list ul").ele.length;j++) {
+				var id = $("#prop_list ul").ele[j].id;
+				var list = ($("#"+id+" li").ele.length != undefined) ? $("#"+id+" li").ele : [$("#"+id+" li").ele];
+				num = 0;
+				for(var i=0;i<list.length;i++) {
+					if(list[i].style.display == "none") {
+						num++;
+					}
+				}
+				if(num == list.length) {
+					$("#"+id).pre().hide();
+					$("#"+id).hide();
+				}else {
+					$("#"+id).show();
+					$("#"+id).pre().show();
+				}
+			}
+		}
+
+		/* == controller end == */
+
+	}
+	window.onresize = function() {
+		$("#prop_list").css("height",document.documentElement.clientHeight-195+"px");
+	}
+</script>
+</body>
+</html>

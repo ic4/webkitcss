@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>textarea的伪元素</title>
+    <style>
+        textarea{width:300px;}
+        #pseudo::-webkit-input-placeholder{color:#3983E4;margin:20px;}
+        #pseudo::-webkit-resizer{-webkit-appearance:none;}
+        #pseudo::-webkit-inner-spin-button{-webkit-appearance:none;}
+    </style>
+</head>
+<body>
+<h1>textarea的伪元素</h1>
+<dl>
+    <dt>::-webkit-input-placeholder</dt>
+    <dd>自定义提示文字的样式</dd>
+    <dt>::-webkit-resizer</dt>
+    <dd>自定义拉伸的样式。</dd>
+</dl>
+<textarea placeholder="请留下你的印记"></textarea>
+<textarea id="pseudo" placeholder="请留下你的印记"></textarea>
+</body>
+</html>

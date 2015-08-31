@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>-webkit-font-variant-ligatures | CtripUED Webkit CSS Library</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+<div class="head">
+	<div class="wrap">
+		<a href="http://ued.ctrip.com/webkitcss/index.html" class="logo">CtripUED Webkit CSS Library</a>
+		<div class="nav">
+			<ul>
+				<li><a href="../index.html">首页</a></li>
+				<li><a href="../aboutus.html#about">关于我们</a></li>
+				<li><a href="../aboutus.html#about_box">意见反馈</a></li>
+				<li><a href="http://ued.ctrip.com">CtripUED 博客</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrap">
+	<div class="side">
+		<div class="filter_box">
+			<div class="field" id="catalogFilter">
+				<input type="search" id="key" placeholder="属性搜索..." />
+			</div>
+		</div>
+		<div class="categorys"></div>
+	</div>
+
+	<div class="main" id="main">
+		<div class="position" id="position">
+			您的位置: <a href="../index.html">首页</a> &gt; -webkit-font-variant-ligatures
+		</div>
+		<!-- /position -->
+		<div class="prop_intro">
+			<div class="tit">
+			<h1>-webkit-font-variant-ligatures 属性</h1>
+			</div>
+			<div class="prop_detail">
+				字符连写，该属性定义了元素的文本内容中使用什么连写和上下文的形式。该属性可以使渲染后的文本内容的形式更加协调。
+			</div>
+			<!-- /prop_detail -->
+			<div class="prop_comp">
+				<p>
+					<i class="ico_browser ico_browser_chr"><small>31.0+</small></i>
+					<i class="ico_browser ico_browser_saf"><small>7.0+</small></i>
+					<i class="ico_browser ico_browser_and"><small>4.4+</small></i>
+					<i class="ico_browser ico_browser_ios"><small>7.0+</small></i>
+				</p>
+				<p>?: 表示版本号未知，但该属性可用。</p>
+			</div>
+			<!-- /prop_comp -->
+
+		</div>
+		<!-- /prop_intro -->
+		<div class="mod prop_gramm">
+			<h2 class="mod_tit">语法</h2>
+			<p class="mod_con">
+				<strong>-webkit-font-variant-ligatures:</strong> normal | none | [ common-lig-values || discretionary-lig-values || historical-lig-values || contextual-alt-values ]
+			</p>
+		</div>
+		<!-- /prop_gramm -->
+		<div class="mod prop_value">
+			<h2 class="mod_tit">取值</h2>
+			<div class="mod_con">
+				<table>
+					<tr>
+						<th>normal</th>
+						<td>使用常用的连写和上下文的形式，其效果相当于contextual no-historical-ligatures no-discretionary-ligatures common-ligatures四个属性值组合得到的字体渲染效果。默认值。</td>
+					</tr>
+					<tr>
+						<th>none</th>
+						<td>不使用任何连写和上下文的形式。</td>
+					</tr>
+					<tr>
+						<th>common-lig-values</th>
+						<td>
+							<dl>
+								<dt>控制常用fi, ffi, th等的连写。对应于OpenType的liga和clig特性。存在两个取值：</dt>
+								<dd>common-ligatures: 使用这些连写。在使用normal属性值时该属性值已起作用。</dd>
+								<dd>no-common-ligatures: 不使用这些连写。</dd>
+							</dl>
+						</td>
+					</tr>
+					<tr>
+						<th>discretionary-lig-values</th>
+						<td>
+							<dl>
+								<dt>控制特殊的连写，与特定的字体和字体设计师定义的连写有关。对应于OpenType的dlig特性。存在两个取值：</dt>
+								<dd>discretionary-ligatures: 使用这些连写。</dd>
+								<dd>no-discretionary-ligatures: 不使用这些连写。在使用normal属性值时该属性值已起作用。</dd>
+							</dl>
+						</td>
+					</tr>
+					<tr>
+						<th>historical-lig-values</th>
+						<td>
+							<dl>
+								<dt>控制古代字母的连写。对应于OpenType的dlig特性。存在两个取值：</dt>
+								<dd>historical-ligatures: 使用这些连写。</dd>
+								<dd>no-historical-ligatures: 不使用这些连写。在使用normal属性值时该属性值已起作用。</dd>
+							</dl>
+						</td>
+					</tr>
+					<tr>
+						<th>contextual-alt-values</th>
+						<td>
+							<dl>
+								<dt>控制某个字母是否与两边的字母相适应。对应于OpenType的calt特性。存在两个取值：</dt>
+								<dd>contextual: 字母与两边的字母相适应。在使用normal属性值时该属性值已起作用。</dd>
+								<dd>no-contextual: 字母不与两边的字母相适应。</dd>
+							</dl>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!-- /prop_value -->
+		<div class="mod prop_demo">
+			<h2 class="mod_tit">示例</h2>
+			<div class="mod_con">
+				<iframe id="iframedemo" style="border:1px solid #ccc;" src="../demo/font-variant-ligatures.html" width="100%" height="400" frameborder="0"></iframe id="test">
+				<div class="btns">
+					<a href="../demo/font-variant-ligatures.html" target="_blank" class="btn_primary">演示</a>
+				</div>
+
+			</div>
+		</div>
+		<!-- /prop_demo -->
+	</div>
+	<!-- /main -->
+</div>
+<!-- /wrap -->
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "name" : "-webkit-animation-direction",
+  "discribe" : "检索或设置对象执行动画的运动方向。<span class="ex">默认值为normal</span>。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "4.0+",
+        "android" : "?",
+        "ios" : "2.0+"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-animation-direction ",
+      "gram_detail" : " normal | alternate | alternate-reverse | reverse"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "normal",
+      "prop_content" : "指定对象的动画正向执行。"
+    },
+    {
+      "prop_title" : "alternate",
+      "prop_content" : "指定对象的动画在奇数次动画周期正向执行、偶数次动画周期反向执行。动画在反向执行时，其对应的时间函数也相应反向。奇偶取决于开始时是奇数还是偶数。"
+    },
+    {
+      "prop_title" : "alternate-reverse",
+      "prop_content" : "与alternate相反，指定对象的动画在奇数次动画周期反向执行、偶数次动画周期正向执行。奇偶取决于开始时是奇数还是偶数。"
+    },
+    {
+      "prop_title" : "reverse",
+      "prop_content" : "指定对象的动画反向执行。"
+    }
+  ],
+  "iframeUrl" : "../demo/animation-direction.html"
+}

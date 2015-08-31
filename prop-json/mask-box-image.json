@@ -1,0 +1,59 @@
+{
+  "name" : "-webkit-mask-box-image",
+  "discribe" : "定义图片遮罩的滚动特性。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "1.0",
+        "safari" : "4.0",
+        "android" : "2.1",
+        "ios" : "3.2"
+      }
+    }
+  ],
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-mask-box-image",
+      "gram_detail" : ["mask-img*  top right bottom left x_repeat y_repeat", "mask-img:uri | gradient | none", "top right bottom left :length | percentage", "x_repeat y_repeat:repeat | stretch | round"]
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "uri",
+      "prop_content" : "图片路径"
+    },
+    {
+      "prop_title" : "gradient",
+      "prop_content" : "用-webkit-gradient函数生成遮罩图（mask image）"
+    },
+    {
+      "prop_title" : "none",
+      "prop_content" : "没有遮罩图片"
+    },
+    {
+      "prop_title" : "top",
+      "prop_content" : "图片离上边缘的距离"
+    },
+    {
+      "prop_title" : "right",
+      "prop_content" : "图片离右边缘的距离"
+    },
+    {
+      "prop_title" : "bottom",
+      "prop_content" : "图片离底边缘的距离"
+    },
+    {
+      "prop_title" : "left",
+      "prop_content" : "图片离左边缘的距离"
+    },
+    {
+      "prop_title" : "x_repeat",
+      "prop_content" : "水平方向的重复，取值：repeat | stretch | round"
+    },
+    {
+      "prop_title" : "y_repeat",
+      "prop_content" : "垂直方向的重复，取值：repeat | stretch | round"
+    }
+  ],
+  "iframeUrl" : "../demo/mask-box-image.html"
+}

@@ -1,0 +1,47 @@
+{
+  "name" : "-webkit-wrap-flow",
+  "discribe" : "使元素成为<span class="ex">排除项元素</span>",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "&times;",
+        "safari" : "&times;",
+        "android" : "&times;",
+        "ios" : "&times;"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-wrap-flow ",
+      "gram_detail" : "auto | both | start | end | maximum | clear"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "auto",
+      "prop_content" : "<span class="ex">默认值</span>。对于浮动元素，创建排除项；对于所有其他元素，不创建排除项。"
+    },
+    {
+      "prop_title" : "both",
+      "prop_content" : "内联流内容可以在排除项的四周流动。"
+    },
+    {
+      "prop_title" : "start",
+      "prop_content" : "内联流内容可以在排除项区域的开始侧环绕，但必须将排除项区域的结尾侧保留为空。"
+    },
+    {
+      "prop_title" : "end",
+      "prop_content" : "内联流内容可以在排除项区域的结尾侧后环绕，但必须将排除项区域的开始侧前保留为空。"
+    },
+    {
+      "prop_title" : "maximum",
+      "prop_content" : "内联流内容可利用对特定行来说最大的可用空间在排除项的一侧环绕，且必须将排除项的另一侧保留为空"
+    },
+    {
+      "prop_title" : "clear",
+      "prop_content" : "内联流内容只能在排除项的上下两侧环绕，且必须将排除项框的左右两侧保留为空。"
+    }
+  ]
+}

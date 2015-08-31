@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>-webkit-flex-basis | CtripUED Webkit CSS Library</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+<div class="head">
+	<div class="wrap">
+		<a href="../index.html" class="logo">Ctrip UED webkit library</a>
+		<div class="nav">
+			<ul>
+				<li><a href="../index.html">首页</a></li>
+				<li><a href="../aboutus.html#about">关于我们</a></li>
+				<li><a href="../aboutus.html#about_box">意见反馈</a></li>
+				<li><a href="http://ued.ctrip.com">CtripUED 博客</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrap">
+	<div class="side">
+		<div class="filter_box">
+			<div class="field" id="catalogFilter">
+					<input type="search" id="key" placeholder="属性搜索..." />
+			</div>
+		</div>
+		<div class="categorys"></div>
+	</div>
+
+	<div class="main" id="main">
+		<div class="position" id="position">
+			您的位置: <a href="../index.html">首页</a> &gt; -webkit-flex-basis
+		</div>
+		<!-- /position -->
+		<div class="prop_intro">
+			<div class="tit">
+				<h1>-webkit-flex-basis 属性</h1>
+			</div>
+			<div class="prop_detail">
+				<p>适用于伸缩项目伸缩性三个属性之一，可以用来设置<span class="ex">伸缩基准值</span>，负长度不合法。<br/>
+				与「width」属性使用相同的值的此部件可以用来设置「flex-basis」长度并指定伸缩基准值，也就是根据可伸缩比率计算出剩余空间的分布之前，伸缩项目主轴长度的起始数值。若在「flex」缩写省略了此部件，则「flex-basis」的指定值是长度零。 若「flex-basis」的指定值是「auto」，则伸缩基准值的指定值是元素主轴长度属性的值。（这个值可能是关键字「auto」，代表元素的长度取决于其内容。）</p>
+			</div>
+			<!-- /prop_detail -->
+			<div class="prop_comp">
+				<p>
+					<i class="ico_browser ico_browser_saf_no"><small>&times;</small></i>
+					<i class="ico_browser ico_browser_chr"><small>21+</small></i>
+					<i class="ico_browser ico_browser_and_no"><small>&times;</small></i>
+					<i class="ico_browser ico_browser_ios_no"><small>&times;</small></i>
+				</p>
+			</div>
+			<!-- /prop_comp -->
+		</div>
+		<!-- /prop_intro -->
+		<div class="mod prop_gramm">
+			<h2 class="mod_tit">语法</h2>
+			<p class="mod_con">
+				<strong>-webkit-flex-basis:</strong> auto | width
+			</p>
+		</div>
+		<!-- /prop_gramm -->
+		<div class="mod prop_value">
+			<h2 class="mod_tit">取值</h2>
+			<div class="mod_con">
+				<table>
+					<tr>
+						<th>auto</th>
+						<td>相对伸缩，伸缩基准值的指定值是元素主轴长度属性的值，这时候分配除内容外多余空间</td>
+					</tr>
+					<tr>
+						<th>width</th>
+						<td>绝对伸缩，宽度值省略为0，分配所有空间</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!-- /prop_value -->
+		<div class="mod prop_demo">
+			<h2 class="mod_tit">示例</h2>
+			<div class="mod_con">
+				<iframe id="iframedemo"style="border:1px solid #ccc;" src="../demo/flex-basis.html" width="100%" height="400" frameborder="0"></iframe id="test">
+				<div class="btns">
+					<a href="../demo/flex-basis.html" target="_blank" class="btn_primary">演示</a>
+				</div>
+
+			</div>
+		</div>
+		<!-- /prop_demo -->
+	</div>
+	<!-- /main -->
+</div>
+<!-- /wrap -->
+</body>
+</html>

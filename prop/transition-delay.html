@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>-webkit-transition-delay | CtripUED Webkit CSS Library</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+<div class="head">
+	<div class="wrap">
+		<a href="http://ued.ctrip.com/webkitcss/index.html" class="logo">CtripUED Webkit CSS Library</a>
+		<div class="nav">
+			<ul>
+				<li><a href="../index.html">首页</a></li>
+				<li><a href="../aboutus.html#about">关于我们</a></li>
+				<li><a href="../aboutus.html#about_box">意见反馈</a></li>
+				<li><a href="http://ued.ctrip.com">CtripUED 博客</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrap">
+	<div class="side">
+		<div class="filter_box">
+			<div class="field" id="catalogFilter">
+					<input type="search" id="key" placeholder="属性搜索..." />
+			</div>
+		</div>
+		<div class="categorys"></div>
+	</div>
+
+	<div class="main" id="main">
+		<div class="position" id="position">
+			您的位置: <a href="../index.html">首页</a> &gt; -webkit-transition-delay
+		</div>
+		<!-- /position -->
+		<div class="prop_intro">
+			<div class="tit">
+			<h1>-webkit-transition-delay 属性</h1>
+			</div>
+			<div class="prop_detail">
+				检索或设置对象延迟过渡的时间。接受多个时间，用,隔开。<span class="ex">默认0s</span>。<br/>
+				若存在多个延迟时间，每个延迟时间将运用到对应的transition-property的属性上。若持续时间个数少于transition-property个数，则由0s填补缺少的延迟时间；若延迟时间个数多于transition-property个数，则取对应数量的延迟时间。
+			</div>
+			<!-- /prop_detail -->
+			<!-- /prop_detail -->
+			<div class="prop_comp">
+				<p>
+					<b>有-webkit-前缀:</b>
+					<i class="ico_browser ico_browser_chr"><small>1.0+</small></i>
+					<i class="ico_browser ico_browser_saf"><small>3.0+</small></i>
+					<i class="ico_browser ico_browser_and"><small>2.1+</small></i>
+					<i class="ico_browser ico_browser_ios"><small>3.2+</small></i>
+				</p>
+				<p>
+					<b>无-webkit-前缀:</b>
+					<i class="ico_browser ico_browser_chr"><small>26+</small></i>
+					<i class="ico_browser ico_browser_saf"><small>6.0+</small></i>
+					<i class="ico_browser ico_browser_and_no"><small>&times;</small></i>
+					<i class="ico_browser ico_browser_ios_no"><small>&times;</small></i>
+				</p>
+			</div>
+			<!-- /prop_comp -->
+
+		</div>
+		<!-- /prop_intro -->
+		<div class="mod prop_gramm">
+			<h2 class="mod_tit">语法</h2>
+			<p class="mod_con">
+				<strong>-webkit-transition-delay:</strong> &lt;time&gt;[ ,&lt;time&gt; ]*
+			</p>
+		</div>
+		<!-- /prop_gramm -->
+		<div class="mod prop_value">
+			<h2 class="mod_tit">取值</h2>
+			<div class="mod_con">
+				<table>
+					<tr>
+						<th>time</th>
+						<td>指定对象过渡的延迟时间。若为负值，过渡将立即执行，但过渡将从过渡周期某处开始。</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!-- /prop_value -->
+		<div class="mod prop_demo">
+			<h2 class="mod_tit">示例</h2>
+			<div class="mod_con">
+				<iframe id="iframedemo" style="border:1px solid #ccc;" src="../demo/transition-delay.html" width="100%" height="400" frameborder="0"></iframe id="test">
+				<div class="btns">
+					<a href="../demo/transition-delay.html" target="_blank" class="btn_primary">演示</a>
+				</div>
+
+			</div>
+		</div>
+		<!-- /prop_demo -->
+	</div>
+	<!-- /main -->
+</div>
+<!-- /wrap -->
+</body>
+</html>

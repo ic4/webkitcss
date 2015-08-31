@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CtripUED Webkit CSS Library</title>
+	<link rel="stylesheet" href="css/base.css">
+	<script type="text/javascript" src="js/base.js"></script>
+	<style type="text/css">
+	@-webkit-keyframes focus{
+		0%{opacity:0.5;}
+		30%{opacity:0.9;}
+		60%{opacity:0.6;}
+		100%{opacity:1;}
+	}
+	@keyframes focus{
+		0%{opacity:0.5;}
+		30%{opacity:0.9;}
+		60%{opacity:0.6;}
+		100%{opacity:1;}
+	}
+	#about:target,
+	#about_box:target > #advice {display:block;-webkit-animation:focus 1s ease-in-out forwards;animation:focus 1s ease-in-out forwards;opacity:0.5;}
+	#about:target ~ #advice,
+	#about_box:target > #about {display:none;}
+	</style>
+</head>
+<body>
+<div class="head">
+	<div class="wrap">
+		<a href="http://ued.ctrip.com/webkitcss/index.html" class="logo">CtripUED Webkit CSS Library</a>
+		<div class="nav">
+			<ul>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="aboutus.html#about">关于我们</a></li>
+				<li><a href="aboutus.html#about_box">意见反馈</a></li>
+				<li><a href="http://ued.ctrip.com">CtripUED 博客</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrap">
+	<div class="main index_main" id="about_box">
+		<div id="about" class="prop_comp aboutus">
+			<h2>关于我们</h2>
+			<p>本手册由CtripUED前端组成员编写。版权所有者为CtripUED。</p>
+			<p>本手册当前版本为：v2.0  更新时间为：2014.11.06。</p>
+			<p style="color:#999;">v2.0版本对v1.0的基础上对属性的描述进行了扩充，突出了属性的重点，修正了部分描述不当的内容；更换了Webkit CSS Library的logo。</p>
+			<p>您可以免费地使用、分发本手册。但未经授权许可不得擅自进行篡改、反编译，及将其全部或部分用于商业用途。</p>
+			<p>本手册的部分内容参考了各类公开的网络文档。</p>
+		</div>
+		<div id="dev_member" class="prop_comp">
+			<h2>开发人员（排名不分先后）</h2>
+			<p>编写：<a href="http://weibo.com/back2black" target="_blank">张峰华</a>
+				<a href="http://weibo.com/u/2738855232" target="_blank">陈宇</a> <a href="http://weibo.com/walter1016" target="_blank">王杰</a> <a href="http://weibo.com/u/2412984801" target="_blank">肖弦</a> 张翼 <a href="http://weibo.com/lyushine" target="_blank">梁宇轩</a> <a href="http://weibo.com/513155670" target="_blank">刘龙龙</a> <a href="http://weibo.com/laconiclzj" target="_blank">李志嘉</a> 王建 吴文奕 <a href="http://weibo.com/talentjeff" target="_blank">么依奥喵</a> <a href="http://www.weibo.com/4eversai" target="_blank">宋晨</a> <a href="http://weibo.com/448600496" target="_blank">张露茜</a>
+			</p>
+			<p>审阅：<a href="http://weibo.com/linxz428" target="_blank">林友赛</a> 赵意馨 <a href="http://weibo.com/ctripued">CtripUED前端组</a></p>
+		</div>
+		<div id="thanks" class="prop_comp">
+			<h2>鸣谢 (排名不分先后)</h2>
+			<p><span>林子杰</span> <a href="http://weibo.com/jieorlin">一丝yisi</a></p>
+		</div>
+		<div id="advice" class="prop_comp">
+			<h2>意见反馈</h2>
+			<p>我们诚挚地希望得到业内人士的批评和指正，虚心地接受合理的意见。如果您对文档中有任何意见和建议，请及时告诉我们。</p>
+			<p>您可以发送邮件到<a href="mailto:fhzhang@ctrip.com?subject=Webkit CSS库意见反馈">fhzhang@ctrip.com</a>，或者将想说的话留在以下评论框。</p>
+			<p>我们与您一起进步。</p>
+			<div class="">
+				<!-- 多说评论框 start -->
+		        <div class="ds-thread" data-thread-key="1" data-title="CtripUED Webkit CSS Library" data-url="http://ued.ctrip.com/webkitcss/"></div>
+				<!-- 多说评论框 end -->
+				<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+				<script type="text/javascript">
+					var duoshuoQuery = {short_name:"webkitcss"};
+			        (function() {
+			               var ds = document.createElement('script');
+			               ds.type = 'text/javascript';ds.async = true;
+			               ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			               ds.charset = 'UTF-8';
+			               (document.getElementsByTagName('head')[0] 
+			                || document.getElementsByTagName('body')[0]).appendChild(ds);
+			        })();
+				</script>
+				<!-- 多说公共JS代码 end -->
+
+			</div>
+		</div>
+	</div>
+	<!-- /main -->
+</div>
+<!-- /wrap -->
+<script type="text/javascript">
+	window.onload=function(){
+
+	}
+</script>
+</body>
+</html>

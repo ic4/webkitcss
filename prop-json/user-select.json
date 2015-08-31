@@ -1,0 +1,36 @@
+{
+  "name" : "-webkit-user-select",
+  "discribe" : "设置用户是否可以选择元素的内容。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "1.0+",
+        "safari" : "3.0+",
+        "android" : "2.1+",
+        "ios" : "3.0+"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-user-select ",
+      "gram_detail" : "auto | none | text"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "auto",
+      "prop_content" : "用户可以选择元素的内容。"
+    },
+    {
+      "prop_title" : "none",
+      "prop_content" : "用户不能选择元素的内容。"
+    },
+    {
+      "prop_title" : "text",
+      "prop_content" : "用户可以选择元素的文本。"
+    }
+  ],
+  "iframeUrl" : "../demo/user-select.html"
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>-webkit-background-size demo</title>
+		<style type="text/css">
+			body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+			dl,dt,dd{margin: 0;padding: 0;}
+			select,option,input{margin:0;padding:0;font:14px/1.0 Tahoma, Arial, "Microsoft Yahei", serif;}
+			dt{font-size: 16px;}
+			dd{margin-bottom: 10px;}
+			h1{margin-bottom:30px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+			#control_panel{float: left;width: 500px;}
+			#show_panel{
+				float: left;
+				text-align: center;
+				color:#fff;
+				font-size: 20px;
+				font-weight: bold;
+			}
+			#demo{
+				width: 500px;
+				height: 500px;
+				margin: 50px auto;
+				padding: 30px;
+				font-size: 20px;
+				font-weight: bold;
+				color:white;
+				border: 10px dashed #CCC;
+				background-color:#006cb8;
+				background-image: url(../img/eric.jpg);
+				background-repeat:no-repeat;
+				-webkit-background-origin: border-box;
+				background-origin: border-box;
+			}
+			input[type='button']{
+				display: inline-block;
+				width: 120px;
+				height: 36px;
+				line-height: 30px;
+				background-color: #ffbb01;
+				color: #fff;
+				border: 1px solid #ffbb01;
+				border-bottom: 5px solid #ff9c01;
+				text-align: center;
+				font-size: 16px;
+				font-family: "microsoft yahei", "Times New Roman", Simsun;
+				cursor: pointer;
+				outline: 0;
+				margin-bottom: 5px;
+			}
+			input[type='button']:hover{
+				border: 1px solid #ff9c01;
+				border-bottom: 5px solid #ec8211;
+				background-color: #ff9c01;
+				border-bottom-color: #ec8211;
+			}
+			span {color: red;font-weight: bold;}
+			.auto{-webkit-background-size:auto;}
+			.cover{-webkit-background-size:cover;}
+			.contain{-webkit-background-size:contain;}
+			.length{-webkit-background-size:50px 100px;}
+			.percentage{-webkit-background-size:78% 10%;}
+		</style>
+	</head>
+	<body>
+		<h1>-webkit-background-size</h1>
+		<dl id="control_panel">
+			<dt>
+			<input type="button" value="auto" onclick="demo.className='auto';text.innerHTML=this.value" />（默认）
+			</dt>
+			<dt>
+			<input type="button" value="cover" onclick="demo.className='cover';text.innerHTML=this.value" />
+			</dt>
+			<dt>
+			<input type="button" value="contain" onclick="demo.className='contain';text.innerHTML=this.value" />
+			</dt>
+			<dt>
+			<input type="button" value="50px,100px" onclick="demo.className='length';text.innerHTML=this.value" />
+			</dt>
+			<dt>
+			<input type="button" value="78% 10%;" onclick="demo.className='percentage';text.innerHTML=this.value" />
+			</dt>
+			<dt>
+			<p>
+			background-origin: <span>auto</span>
+			</p>
+			</dt>
+		</dl>
+		<div id="show_panel">
+			<div id="demo">
+				Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED Ctrip UED
+			</div>
+		</div>
+		<script type="text/javascript">
+		var demo = document.getElementById('demo');
+		var text = document.getElementsByTagName('span')[0];
+		</script>
+	</body>
+</html>

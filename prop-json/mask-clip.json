@@ -1,0 +1,50 @@
+{
+  "name" : "-webkit-mask-clip",
+  "discribe" : "定义图片遮罩延伸到的位置。",
+  "support" : [
+    {
+      "type": "有-webkit-前缀",
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "4.0"
+      }
+    },
+    {
+      "type": "无-webkit-前缀",
+      "browser" : {
+        "chrome" : "4.0",
+        "safari" : "5.1",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-mask-clip",
+      "gram_detail" : "border | padding | content | text"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "border",
+      "prop_content" : "图片遮罩延伸到元素border"
+    },
+    {
+      "prop_title" : "padding",
+      "prop_content" : "图片遮罩延伸到元素padding"
+    },
+    {
+      "prop_title" : "content",
+      "prop_content" : "图片遮罩延伸到元素内容部分"
+    },
+    {
+      "prop_title" : "text",
+      "prop_content" : "图片遮罩延伸到元素文字部分"
+    }
+  ],
+  "iframeUrl" : "../demo/mask-clip.html"
+}

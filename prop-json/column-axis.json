@@ -1,0 +1,33 @@
+{
+  "name" : "-webkit-column-axis",
+  "discribe" : "允许列元素<span class="ex">以块级方式堆叠</span>而不是行内元素方式堆叠。该属性可以促进分页形式的接口。<span class="ex">该属性为safari 7.0专属。</span>
+  ",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "3.0+",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-column-axis: ",
+      "gram_detail" : "horizontal | vertical"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "horizontal",
+      "prop_content" : "允许列元素水平方向堆叠"
+    },
+    {
+      "prop_title" : "vertical",
+      "prop_content" : "允许列元素纵向堆叠"
+    }
+  ],
+  "iframeUrl" : "../demo/column.html"
+}

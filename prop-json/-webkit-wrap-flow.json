@@ -1,0 +1,71 @@
+{
+	"name" : "-webkit-wrap-flow",
+	"discribe" : "设置或检索对象的<span class='ex'>转换</span>。",
+	"support" : [
+		{
+			"type" : "2D",
+			"browser" : {
+				"chrome" : "1.0+",
+				"safari" : "?",
+				"android" : "x",
+				"ios" : "2.0"
+			}
+		},
+		{
+			"type" : "3D",
+			"browser" : {
+				"chrome" : "1.0+",
+				"safari" : "?",
+				"android" : "x",
+				"ios" : "2.0"
+			}
+		},
+		{
+			"type" : "无-webkit-前缀",
+			"browser" : {
+				"chrome" : "2.0+",
+				"safari" : "x",
+				"android" : "x",
+				"ios" : "x"
+			}
+		}
+	],
+	"version" : "?: 表示版本号未知，但该属性可用。",
+	"grammar" : [
+		{
+			"gram_name" : "(2D)-webkit-transform: ",
+			"gram_detail" : "none | matrix(<number>,<number>,<number>,<number>,<number>,<number>)? translate(<length>[,<length>])? translateX(<length>)? translateY(<length>)? rotate(<angle>)? scale(<number>[,<number>])? scaleX(<number>)? scaleY(<number>)? skew(<angle>[,<angle>])? skewX(<angle>) | skewY(<angle>)?"
+		},
+		{
+			"gram_name" : "(3D)-webkit-transform: ",
+			"gram_detail" : "none | matrix(<number>,<number>,<number>,<number>,<number>,<number>)? translate(<length>[,<length>])? translateX(<length>)? translateY(<length>)? rotate(<angle>)? scale(<number>[,<number>])? scaleX(<number>)? scaleY(<number>)? skew(<angle>[,<angle>])? skewX(<angle>) | skewY(<angle>)?"
+		}
+	],
+	"prop_value" : [
+		{
+			"prop_title" : "start",
+			"prop_content" : "设置弹性盒模型对象的子元素从开始位置对齐"
+		},
+		{
+			"prop_title" : "center",
+			"prop_content" : "设置弹性盒模型对象的子元素居中对齐"
+		},
+		{
+			"prop_title" : "end",
+			"prop_content" : "设置弹性盒模型对象的子元素从结束位置对齐"
+		},
+		{
+			"prop_title" : "baseline",
+			"prop_content" : "设置弹性盒模型对象的子元素从开始位置对齐"
+		},
+		{
+			"prop_title" : "stretch",
+			"prop_content" : "设置弹性盒模型对象的子元素自适应父元素尺寸 <span class='ex'>默认值</span>"
+		},
+		{
+			"prop_title" : "...",
+			"prop_content" : "..."
+		}
+	],
+	"iframeUrl" : "http://www.baidu.com"
+}

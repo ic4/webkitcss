@@ -1,0 +1,45 @@
+{
+  "name" : "-webkit-box-orient",
+  "discribe" : "设置或检索<span class=\"ex\">弹性盒模型对象的子元素</span>的排列方式。<br />
+        对应的脚本特性为boxOrient。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "3+",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "1.0+"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-box-orient: ",
+      "gram_detail" : " horizontal | vertical | inline-axis | block-axis | inherit"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "horizontal",
+      "prop_content" : "设置弹性盒模型对象的子元素为水平排列"
+    },
+    {
+      "prop_title" : "vertical",
+      "prop_content" : "设置弹性盒模型对象的子元素为纵向排列"
+    },
+    {
+      "prop_title" : "inline-axis",
+      "prop_content" : "设置弹性盒模型对象的子元素为行内元素排列方式"
+    },
+    {
+      "prop_title" : "block-axis",
+      "prop_content" : "设置弹性盒模型对象的子元素为块级元素排列方式"
+    },
+    {
+      "prop_title" : "inherit",
+      "prop_content" : "<span class=\"ex\">默认值</span>，继承属性"
+    }
+  ],
+  "iframeUrl" : "../demo/box-orient.html"
+}

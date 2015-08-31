@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>-webkit-transform-origin | CtripUED Webkit CSS Library</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+<div class="head">
+	<div class="wrap">
+		<a href="http://ued.ctrip.com/webkitcss/index.html" class="logo">CtripUED Webkit CSS Library</a>
+		<div class="nav">
+			<ul>
+				<li><a href="../index.html">首页</a></li>
+				<li><a href="../aboutus.html#about">关于我们</a></li>
+				<li><a href="../aboutus.html#about_box">意见反馈</a></li>
+				<li><a href="http://ued.ctrip.com">CtripUED 博客</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrap">
+	<div class="side">
+		<div class="filter_box">
+			<div class="field" id="catalogFilter">
+					<input type="search" id="key" placeholder="属性搜索..." />
+			</div>
+		</div>
+		<div class="categorys"></div>
+	</div>
+
+	<div class="main" id="main">
+		<div class="position" id="position">
+			您的位置: <a href="../index.html">首页</a> &gt; -webkit-transform-origin
+		</div>
+		<!-- /position -->
+		<div class="prop_intro">
+			<div class="tit">
+				<h1>-webkit-transform-origin 属性</h1>
+			</div>
+			<div class="prop_detail">
+				设置或检索对象以某个原点进行转换。该属性提供3个参数值，<span class="ex">默认值为50% 50% 0</span>；提供2个参数值，默认为50% 50%。如果提供3个，第一个用于横坐标，第二个用于纵坐标，第三个用于z轴。如果提供3个，第一个用于横坐标，第二个用于纵坐标，z轴默认为0。如果只提供一个，该值将用于横坐标；纵坐标默认为50%，z轴默认为0。<br/>
+				该属性是<a target="_blank" href="transform-origin-x.html">-webkit-transform-origin-x</a>、<a target="_blank" href="transform-origin-y.html">-webkit-transform-origin-y</a>和<a target="_blank" href="transform-origin-z.html">-webkit-transform-origin-z</a>的简写形式。
+			</div>
+			<div class="prop_comp">
+				<p>
+					<b>二值语法：</b>
+					<i class="ico_browser ico_browser_chr"><small>?</small></i>
+					<i class="ico_browser ico_browser_saf"><small>3.1+</small></i>
+					<i class="ico_browser ico_browser_and"><small>?</small></i>
+					<i class="ico_browser ico_browser_ios"><small>?</small></i>
+				</p>
+				<p>
+					<b>三值语法：</b>
+					<i class="ico_browser ico_browser_chr"><small>?</small></i>
+					<i class="ico_browser ico_browser_saf"><small>?</small></i>
+					<i class="ico_browser ico_browser_and"><small>?</small></i>
+					<i class="ico_browser ico_browser_ios"><small>?</small></i>
+				</p>
+				<p>?: 表示版本号未知，但该属性可用。</p>
+			</div>
+			<!-- /prop_comp -->
+			<!-- /prop_detail -->
+
+		</div>
+		<!-- /prop_intro -->
+		<div class="mod prop_gramm">
+			<h2 class="mod_tit">语法</h2>
+			<p class="mod_con">
+				<strong>-webkit-transform-origin:</strong>  [ &lt;percentage&gt; | &lt;length&gt; | left | center | right | top | bottom] | [ [ &lt;percentage&gt; | &lt;length&gt; | left | center&#9312; | right ] &amp;&amp; [ &lt;percentage&gt; | &lt;length&gt; | top | center&#9313; | bottom ] ] &lt;length&gt;?
+			</p>
+		</div>
+		<!-- /prop_gramm -->
+		<div class="mod prop_value">
+			<h2 class="mod_tit">取值</h2>
+			<div class="mod_con">
+				<table>
+					<tr>
+						<th>percentage</th>
+						<td>用百分比指定坐标值。可以为负值。</td>
+					</tr>
+					<tr>
+						<th>length</th>
+						<td>用长度值指定坐标值。可以为负值。</td>
+					</tr>
+					<tr>
+						<th>left</th>
+						<td>指定原点的横坐标为left，相当于0。</td>
+					</tr>
+					<tr>
+						<th>center&#9312;</th>
+						<td>指定原点的横坐标为center，相当于元素宽度的50%。</td>
+					</tr>
+					<tr>
+						<th>right</th>
+						<td>指定原点的横坐标为right，相当于元素宽度的100%。</td>
+					</tr>
+					<tr>
+						<th>top</th>
+						<td>指定原点的纵坐标为top，相当于0。</td>
+					</tr>
+					<tr>
+						<th>center&#9313;</th>
+						<td>指定原点的纵坐标为center，相当于元素高度的50%。</td>
+					</tr>
+					<tr>
+						<th>bottom</th>
+						<td>指定原点的纵坐标为bottom，相当于元素高度的100%。</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!-- /prop_value -->
+		<div class="mod prop_demo">
+			<h2 class="mod_tit">示例</h2>
+			<div class="mod_con">
+				<iframe id="iframedemo" style="border:1px solid #ccc;" src="../demo/transform-origin.html" width="100%" height="400" frameborder="0"></iframe >
+				<div class="btns">
+					<a href="../demo/transform-origin.html" target="_blank" class="btn_primary">演示</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- /main -->
+</div>
+<!-- /wrap -->
+</body>
+</html>

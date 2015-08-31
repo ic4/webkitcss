@@ -1,0 +1,36 @@
+{
+  "name" : "-webkit-user-drag",
+  "discribe" : "设置整个元素而非它的内容可拖动。对应于标签属性draggable。其中图片和链接默认为可拖动（draggable="true"），其他元素默认为不可拖动（draggable="false"）。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "1.0+",
+        "safari" : "3.0+",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-user-drag ",
+      "gram_detail" : "auto | element | none"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "auto",
+      "prop_content" : "使用默认的拖动行为。图片和链接默认为可拖动，其他元素默认为不可拖动。"
+    },
+    {
+      "prop_title" : "element",
+      "prop_content" : "整个元素而非它的内容可拖动。"
+    },
+    {
+      "prop_title" : "none",
+      "prop_content" : "元素不能被拖动。但可通过复制选中后拖动。"
+    }
+  ],
+  "iframeUrl" : "../demo/user-drag.html"
+}

@@ -1,0 +1,36 @@
+{
+  "name" : "-webkit-column-rule",
+  "discribe" : "复合属性。参见：-webkit-column-rule-color | -webkit-column-rule-style | -webkit-column-rule-width。列规则会出现在中间的列在一个多流布局的差距。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "3.0+",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-column-rule ",
+      "gram_detail" : "width | style | color"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "width",
+      "prop_content" : "设置或检索对象的列与列之间的边框厚度"
+    },
+    {
+      "prop_title" : "style",
+      "prop_content" : "设置或检索对象的列与列之间的边框样式"
+    },
+    {
+      "prop_title" : "color",
+      "prop_content" : "设置或检索对象的列与列之间的边框颜色"
+    }
+  ],
+  "iframeUrl" : "../demo/column.html"
+}

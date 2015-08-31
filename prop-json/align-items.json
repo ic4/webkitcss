@@ -1,0 +1,44 @@
+{
+  "name" : "-webkit-align-items",
+  "discribe" : "基于Flex布局，用来指定容器内内容的<span class="ex">沿着侧轴方向</span>的对齐方式。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "21+",
+        "safari" : "7.0+",
+        "android" : "4.4+",
+        "ios" : "7.0+"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-align-items ",
+      "gram_detail" : " flex-start | flex-end | center | stretch | baseline"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "flex-start",
+      "prop_content" : "将所有项目对着侧轴的起始方向对齐"
+    },
+    {
+      "prop_title" : "flex-end",
+      "prop_content" : "将所有项目对着侧轴的结尾方向对齐"
+    },
+    {
+      "prop_title" : "center",
+      "prop_content" : "将所有项目对着侧轴的中心对齐"
+    },
+    {
+      "prop_title" : "stretch",
+      "prop_content" : "将所有项目伸长，让项目占据了整个侧轴的长度"
+    },
+    {
+      "prop_title" : "baseline",
+      "prop_content" : "如果伸缩项目的行内轴与侧轴为同一条，则该值与「flex-start」等效。 其它情况下，该值将参与基线对齐。所有参与该对齐方式的伸缩项目将按下列方式排列：首先将这些伸缩项目的基线进行对齐，随后其中基线至侧轴起点边的外边距距离最长的那个项目将紧靠住该行在侧轴起点的边。"
+    }
+  ],
+  "iframeUrl" : "../demo/align-items.html"
+}

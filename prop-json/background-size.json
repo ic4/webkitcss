@@ -1,0 +1,54 @@
+{
+  "name" : "-webkit-background-size",
+  "discribe" : "检索或设置对象的背景图像的尺寸大小。该属性提供2个参数值(特性值cover和contain除外)。如果提供两个：第一个用于定义背景图像的宽度，第二个用于定义背景图像的高度；如果只提供一个：该值将用于定义背景图像的宽度，第2个值默认为auto，即高度为auto。此时背景图以提供的宽度作为参照来进行等比缩放。对应的脚本特性为backgroundSize。",
+  "support" : [
+    {
+      "type" : "有-webkit-前缀",
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "3.0",
+        "android" : "?",
+        "ios" : "1.0"
+      }
+    },
+    {
+      "type" : "无-webkit-前缀",
+      "browser" : {
+        "chrome" : "4.0",
+        "safari" : "5.1.7",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-background-size: ",
+      "gram_detail" : "auto | cover | contain | &lt;length&gt; | &lt;percentage&gt;"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "auto",
+      "prop_content" : "<span class=\"ex\">默认值</span>，背景图像的真实大小。"
+    },
+    {
+      "prop_title" : "cover",
+      "prop_content" : "将背景图像等比缩放到完全覆盖容器，背景图像有可能超出容器。"
+    },
+    {
+      "prop_title" : "contain",
+      "prop_content" : "将背景图像等比缩放到宽度或高度与容器的宽度或高度相等，背景图像始终被包含在容器内。"
+    },
+    {
+      "prop_title" : "&lt;length&gt;",
+      "prop_content" : "用长度值指定背景图像大小,不允许负值。"
+    },
+    {
+      "prop_title" : "&lt;percentage&gt;",
+      "prop_content" : "用百分比指定背景图像大小,不允许负值。"
+    }
+  ],
+  "iframeUrl" : "../demo/background-size.html"
+}

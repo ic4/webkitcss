@@ -1,0 +1,196 @@
+{
+  "name" : "-webkit-appearance",
+  "discribe" : "按照本地默认样式显示元素外观。<a target=\"_blank\" href=\"http://www.w3.org/TR/css3-ui/#changes-list\">W3暂无官方文档</a>。此属性非标准且渲染效果在不同浏览器下不同，有些属性值甚至不支持，请慎用。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-appearance: ",
+      "gram_detail" : " none | button | button-bevel ... "
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "caps-lock-indicator",
+      "prop_content" : "在密码字段中出现的大写字母锁定时，指示灯处于活动状态。"
+    },
+    {
+      "prop_title" : "button",
+      "prop_content" : "看起来像个按钮，以按钮的风格渲染"
+    },
+    {
+      "prop_title" : "button-bevel",
+      "prop_content" : "渲染成button-bevel的风格"
+    },
+    {
+      "prop_title" : "checkbox",
+      "prop_content" : "渲染为input:checkbox样式的复选框按钮"
+    },
+    {
+      "prop_title" : "default-button",
+      "prop_content" : "渲染为default-button的风格"
+    },
+    {
+      "prop_title" : "listbox",
+      "prop_content" : "看起来像个清单盒子，以listbox风格渲染"
+    },
+    {
+      "prop_title" : "listitem",
+      "prop_content" : "看起来像个清单列表，以listitem风格渲染"
+    },
+    {
+      "prop_title" : "media-fullscreen-button",
+      "prop_content" : "渲染为media-fullscreen-button风格"
+    },
+    {
+      "prop_title" : "media-mute-button",
+      "prop_content" : "渲染为media-mute-button风格"
+    },
+    {
+      "prop_title" : "media-play-button",
+      "prop_content" : "渲染为media-play-button风格"
+    },
+    {
+      "prop_title" : "media-seek-back-button",
+      "prop_content" : "渲染为media-seek-back-button风格"
+    },
+    {
+      "prop_title" : "media-seek-forward-button",
+      "prop_content" : "渲染为media-seek-forward-button风格"
+    },
+    {
+      "prop_title" : "media-slider",
+      "prop_content" : "渲染为media-slider风格"
+    },
+    {
+      "prop_title" : "media-sliderthumb",
+      "prop_content" : "渲染为media-sliderthumb风格"
+    },
+    {
+      "prop_title" : "menulist",
+      "prop_content" : "渲染为menulist-menulist风格"
+    },
+    {
+      "prop_title" : "menulist-button",
+      "prop_content" : "渲染为menulist-button风格"
+    },
+    {
+      "prop_title" : "menulist-text",
+      "prop_content" : "渲染为menulist-text风格"
+    },
+    {
+      "prop_title" : "menulist-textfield",
+      "prop_content" : "渲染为menulist-textfield风格"
+    },
+    {
+      "prop_title" : "none",
+      "prop_content" : "去除系统默认appearance的样式,<span class="ex">常用于IOS下移除原生样式</span>"
+    },
+    {
+      "prop_title" : "push-button",
+      "prop_content" : "渲染为push-button风格"
+    },
+    {
+      "prop_title" : "radio",
+      "prop_content" : "看起来像个单选框，以radio单选框风格渲染"
+    },
+    {
+      "prop_title" : "searchfield",
+      "prop_content" : "看起来像个搜索框，以searchfield风格渲染"
+    },
+    {
+      "prop_title" : "searchfield-cancel-button",
+      "prop_content" : "渲染为searchfield-cancel-button风格"
+    },
+    {
+      "prop_title" : "searchfield-decoration",
+      "prop_content" : "渲染为searchfield-decoration风格"
+    },
+    {
+      "prop_title" : "searchfield-results-button",
+      "prop_content" : "渲染为searchfield-results-button风格"
+    },
+    {
+      "prop_title" : "searchfield-results-decoration",
+      "prop_content" : "渲染为searchfield-results-decoration风格"
+    },
+    {
+      "prop_title" : "slider-horizontal",
+      "prop_content" : "渲染为slider-horizontal风格"
+    },
+    {
+      "prop_title" : "slider-vertical",
+      "prop_content" : "渲染为lider-vertical风格"
+    },
+    {
+      "prop_title" : "sliderthumb-horizontal",
+      "prop_content" : "渲染为sliderthumb-horizontal风格"
+    },
+    {
+      "prop_title" : "sliderthumb-vertical",
+      "prop_content" : "渲染为sliderthumb-vertical风格"
+    },
+    {
+      "prop_title" : "square-button",
+      "prop_content" : "渲染为square-button风格"
+    },
+    {
+      "prop_title" : "textarea",
+      "prop_content" : "渲染为textarea风格"
+    },
+    {
+      "prop_title" : "textfield",
+      "prop_content" : "渲染为textfield风格"
+    },
+    {
+      "prop_title" : "scrollbarbutton-down",
+      "prop_content" : "渲染为scrollbarbutton-down风格"
+    },
+    {
+      "prop_title" : "scrollbarbutton-left",
+      "prop_content" : "渲染为scrollbarbutton-left风格"
+    },
+    {
+      "prop_title" : "scrollbarbutton-right",
+      "prop_content" : "渲染为scrollbarbutton-right风格"
+    },
+    {
+      "prop_title" : "scrollbarbutton-up",
+      "prop_content" : "渲染为scrollbarbutton-up风格"
+    },
+    {
+      "prop_title" : "scrollbargripper-horizontal",
+      "prop_content" : "渲染为scrollbargripper-horizontal风格"
+    },
+    {
+      "prop_title" : "scrollbargripper-vertical",
+      "prop_content" : "渲染为scrollbargripper-vertical风格"
+    },
+    {
+      "prop_title" : "scrollbarthumb-horizontal",
+      "prop_content" : "渲染为scrollbarthumb-horizontal风格"
+    },
+    {
+      "prop_title" : "scrollbarthumb-vertical",
+      "prop_content" : "渲染为scrollbarthumb-vertical风格"
+    },
+    {
+      "prop_title" : "scrollbartrack-horizontal",
+      "prop_content" : "渲染为scrollbartrack-horizontal风格"
+    },
+    {
+      "prop_title" : "scrollbartrack-vertical",
+      "prop_content" : "渲染为scrollbartrack-vertica风格"
+    }
+  ],
+  "iframeUrl" : "../demo/appearance.html"
+}

@@ -1,0 +1,32 @@
+{
+  "name" : "-webkit-animation-iteration-count",
+  "discribe" : " 指定对象动画的执行次数。<span class="ex">默认值为1</span>。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "?",
+        "safari" : "4.0+",
+        "android" : "?",
+        "ios" : "2.0+"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-animation-iteration-count ",
+      "gram_detail" : " infinite | <single-animation-iteration-count> [, <single-animation-iteration-count>]*"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "infinite",
+      "prop_content" : "指定对象动画无限循环。"
+    },
+    {
+      "prop_title" : "single-animation-iteration-count",
+      "prop_content" : "指定对象动画的执行次数。接受非负数，如1.5，则将执行1.5个动画周期。"
+    }
+  ],
+  "iframeUrl" : "../demo/animation-iteration-count.html"
+}

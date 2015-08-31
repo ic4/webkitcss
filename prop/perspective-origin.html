@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>-webkit-perspective-origin | CtripUED Webkit CSS Library</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<script type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+<div class="head">
+	<div class="wrap">
+		<a href="http://ued.ctrip.com/webkitcss/index.html" class="logo">CtripUED Webkit CSS Library</a>
+		<div class="nav">
+			<ul>
+				<li><a href="../index.html">首页</a></li>
+				<li><a href="../aboutus.html#about">关于我们</a></li>
+				<li><a href="../aboutus.html#about_box">意见反馈</a></li>
+				<li><a href="http://ued.ctrip.com">CtripUED 博客</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrap">
+	<div class="side">
+		<div class="filter_box">
+			<div class="field" id="catalogFilter">
+					<input type="search" id="key" placeholder="属性搜索..." />
+			</div>
+		</div>
+		<div class="categorys"></div>
+	</div>
+
+	<div class="main" id="main">
+		<div class="position" id="position">
+			您的位置: <a href="../index.html">首页</a> &gt; -webkit-perspective-origin
+		</div>
+		<!-- /position -->
+		<div class="prop_intro">
+			<div class="tit">
+			<h1>-webkit-perspective-origin 属性</h1>
+			</div>
+			<div class="prop_detail">
+				定义3D元素所基于的X轴和Y轴。<span class="ex">默认为50% 50%</span>。<br/>
+				该属性是-webkit-perspective-origin-x和-webkit-perspective-origin-y的简写形式。
+			</div>
+			<!-- /prop_detail -->
+			<div class="prop_comp">
+				<p>
+					<i class="ico_browser ico_browser_chr"><small>12+</small></i>
+					<i class="ico_browser ico_browser_saf"><small>?</small></i>
+					<i class="ico_browser ico_browser_and"><small>3.0+</small></i>
+					<i class="ico_browser ico_browser_ios"><small>?</small></i>
+				</p>
+				<p>?: 表示版本号未知，但该属性可用。</p>
+			</div>
+			<!-- /prop_comp -->
+		</div>
+		<!-- /prop_intro -->
+		<div class="mod prop_gramm">
+			<h2 class="mod_tit">语法</h2>
+			<p class="mod_con">
+				<strong>-webkit-perspective-origin:</strong> [ &lt;percentage&gt; | &lt;length&gt; | left | center | right | top | bottom] | [ [ &lt;percentage&gt; | &lt;length&gt; | left | center | right ] &amp;&amp; [ &lt;percentage&gt; | &lt;length&gt; | top | center | bottom ] ]
+			</p>
+		</div>
+		<!-- /prop_gramm -->
+		<div class="mod prop_value">
+			<h2 class="mod_tit">取值</h2>
+			<div class="mod_con">
+				<table>
+					<tr>
+						<th>xpos</th>
+						<td>
+							<dl>
+								<dt>定义该视图在 x 轴上的位置：</dt>
+								<dd>&lt;percentage&gt;：其值相对于元素宽度，可为负；</dd>
+								<dd>&lt;length&gt;：其值为长度值，可为负，单位可以是任意CSS距离单位，若不带单位，默认为px；</dd>
+								<dd>left：等价于0；</dd>
+								<dd>center：等价于50%；</dd>
+								<dd>right：等价于100%。</dd>
+							</dl>
+						</td>
+					</tr>
+					<tr>
+						<th>ypos</th>
+						<td>
+							<dl>
+								<dt>定义该视图在 y 轴上的位置：</dt>
+								<dd>&lt;percentage&gt;：其值相对于元素高度，可为负；</dd>
+								<dd>&lt;length&gt;：其值为长度值，可为负，单位可以是任意CSS距离单位，若不带单位，默认为px；</dd>
+								<dd>top：等价于0；</dd>
+								<dd>center：等价于50%；</dd>
+								<dd>bottom：等价于100%。</dd>
+							</dl>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!-- /prop_value -->
+		<div class="mod prop_demo">
+			<h2 class="mod_tit">示例</h2>
+			<div class="mod_con">
+				<iframe id="iframedemo" style="border:1px solid #ccc;" src="../demo/perspective-origin.html" width="100%" height="400" frameborder="0"></iframe id="test">
+				<div class="btns">
+					<a href="../demo/perspective-origin.html" target="_blank" class="btn_primary">演示</a>
+				</div>
+
+			</div>
+		</div>
+		<!-- /prop_demo -->
+	</div>
+	<!-- /main -->
+</div>
+<!-- /wrap -->
+</body>
+</html>

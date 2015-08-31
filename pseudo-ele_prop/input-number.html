@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>input[type="number"]的伪元素</title>
+    <style>
+        input{height: 40px;}
+        #pseudo{-webkit-appearance:none;}
+        #pseudo::-webkit-inner-spin-button{width:20px;height:40px;}
+        #pseudo::-webkit-outer-spin-button{width:20px;height: 40px;background-color: #3983E4;color:#FF9913;}
+        #pseudo::-webkit-textfield-decoration-container{width:100%;border:4px solid #3983E4;margin:10px;}
+    </style>
+</head>
+<body>
+<h1>input[type="number"]的伪元素</h1>
+<dl>
+    <dt>::-webkit-textfield-decoration-container</dt>
+    <dd>自定义输入区域容器的样式</dd>
+    <dt>::-webkit-inner-spin-button</dt>
+    <dd>自定义自增自减按钮的样式</dd>
+    <!-- <dt>::-webkit-outer-spin-button</dt> -->
+</dl>
+<input type="number"/>
+<input id="pseudo" type="number"/>
+</body>
+</html>

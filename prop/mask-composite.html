@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<title>-webkit-mask-composite | CtripUED Webkit CSS Library</title>
+		<link rel="stylesheet" href="../css/base.css">
+		<script type="text/javascript" src="../js/base.js"></script>
+	</head>
+	<body>
+		<div class="head">
+			<div class="wrap">
+				<a href="http://ued.ctrip.com/webkitcss/index.html" class="logo">CtripUED Webkit CSS Library</a>
+				<div class="nav">
+					<ul>
+						<li><a href="../index.html">首页</a></li>
+						<li><a href="../aboutus.html#about">关于我们</a></li>
+				<li><a href="../aboutus.html#about_box">意见反馈</a></li>
+						<li><a href="http://ued.ctrip.com">CtripUED 博客</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="wrap">
+			<div class="side">
+				<div class="filter_box">
+					<div class="field" id="catalogFilter">
+						<input type="search" id="key" placeholder="属性搜索...">
+					</div>
+				</div>
+				<div class="categorys"></div>
+			</div>
+			<div class="main" id="main">
+				<div class="position" id="position">
+					您的位置: <a href="../index.html">首页</a> &gt; -webkit-mask-composite
+				</div>
+				<!-- /position -->
+				<div class="prop_intro">
+					<div class="tit">
+						<h1>-webkit-mask-composite 属性</h1>
+					</div>
+					<div class="prop_detail">
+						定义同一个元素上有多个图片遮罩时的相对顺序。
+					</div>
+					<!-- /prop_detail -->
+					<div class="prop_comp">
+						<p>
+						<b>有-webkit-前缀:</b>
+						<i class="ico_browser ico_browser_chr"><small>1.0</small></i>
+						<i class="ico_browser ico_browser_saf"><small>4.0</small></i>
+						<i class="ico_browser ico_browser_and"><small>2.1</small></i>
+						<i class="ico_browser ico_browser_ios"><small>3.2</small></i>
+						</p>
+						<p>
+						<b>无-webkit-前缀:</b>
+						<i class="ico_browser ico_browser_chr"><small>？</small></i>
+						<i class="ico_browser ico_browser_saf"><small>？</small></i>
+						<i class="ico_browser ico_browser_and"><small>?</small></i>
+						<i class="ico_browser ico_browser_ios"><small>?</small></i>
+						</p>
+						<p>?: 表示版本号未知，但该属性可用。</p>
+					</div>
+					<!-- /prop_comp -->
+					<!-- Baidu Button BEGIN -->
+					<!-- Baidu Button BEGIN -->
+
+				</div>
+				<!-- /prop_intro -->
+				<div class="mod prop_gramm">
+					<h2 class="mod_tit">语法</h2>
+					<p class="mod_con">
+					<strong>-webkit-mask-composite:</strong> composite-style</p>
+					<p class="mod_con">composite-style:*clear | copy | source-over | source-in | source-out | source-atop | destination-over | destination-in | destination-out | destination-atop | xor</p>
+				</div>
+				<!-- /prop_gramm -->
+				<div class="mod prop_value">
+					<h2 class="mod_tit">取值</h2>
+					<div class="mod_con">
+						<table>
+							<tr>
+								<th>clear</th>
+								<td>源图片和目标图片重叠的像素被清除</td>
+							</tr>
+							<tr>
+								<th>copy</th>
+								<td>源图片替代目标图片</td>
+							</tr>
+							<tr>
+								<th>source-over</th>
+								<td>源图片呈现在目标图片上</td>
+							</tr>
+							<tr>
+								<th>source-in</th>
+								<td>源图片和目标图片重叠的像素被源图片替代，其他像素被清除</td>
+							</tr>
+							<tr>
+								<th>source-out</th>
+								<td>源图片和目标图片重叠的像素被清除，源图片剩下的像素被呈现</td>
+							</tr>
+							<tr>
+								<th>source-atop</th>
+								<td>目标图片被呈现。只有在重叠像素在目标图片的不透明部分时，源图片被呈现。这导致源图片不起作用</td>
+							</tr>
+							<tr>
+								<th>destination-over</th>
+								<td>目标图片呈现在源图片上</td>
+							</tr>
+							<tr>
+								<th>destination-in</th>
+								<td>源图片和目标图片的重叠像素中，属于源图片的保留，其他像素被清除</td>
+							</tr>
+							<tr>
+								<th>destination-out</th>
+								<td>图片和目标图片的重叠像素被清除，源图片剩余的像素被展示</td>
+							</tr>
+							<tr>
+								<th>destination-atop</th>
+								<td>源图片的像素被展示。只有在重叠部分在目标图片的不透明时。目标图片被呈现。这导致目标图片不起作用</td>
+							</tr>
+							<tr>
+								<th>xor</th>
+								<td>如果源图片与目标图片都透明时，重叠像素全变为透明</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!-- /prop_value -->
+				<div class="mod prop_demo">
+					<h2 class="mod_tit">示例</h2>
+					<div class="mod_con">
+						<iframe id="iframedemo" style="border:1px solid #ccc;" src="../demo/mask-composite.html" width="100%" height="400" frameborder="0"></iframe id="test">
+						<div class="btns">
+							<a href="../demo/mask-composite.html" target="_blank" class="btn_primary">演示</a>
+						</div>
+					</div>
+				</div>
+				<!-- /prop_demo -->
+			</div>
+			<!-- /main -->
+		</div>
+		<!-- /wrap -->
+	</body>
+</html>

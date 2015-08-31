@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>-webkit-text-stroke | -webkit-text-fill-color | -webkit-text-security | -webkit-text-size-adjust demo</title>
+	<style type="text/css">
+	body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+	dl,dt,dd,p{margin: 0;padding: 0}
+	select,option,input{margin:0;padding:0;font:14px/1.0 Tahoma, Arial, "Microsoft Yahei", serif;}
+	dt{font-size: 18px;}
+	dd{margin: 0 0 10px 20px;font-size: 20px;}
+	h1{margin-bottom:20px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+	.control_panel{float: left;}
+	.show_panel{margin-left: 240px;margin-top: 200px;padding:10px 20px;width:160px;text-align: center;color:#fff;font-size: 20px;font-weight: bold;background-color: #3983E4;}
+	</style>
+</head>
+<body>
+	<h1>-webkit-text:</h1>
+	<dl>
+		<dt>-webkit-text-stroke: 文字描边的宽度和颜色</dt>
+		<dd>
+			<p style="-webkit-text-stroke: 0.4px;text-stroke: 0.4px;">-webkit-text-stroke: 0.4px;</p>
+			<p style="-webkit-text-stroke: #3983E4;text-stroke: #3983E4;">-webkit-text-stroke: #3983E4;</p>
+			<p style="-webkit-text-stroke: 0.4px #3983E4;text-stroke: 0.4px #3983E4;">-webkit-text-stroke: 0.4px #3983E4;</p>
+			<p style="-webkit-text-stroke: 1px;text-stroke: 1px;">-webkit-text-stroke: 1px;</p>
+			<p style="-webkit-text-stroke: 1px #3983E4;text-stroke: 1px #3983E4;">-webkit-text-stroke: 1px #3983E4;</p>
+		</dd>
+		<dt>-webkit-text-fill-color: 文字填充颜色</dt>
+		<dd>
+			<p style="-webkit-text-fill-color: #3983E4;text-fill-color: #3983E4;">-webkit-text-fill-color: #3983E4</p>
+			<p style="-webkit-text-fill-color: transparent;text-fill-color: transparent;background-color:#3983E4;-webkit-background-clip:text;background-clip:text;">-webkit-text-fill-color: transparent;background-color:#3983E4;-webkit-background-clip:text;background-clip:text;</p>
+			<p style="-webkit-text-fill-color: #3983E4;text-fill-color: #3983E4;-webkit-text-stroke: 0.4px #f60;text-stroke: 0.4px #f60;">-webkit-text-fill-color: #3983E4;-webkit-text-stroke: 0.4px #f60;</p>
+		</dd>
+		<dt>-webkit-text-security: 使用形状代替文本</dt>
+		<dd>
+			<p style="-webkit-text-security:none;text-security:none;">-webkit-text-security:none;</p>
+			<p style="-webkit-text-security:circle;text-security:circle;">-webkit-text-security:circle;</p>
+			<p style="-webkit-text-security:disc;text-security:disc;">-webkit-text-security:disc;</p>
+			<p style="-webkit-text-security:square;text-security:square;">-webkit-text-security:square;</p>
+		</dd>
+		<dt>-webkit-text-size-adjust: 调整页面文本大小</dt>
+		<dd>
+			<p style="-webkit-text-size-adjust:auto;text-size-adjust:auto;">-webkit-text-size-adjust: auto;</p>
+			<p style="-webkit-text-size-adjust:none;text-size-adjust:none;">-webkit-text-size-adjust: none;</p>
+			<p style="-webkit-text-size-adjust:50%;text-size-adjust:50%;">-webkit-text-size-adjust: 50%;</p>
+		</dd>
+	</dl>
+</body>
+</html>
+

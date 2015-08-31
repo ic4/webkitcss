@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>-webkit-wrap-margin demo</title>
+<style>
+body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+dl,dt,dd{margin: 0;padding: 0}
+select,option,input{margin:0;padding:0;font:14px/1.0 Tahoma, Arial, "Microsoft Yahei", serif;}
+dt{font-size: 16px;}
+dd{margin-bottom: 10px;}
+h1{margin-bottom:30px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+.control_panel{float: left;}
+.show_panel{margin-left: 240px;margin-top: 200px;padding:10px 20px;width:160px;text-align: center;color:#fff;font-size: 20px;font-weight: bold;background-color: #3983E4;}
+.show-box h2{height: 20px;line-height: 20px;font-size: 20px;}
+</style>
+</head>
+<body>
+<h1>-webkit-wrap-margin</h1>(以下测试结果都是使用属性-ms-wrap-margin在IE10下出现的效果,chrome暂不支持此属性,此时设置的-ms-wrap-flow:both;)
+<div class="show-box">	
+	<h2>-webkit-wrap-margin:20px</h2>
+	<img src="../img/wrap-margin.png" alt="">
+</div>
+<div class="show-box">	
+	<h2>-webkit-wrap-margin:10em</h2>
+	<img src="../img/wrap-margin1.png" alt="">
+</div>
+<script type="text/javascript">
+</script>
+</body>
+</html>
+			

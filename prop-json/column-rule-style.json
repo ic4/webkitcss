@@ -1,0 +1,60 @@
+{
+  "name" : "-webkit-column-rule-style",
+  "discribe" : "列规则的风格。指定样式列规则",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "3.0+",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-column-rule-style ",
+      "gram_detail" : " style[dashed | dotted | double | groove | hidden | inset | none | outset | ridge | solid]"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "dashed",
+      "prop_content" : "虚线轮廓"
+    },
+    {
+      "prop_title" : "dotted",
+      "prop_content" : "点状轮廓"
+    },
+    {
+      "prop_title" : "double",
+      "prop_content" : "双线轮廓。两条单线与其间隔的和等于指定的column-rule-width值"
+    },
+    {
+      "prop_title" : "groove",
+      "prop_content" : "3D凹槽轮廓"
+    },
+    {
+      "prop_title" : "hidden",
+      "prop_content" : "隐藏边框"
+    },
+    {
+      "prop_title" : "inset",
+      "prop_content" : "3D凹边轮廓"
+    },
+    {
+      "prop_title" : "none",
+      "prop_content" : "无轮廓。column-rule-color与column-rule-width将被忽略"
+    },
+    {
+      "prop_title" : "outset",
+      "prop_content" : "D凸边轮廓"
+    },
+    {
+      "prop_title" : "ridge",
+      "prop_content" : "3D凹边轮廓"
+    }
+  ],
+  "iframeUrl" : "../demo/column.html"
+}

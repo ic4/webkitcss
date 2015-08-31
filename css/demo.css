@@ -1,0 +1,42 @@
+/*===== reset =====*/
+html, body, p, dl, dd, form {margin:0;}
+body {color:#333;font:14px/1.42 "Microsoft Yahei","Simsun",arial,tahoma, sans-serif;-webkit-text-size-adjust:none;}
+h1, h2, h3, h4, h5, h6 {margin:0;font-size:14px;}
+ul, ol {margin:0;padding:0;list-style:none;}
+fieldset, input {margin:0;padding:0;}
+legend, textarea {padding:0;}
+select, textarea, input, button {color:inherit;font-size:inherit;font-family:inherit;*font-size:11px;*color:#666666;}
+input {vertical-align:middle;}
+input[type="button"] {cursor:pointer;}
+button {vertical-align:middle;cursor:pointer;}
+img {border:0 none;vertical-align:middle;}
+em, dfn {font-style:normal;}
+table {border-collapse:collapse; border-spacing: 0;}
+a {color:#3983E4;text-decoration:none;}
+a:hover {text-decoration:none;}
+
+/* == demo global == */
+dl,dt,dd{margin: 0;padding: 0}
+select,option,input{margin:0;padding:0;font:14px/1.0 Tahoma, Arial, "Microsoft Yahei", serif;}
+dt{font-size: 16px;}
+dd{margin-bottom: 10px;}
+h1{margin-bottom:30px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+
+.control_panel {float: left; padding-left: 20px; }
+.control_panel h2 {font-size: 16px; margin-top: 10px; }
+.control_panel p {margin-left: 20px; }
+.show_wrap,#show_wrap,.demo {margin-left: 210px; overflow: hidden; }
+.show_panel {width:160px; text-align: center; color:#fff; font-size: 20px; font-weight: bold; margin-top:200px; padding:10px 20px; background-color: #3983E4; }
+.control_panel label {display: block; margin-bottom: 5px; }
+
+
+
+/*-- layout(by yu.c) --*/
+/*.operate {position: fixed; left: 0; width: 200px;
+	padding: 30px; padding-bottom: 999px; margin-bottom: -999px; border-right: 5px solid #fff;
+	box-shadow: -3px 0 5px #999 inset;
+	background-color: #eee; }
+.operate label {display: block; line-height: 30px; }
+.operate h2 {margin: 10px 5px; }
+.demo {overflow: hidden; padding: 45px 0 0 265px; }*/
+

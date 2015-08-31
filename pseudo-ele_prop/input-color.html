@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>input[type="color"]的伪元素</title>
+    <style>
+        #pseudo{-webkit-appearance:none;}
+        #pseudo::-webkit-color-swatch{opacity: 0.5;border:0;background:#FF9913;height:20px;margin-top:-20px;}
+        #pseudo::-webkit-color-swatch-wrapper{border: 4px solid #FF9913;padding:0;background:#3983E4;}
+    </style>
+</head>
+<body>
+<h1>input[type="color"]的伪元素</h1>
+<dl>
+    <dt>::-webkit-color-swatch-wrapper</dt>
+    <dd>自定义颜色外框的样式</dd>
+    <dt>::-webkit-color-swatch</dt>
+    <dd>自定义颜色显示块的样式。其默认background-color为rgb(0,0,0)。</dd>
+</dl>
+<input type="color" id="no_pseudo" />
+<input type="color" id="pseudo" />
+</body>
+</html>

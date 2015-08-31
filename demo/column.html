@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>webkit-column demo</title>
+<link rel="stylesheet" href="../css/demo.css" />
+</head>
+
+<body>
+
+	<h1>-webkit-columns</h1>
+	<dl id="control_panel" class="control_panel" style="width:300px;">
+		<h2>栏数</h2>
+		<p>
+			<label><input type="range" name="column-count" step="1" min="0" max="6" value="0" /><span></span></label>
+		</p>
+		<h2>间隔</h2>
+		<p>
+			<label><input type="range" name="column-gap" step="2" min="0" max="30" value="0" /><span></span></label>
+		</p>
+		<h2>间隔线大小</h2>
+		<p>
+			<label><input type="range" name="column-rule-width" step="1" min="1" max="5" value="1"  /><span></span></label>
+		</p>
+		<h2>间隔线类型</h2>
+		<p>
+			<label>
+				<select name="column-rule-style">
+					<option value="solid">solid</option>
+					<option value="dashed">dashed</option>
+					<option value="dotted">dotted</option>
+				</select><span></span>
+			</label>
+		</p>
+		<h2>颜色</h2>
+		<p>
+			<label><input type="color" name="column-rule-color" /><span></span></label>
+		</p>
+		<h2>某个段落通栏显示</h2>
+		<p>
+			<label>
+				<select name="column-span">
+					<option value="none">none</option>
+					<option value="all">all</option>
+				</select><span></span>
+			</label>
+		</p>
+		<h2>某个段落在分栏时是否强制不断开，显示在一栏中：</h2>
+		<p>
+			<label>
+				<select name="column-break-inside">
+					<option value="auto">auto</option>
+					<option value="avoid">avoid</option>
+				</select><span></span>
+			</label>
+		</p>
+		<h2>某个段落在段落前断开，从该段落开始在新的一栏中显示：</h2>
+		<p>
+			<label>
+				<select name="column-break-before">
+					<option value="auto">auto</option>
+					<option value="always">always</option>
+					<option value="avoid">avoid</option>
+					<option value="left">left</option>
+					<option value="right">right</option>
+				</select><span></span>
+			</label>
+		</p>
+		<h2>某个段落在段落后断开，让后面的段落在新的一栏中显示：</h2>
+		<p>
+			<label>
+				<select name="column-break-after">
+					<option value="auto">auto</option>
+					<option value="always">always</option>
+					<option value="avoid">avoid</option>
+					<option value="left">left</option>
+					<option value="right">right</option>
+				</select><span></span>
+			</label>
+		</p>
+	</dl>
+
+	<style type="text/css">
+		.demo {margin-left: 320px; }
+		.test strong {color: #f00; font-size: 16px; }
+	</style>
+
+	<div class="demo">
+		<!-- demo start -->
+		<div class="test">
+			<p><strong>第一行</strong> 第九届联合国际计算机会议得到广东省科技厅网站、广东省信息产业厅、珠海市人民政府及当地学术界和实业界的大力支持，其宗旨是为IT专业人士提供一个交流最新研究成果，了解本领域最新技术发展趋势，探讨IT产业对全球化趋势日益明显的世界新经济影响与作用的舞台，以达到促进地区IT产业发展的目的。应邀参加此次大会的主讲嘉宾包括微软、英特尔、爱立信、三星电子、甲骨文、戴尔等国际知名公司的高层，以及国家科技部、信息产业部、中科院、清华大学、中山大学、国防科技大学、香港大学、联想研究院等部门的官员、专家和学者。</p>
+			<p><strong>第二行</strong> 第九届联合国际计算机会议得到广东省科技厅网站、广东省信息产业厅、珠海市人民政府及当地学术界和实业界的大力支持，其宗旨是为IT专业人士提供一个交流最新研究成果，了解本领域最新技术发展趋势，探讨IT产业对全球化趋势日益明显的世界新经济影响与作用的舞台，以达到促进地区IT产业发展的目的。应邀参加此次大会的主讲嘉宾包括微软、英特尔、爱立信、三星电子、甲骨文、戴尔等国际知名公司的高层，以及国家科技部、信息产业部、中科院、清华大学、中山大学、国防科技大学、香港大学、联想研究院等部门的官员、专家和学者。</p>
+			<p><strong>第三行</strong> 第九届联合国际计算机会议得到广东省科技厅网站、广东省信息产业厅、珠海市人民政府及当地学术界和实业界的大力支持，其宗旨是为IT专业人士提供一个交流最新研究成果，了解本领域最新技术发展趋势，探讨IT产业对全球化趋势日益明显的世界新经济影响与作用的舞台，以达到促进地区IT产业发展的目的。应邀参加此次大会的主讲嘉宾包括微软、英特尔、爱立信、三星电子、甲骨文、戴尔等国际知名公司的高层，以及国家科技部、信息产业部、中科院、清华大学、中山大学、国防科技大学、香港大学、联想研究院等部门的官员、专家和学者。</p>
+			<p><strong>第四行</strong> 第九届联合国际计算机会议得到广东省科技厅网站、广东省信息产业厅、珠海市人民政府及当地学术界和实业界的大力支持，其宗旨是为IT专业人士提供一个交流最新研究成果，了解本领域最新技术发展趋势，探讨IT产业对全球化趋势日益明显的世界新经济影响与作用的舞台，以达到促进地区IT产业发展的目的。应邀参加此次大会的主讲嘉宾包括微软、英特尔、爱立信、三星电子、甲骨文、戴尔等国际知名公司的高层，以及国家科技部、信息产业部、中科院、清华大学、中山大学、国防科技大学、香港大学、联想研究院等部门的官员、专家和学者。</p>
+			<p><strong>第五行</strong> 第九届联合国际计算机会议得到广东省科技厅网站、广东省信息产业厅、珠海市人民政府及当地学术界和实业界的大力支持，其宗旨是为IT专业人士提供一个交流最新研究成果，了解本领域最新技术发展趋势，探讨IT产业对全球化趋势日益明显的世界新经济影响与作用的舞台，以达到促进地区IT产业发展的目的。应邀参加此次大会的主讲嘉宾包括微软、英特尔、爱立信、三星电子、甲骨文、戴尔等国际知名公司的高层，以及国家科技部、信息产业部、中科院、清华大学、中山大学、国防科技大学、香港大学、联想研究院等部门的官员、专家和学者。</p>
+			<p><strong>第六行</strong> 第九届力支持，其宗旨是、爱立信、三星电子、甲骨文、戴尔等国际知名公司的高层，以及国家科技部、信息产业部、中科院、清华大学、中山大学、国防科技大学、香港大学、联想研究院等部门的官员、专家和学者。</p>
+			<p><strong>第七行</strong> 第九届联合国际计算机会议得到广东省科技厅网站、广东省信息产业厅、珠海市人民政府及当地学术界和实业界的大力支持，其宗旨是为IT专业人士提供一个交流最新研究成果，了解本领域最新技术发展趋势，探讨IT产业对全球化趋势日益明显的世界新经济影响与作用的舞台，以达到促进地区IT产业发展的目的。应邀参加此次大会的主讲嘉宾包括微软、英特尔、爱立信、三星电子、甲骨文、戴尔等国际知名公司的高层，以及国家科技部、信息产业部、中科院、清华大学、中山大学、国防科技大学、香港大学、联想研究院等部门的官员、专家和学者。</p>
+			<p><strong>第八行</strong> 第九届联合国际计算机会议得到广东省科技厅网站、广东省信息产业厅、珠海市人民政府及当地学术界和实业界的大力支持，其宗旨是为IT专业人士提供一个交流最新研究成果，了解本领域最新技术发展趋势，探讨IT产业对全球化趋势日益明显的世界新经济影响与作用的舞台，以达到促进地区IT产业发展的目的。应邀参加此次大会的主讲嘉宾包括微软、英特尔、爱立信、三星电子、甲骨文、戴尔等国际知名公司的高层，以及国家科技部、信息产业部、中科院、清华大学、中山大学、国防科技大学、香港大学、联想研究院等部门的官员、专家和学者。</p>
+			<p><strong>第九行</strong> 第九届联合国际计算机会议得到广东省科技厅网站、广东省信息产业厅、珠海市人民政府及当地学术界和实业界的大力支持，其宗旨是为IT专业人士提供一个交流最新研究成果，了解本领域最新技术发展趋势，探讨IT产业对全球化趋势日益明显的世界新经济影响与作用的舞台，以达到促进地区IT产业发展的目的。应邀参加此次大会的主讲嘉宾包括微软、英特尔、爱立信、三星电子、甲骨文、戴尔等国际知名公司的高层，以及国家科技部、信息产业部、中科院、清华大学、中山大学、国防科技大学、香港大学、联想研究院等部门的官员、专家和学者。</p>
+			<p><strong>第十行</strong> 第九届联合国际计算机会议得到广东省科技厅网站、广东省信息产业厅、珠海市人民政府及当地学术界和实业界的大力支持，其宗旨是为IT专业人士提供一个交流最新研究成果，了解本领域最新技术发展趋势，探讨IT产业对全球化趋势日益明显的世界新经济影响与作用的舞台，以达到促进地区IT产业发展的目的。应邀参加此次大会的主讲嘉宾包括微软、英特尔、爱立信、三星电子、甲骨文、戴尔等国际知名公司的高层，以及国家科技部、信息产业部、中科院、清华大学、中山大学、国防科技大学、香港大学、联想研究院等部门的官员、专家和学者。</p>
+			<p><strong>第十一行</strong> 第九届联合国际计算机会议得到广东省科技厅网站、广东省信息产业厅、珠海市人民政府及当地学术界和实业界的大力支持，其宗旨是为IT专业人士提供一个交流最新研究成果，了解本领域最新技术发展趋势，探讨IT产业对全球化趋势日益明显的世界新经济影响与作用的舞台，以达到促进地区IT产业发展的目的。应邀参加此次大会的主讲嘉宾包括微软、英特尔、爱立信、三星电子、甲骨文、戴尔等国际知名公司的高层，以及国家科技部、信息产业部、中科院、清华大学、中山大学、国防科技大学、香港大学、联想研究院等部门的官员、专家和学者。</p>
+			<p><strong>第十二行</strong> 第九届联合国际计算机会议得到广东省科技厅网站、广东省信息产业厅、珠海市人民政府及当地学术界和实业界的大力支持，其宗旨是为IT专业人士提供一个交流最新研究成果，了解本领域最新技术发展趋势，探讨IT产业对全球化趋势日益明显的世界新经济影响与作用的舞台，以达到促进地区IT产业发展的目的。应邀参加此次大会的主讲嘉宾包括微软、英特尔、爱立信、三星电子、甲骨文、戴尔等国际知名公司的高层，以及国家科技部、信息产业部、中科院、清华大学、中山大学、国防科技大学、香港大学、联想研究院等部门的官员、专家和学者。</p>
+			<p><strong>第十三行</strong> 第九届联合国际计算机会议得到广东省科技厅网站、广东省信息产业厅、珠海市人民政府及当地学术界和实业界的大力支持，其宗旨是为IT专业人士提供一个交流最新研究成果，了解本领域最新技术发展趋势，探讨IT产业对全球化趋势日益明显的世界新经济影响与作用的舞台，以达到促进地区IT产业发展的目的。应邀参加此次大会的主讲嘉宾包括微软、英特尔、爱立信、三星电子、甲骨文、戴尔等国际知名公司的高层，以及国家科技部、信息产业部、中科院、清华大学、中山大学、国防科技大学、香港大学、联想研究院等部门的官员、专家和学者。</p>
+		</div>
+		<!-- demo end -->
+		<p class="code"></p>
+	</div>
+
+	<script type="text/javascript">
+		var test = document.querySelector(".test");
+		var cCount = document.getElementsByName("column-count")[0];
+		var cGap = document.getElementsByName("column-gap")[0];
+		var cRuleWidth = document.getElementsByName("column-rule-width")[0];
+		var cRuleStyle = document.getElementsByName("column-rule-style")[0];
+		var cRuleColor = document.getElementsByName("column-rule-color")[0];
+		var cSpan = document.getElementsByName("column-span")[0];
+		var cBreakInside = document.getElementsByName("column-break-inside")[0];
+		var cBreakBefore = document.getElementsByName("column-break-before")[0];
+		var cBreakAfter = document.getElementsByName("column-break-after")[0];
+
+		var code = document.querySelector(".code");
+
+		cCount.onchange = function() {
+			test.style.cssText += "-webkit-"+this.name+":"+this.value;
+		}
+		cGap.onchange = function() {
+			test.style.cssText += "-webkit-"+this.name+":"+this.value+"px";
+		}
+		cRuleWidth.onchange = function() {
+			test.style.cssText += "-webkit-"+this.name+":"+this.value+"px";
+		}
+		cRuleStyle.onchange = function() {
+			test.style.cssText += "-webkit-"+this.name+":"+this.value;
+		}
+		cRuleColor.onchange = function() {
+			test.style.cssText += "-webkit-"+this.name+":"+this.value;
+		}
+
+		cSpan.onchange = function() {
+			test.children[2].style.cssText = "-webkit-"+this.name+":"+this.value;
+		}
+		cBreakInside.onchange = function() {
+			test.children[2].style.cssText = "-webkit-"+this.name+":"+this.value;
+		}
+		cBreakBefore.onchange = function() {
+			test.children[2].style.cssText = "-webkit-"+this.name+":"+this.value;
+		}
+		cBreakAfter.onchange = function() {
+			test.children[2].style.cssText = "-webkit-"+this.name+":"+this.value;
+		}
+	</script>
+</body>
+</html>

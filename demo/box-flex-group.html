@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>webkit-flex-group demo</title>
+	<style type="text/css">
+		label {display: block; line-height: 30px; }
+		li {padding:10px 0;}
+		.test {display:-webkit-box;
+			width:800px;height:300px;
+			margin:20px auto 80px;padding:10px;border:1px solid #999;
+			background-color:#CCC; -webkit-box-align: stretch; }
+		.test div {text-align:center; color:#fff; }
+		.flex_3 {-webkit-box-flex:3; background-color:#A1D942; }
+		.flex_2 {-webkit-box-flex:2; line-height: 150px; background-color:#D8390C; }
+		.flex_w200 {width:200px; background-color:#20549D; }
+		.flex_w300 {width:300px;}
+		.shadow_box {box-shadow:3px 3px 3px rgba(0,0,0,0.8);}
+		.reflect_box {-webkit-box-reflect: below 10px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.5, transparent), to(white));}
+	</style>
+</head>
+<body>
+
+	<h1>-webkit-flex-group</h1>
+	<dl id="control_panel" class="control_panel">
+		
+	</dl>
+
+	<!-- demo start -->
+	<div class="test">
+		<div class="flex_3" style="-webkit-box-flex-group: 6;">flex-3..testtestest<br/>-webkit-box-flex-group: 6;</div>
+		<div class="flex_2" style="-webkit-box-flex-group: 5;">flex-2<br/>-webkit-box-flex-group: 5;</div>
+		<div class="flex_w200">testtestest</div>
+	</div>
+	<!-- demo end -->
+
+
+</body>
+</html>

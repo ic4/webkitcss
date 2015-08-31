@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>-webkit-mask-repeat demo</title>
+		<style type="text/css">
+			body{font: normal 14px/1.5 Tahoma, Arial, "Microsoft Yahei", serif;}
+			dl,dt,dd{margin: 0;padding: 0;}
+			select,option,input{margin:0;padding:0;font:14px/1.0 Tahoma, Arial, "Microsoft Yahei", serif;}
+			dt{font-size: 16px;}
+			dd{margin-bottom: 10px;}
+			h1{margin-bottom:30px;font-size: 28px;width: 400px;border-bottom: 1px solid #ccc;}
+			#control_panel{float: left;width: 500px;}
+			#show_panel{
+				float: left;
+				text-align: center;
+				color:#fff;
+				font-size: 20px;
+				font-weight: bold;
+			}
+			#demo{
+				width: 509px;
+				height:300px;
+				margin: 50px auto;
+				font-size: 20px;
+				font-weight: bold;
+				color:red;
+				background:url(../img/bg.jpg) no-repeat;
+			}
+			input[type='button']{
+				display: inline-block;
+				width: 150px;
+				height: 36px;
+				line-height: 30px;
+				background-color: #ffbb01;
+				color: #fff;
+				border: 1px solid #ffbb01;
+				border-bottom: 5px solid #ff9c01;
+				text-align: center;
+				font-size: 16px;
+				font-family: "microsoft yahei", "Times New Roman", Simsun;
+				cursor: pointer;
+				outline: 0;
+				margin-bottom: 5px;
+			}
+			input[type='button']:hover{
+				border: 1px solid #ff9c01;
+				border-bottom: 5px solid #ec8211;
+				background-color: #ff9c01;
+				border-bottom-color: #ec8211;
+			}
+			span {color: red;font-weight: bold;}
+			.mask_img_rp{
+				-webkit-mask-image:url(../img/ctriplogo.png);
+				-webkit-mask-repeat:repeat;
+			}
+			.mask_img_rpx{
+				-webkit-mask-image:url(../img/ctriplogo.png);
+				-webkit-mask-repeat:repeat-x;
+			}
+			.mask_img_rpy{
+				-webkit-mask-image:url(../img/ctriplogo.png);
+				-webkit-mask-repeat:repeat-y;
+			}
+			.mask_img_rpno{
+				-webkit-mask-image:url(../img/ctriplogo.png);
+				-webkit-mask-repeat:no-repeat;
+			}
+			.mask_img_space{
+				-webkit-mask-image:url(../img/ctriplogo.png);
+				-webkit-mask-repeat:space;
+			}
+			.mask_img_round{
+				-webkit-mask-image:url(../img/ctriplogo.png);
+				-webkit-mask-repeat:round;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>-webkit-mask-repeat</h1>
+		<dl id="control_panel">
+			<dt>
+			<input id="repeat"  type="button" value="repeat"
+			onclick="demo.className='mask_img_rp';text.innerHTML=this.value"/>&nbsp;默认值,遮罩图片水平、垂直方向都重复
+			</dt>
+			<dt>
+			<input id="repeat-x"  type="button" value="repeat-x"
+			onclick="demo.className='mask_img_rpx';text.innerHTML=this.value"/>&nbsp;遮罩图片只在水平方向重复
+			</dt>
+			<dt>
+			<input id="repeat-y"  type="button" value="repeat-y"
+			onclick="demo.className='mask_img_rpy';text.innerHTML=this.value"/>&nbsp;遮罩图片只在垂直方向重复
+			</dt>
+			<dt>
+			<input id="no-repeat"  type="button" value="no-repeat"
+			onclick="demo.className='mask_img_rpno';text.innerHTML=this.value"/>&nbsp;遮罩图片不重复
+			</dt>
+			<dt>
+			<input id="space"  type="button" value="space"
+			onclick="demo.className='mask_img_space';text.innerHTML=this.value"/>&nbsp;
+			</dt>
+			<dt>
+			<input id="round"  type="button" value="round"
+			onclick="demo.className='mask_img_round';text.innerHTML=this.value"/>&nbsp;遮盖图像经过缩放，以便可放下整数个该图像
+			</dt>			
+			<dt>-webkit-mask-repeat:<span>repeat</span></dt>
+		</dl>
+		<div id="show_panel">
+			<div id="demo">
+			</div>
+		</div>
+		<script type="text/javascript">
+			var demo = document.getElementById('demo');
+			var text = document.getElementsByTagName('span')[0];
+		</script>
+	</body>
+</html>

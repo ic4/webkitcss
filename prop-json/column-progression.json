@@ -1,0 +1,28 @@
+{
+  "name" : "-webkit-column-progression",
+  "discribe" : "设置列元素的<span class="ex">排列方向</span>。",
+  "support" : [
+    {
+      "browser" : {
+        "chrome" : "3.0+",
+        "safari" : "?",
+        "android" : "?",
+        "ios" : "?"
+      }
+    }
+  ],
+  "version" : "?: 表示版本号未知，但该属性可用。",
+  "grammar" : [
+    {
+      "gram_name" : "-webkit-column-gap ",
+      "gram_detail" : "unknown"
+    }
+  ],
+  "prop_value" : [
+    {
+      "prop_title" : "unknown value",
+      "prop_content" : "unknown description"
+    }
+  ],
+  "iframeUrl" : "../demo/column.html"
+}

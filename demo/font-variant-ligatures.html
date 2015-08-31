@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>-webkit-font-variant-ligatures demo</title>
+<style type="text/css">
+    @font-face{
+      font-family: 'ambleregular';
+      src: url('FiraSans-Regular.otf');
+    }
+    body{font: normal 50px/1.5 "ambleregular", Tahoma, Arial, "Microsoft Yahei", serif;}
+    h1{margin-bottom:30px;font-size: 28px;width: 420px;border-bottom: 1px solid #ccc;}
+    ul, li{list-style: none;margin:0;padding: 0;}
+    .control_panel{float: left;font-size: 20px;text-align: right;color:#3983E4;}
+    .show_panel{margin-left: 250px;padding:0 20px;}
+    .control_panel li, .show_panel li{height: 50px;line-height: 50px;}
+
+</style>
+</head>
+<body>
+<h1>-webkit-font-variant-ligatures</h1>
+<ul class="control_panel">
+    <li>normal</li>
+    <li>none</li>
+    <li>common-ligatures</li>
+    <li>no-common-ligatures</li>
+    <li>discretionary-ligatures</li>
+    <li>no-discretionary-ligatures</li>
+    <li>historical-ligatures</li>
+    <li>no-historical-ligatures</li>
+    <li>contextual</li>
+    <li>no-contextual</li>
+</ul>
+<ul class="show_panel">
+    <li style="-webkit-font-variant-ligatures:normal;font-variant-ligatures:normal;">ff, fl, fi, fb, fh, fk, fj, ffk</li>
+    <li style="-webkit-font-variant-ligatures:none;font-variant-ligatures:none;">ff, fl, fi, fb, fh, fk, fj, ffk</li>
+    <li style="-webkit-font-variant-ligatures:common-ligatures;font-variant-ligatures:common-ligatures;">ff, fl, fi, fb, fh, fk, fj, ffk</li>
+    <li style="-webkit-font-variant-ligatures:no-common-ligatures;font-variant-ligatures:no-common-ligatures;">ff, fl, fi, fb, fh, fk, fj, ffk</li>
+    <li style="-webkit-font-variant-ligatures:discretionary-ligatures;font-variant-ligatures:discretionary-ligatures;">ff, fl, fi, fb, fh, fk, fj, ffk</li>
+    <li style="-webkit-font-variant-ligatures:no-discretionary-ligatures;font-variant-ligatures:no-discretionary-ligatures;">ff, fl, fi, fb, fh, fk, fj, ffk</li>
+    <li style="-webkit-font-variant-ligatures:historical-ligatures;font-variant-ligatures:historical-ligatures;">ff, fl, fi, fb, fh, fk, fj, ffk</li>
+    <li style="-webkit-font-variant-ligatures:no-historical-ligatures;font-variant-ligatures:no-historical-ligatures;">ff, fl, fi, fb, fh, fk, fj, ffk</li>
+    <li style="-webkit-font-variant-ligatures:contextual;font-variant-ligatures:contextual;">ff, fl, fi, fb, fh, fk, fj, ffk</li>
+    <li style="-webkit-font-variant-ligatures:no-contextual;font-variant-ligatures:no-contextual;">ff, fl, fi, fb, fh, fk, fj, ffk</li>
+</ul>
+</body>
+</html>
