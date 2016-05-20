@@ -25,7 +25,7 @@
   "grammar" : [
     {
       "gram_name" : "-webkit-background-clip: ",
-      "gram_detail" : "border-box | padding-box | content-box | text"
+      "gram_detail" : "padding-box | border-box | content-box | text | padding | border | content"
     }
   ],
   "prop_value" : [
@@ -44,6 +44,18 @@
     {
       "prop_title" : "text",
       "prop_content" : "从前景内容的形状（比如文字）作为裁剪区域向外裁剪，如此即可实现使用背景作为填充色之类的遮罩效果。"
+    },
+    {
+      "prop_title" : "padding",
+      "prop_content" : "类似 padding-box（WebKit 早期的实现）"
+    },
+    {
+      "prop_title" : "border",
+      "prop_content" : "类似 border-box（WebKit 早期的实现）"
+    },
+    {
+      "prop_title" : "content",
+      "prop_content" : "类似 content-box（WebKit 早期的实现）"
     }
   ],
   "iframeUrl" : "../demo/background-clip.html"
